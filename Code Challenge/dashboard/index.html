@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css     -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="s-main d-flex">
+        <!-- Start: Header Part -->
+        <header class="d-flex align-center justify-content-between" id="head">
+            <!-- Start: Head Left Part -->
+            <div class="d-flex align-center">
+                <div class="menu">
+                    <label for="menu"><span class="primary-color fa-solid fa-clone"></span></label>
+                    <!-- <span id="menu" class="primary-color fa-solid fa-clone"></span> -->
+                </div>
+                <div class="search">
+                    <label for="search" class="icon"></label>
+                    <a class="fa-solid fa-magnifying-glass"></a>
+                    <input type="search" placeholder="Search here..." id="search" class="unset">
+                    <button type="submit" class="btn unset">Search</button>
+                </div>
+            </div>
+            <!-- End: Head Left Part -->
+            <!-- Start: Head Right Part -->
+            <div class="d-flex align-center">
+                <span class="right-notification">
+                    <a href="#" class="fa-regular fa-message"></a>
+                </span>
+                <span class="right-notification">
+                    <a href="#" class="fa-regular fa-bell"></a>
+                </span>
+                <span class="img">
+                    <img src="image/man-avatar-icon-free-vector.jpg" alt="User Pic">
+                </span>
+                <span>
+                    <a href="#" class="fa-solid fa-angle-down"></a>
+                </span>
+            </div>
+            <!-- End: Head Right Part -->
+        </header>
+        <!-- End: Header Part -->
+        <!-- Start: body Part -->
+        <div class="d-flex align-center" id="main">
+            <!-- Start: Body Left Side -->
+            <input type="checkbox" id="menu">
+            <aside class="side-bar d-flex align-center ">
+                <div class="d-flex justify-content-between flex-direction-cl flex-grow">
+                    <ul class="menu-up">
+                        <li>
+                            <div class="list">
+                                <a href="#" class="unset">
+                                    <label for="dashboard">
+                                        <span id="dashboard" class="primary-color icon fa-solid fa-box"></span>
+                                    Dashboard</label></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list">
+                                <a href="#" class="unset">
+                                    <label for="cart">
+                                        <span id="cart" class="primary-color icon fa-solid fa-cart-shopping"></span>
+                                    Cart</label></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list">
+                                <a href="#" class="unset">
+                                    <label for="file">
+                                        <span id="file" class="primary-color icon fa-solid fa-file"></span>
+                                    File</label></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list">
+                                <a href="#" class="unset">
+                                    <label for="setting">
+                                        <span id="setting" class="primary-color icon fa-solid fa-gear"></span>
+                                    Settings</label></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="menu-down">
+                        <li>
+                            <div class="list">
+                                <a href="#" class="unset">
+                                    <label for="bin">
+                                        <span id="bin" class="primary-color icon fa-solid fa-trash"></span>
+                                    Bin</label></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list">
+                                <a href="#" class="unset">
+                                    <label for="logout">
+                                        <span id="logout" class="primary-color icon fa-solid fa-arrow-right-from-bracket"></span>
+                                    logout</label></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- End: Body Left Side -->
+            <!-- Start: Body Right Side -->
+
+            <section class="right d-flex flex-direction-cl flex-grow">
+                <!-- Start: Heding Part -->
+                <h1 class="primary-color">Dashboard</h1>
+                <!-- End: Heding Part -->
+                <!-- Start: Card Part -->
+                <div class="wrap d-flex">
+                    <div class="card-part d-flex flex-grow">
+
+                        <div class="card">
+                            <div class="card-icon d-flex align-center justify-content-center"> <a href="#"
+                                    class="fa-solid fa-eye"></a> </div>
+                            <h4 class="card-heading"> Total Views </h4>
+                            <p class="card-digit"> 308.402 </p>
+                            <small class="card-foot"> Start form 1 Jan 2021 </small>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon d-flex align-center justify-content-center"> <a href="#"
+                                    class="fa-solid fa-shopping-bag"></a> </div>
+                            <h4 class="card-heading"> Total Products </h4>
+                            <p class="card-digit"> 10.820 </p>
+                            <small class="card-foot"> Start form 1 Jan 2021 </small>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon d-flex align-center justify-content-center"> <a href="#"
+                                    class="fa-solid fa-users"></a> </div>
+                            <h4 class="card-heading"> Total Users </h4>
+                            <p class="card-digit"> 8.425 </p>
+                            <small class="card-foot"> New user noted Every week </small>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon d-flex align-center justify-content-center"> <a href="#"
+                                    class="fa-solid fa-shopping-cart"></a> </div>
+                            <h4 class="card-heading"> Total Sells </h4>
+                            <p class="card-digit"> 1.028.623 </p>
+                            <small class="card-foot"> Start form 1 Jan 2021 </small>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End: Card Part -->
+
+            </section>
+
+            <!-- End: Body Right Side -->
+        </div>
+        <!-- End: Body Part -->
+    </div>
+</body>
+
+</html>
