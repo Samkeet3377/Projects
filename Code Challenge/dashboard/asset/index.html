@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css     -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="s-main d-flex">
+        <!-- Start: Header Part -->
+        <header class="d-flex align-center justify-content-between" id="head">
+            <!-- Start: Head Left Part -->
+            <div class="d-flex align-center">
+                <div class="menu">
+                    <label for="menu"></label>
+                    <a href="#" class="unset"><span id="menu" class="primary-color fa-solid fa-clone"></span></a>
+                </div>
+                <div class="search">
+                    <label for="search" class="icon"></label>
+                    <a class="fa-solid fa-magnifying-glass"></a>
+                    <input type="search" placeholder="Search here..." id="search" class="unset">
+                    <button type="submit" class="btn unset">Search</button>
+                </div>
+            </div>
+            <!-- End: Head Left Part -->
+            <!-- Start: Head Right Part -->
+            <div class="d-flex align-center">
+                <span class="right-notification">
+                    <a href="#" class="fa-regular fa-message"></a>
+                </span>
+                <span class="right-notification">
+                    <a href="#" class="fa-regular fa-bell"></a>
+                </span>
+                <span class="img">
+                    <img src="image/man-avatar-icon-free-vector.jpg" alt="User Pic">
+                </span>
+                <span>
+                    <a href="#" class="fa-solid fa-angle-down"></a>
+                </span>
+            </div>
+            <!-- End: Head Right Part -->
+        </header>
+        <!-- End: Header Part -->
+        <!-- Start: body Part -->
+        <div class="d-flex align-center" id="main">
+            <!-- Start: Body Left Side -->
+            <aside class="d-flex align-center">
+                <div class="side-bar d-flex justify-content-between">
+                    <ul class="menu-up">
+                        <li>
+                            <a href="#" class="unset"><span id="dashboard"
+                                    class="primary-color icon fa-solid fa-box"></span></a>
+                            <label for="dashboard">Dashboard</label>
+                        </li>
+                        <li>
+                            <a href="#" class="unset"><span id="cart"
+                                    class="primary-color icon fa-solid fa-cart-shopping"></span></a>
+                            <label for="cart">Cart</label>
+                        </li>
+                        <li>
+                            <a href="#" class="unset"><span id="file"
+                                    class="primary-color icon fa-solid fa-file"></span></a>
+                            <label for="file">File</label>
+                        </li>
+                        <li>
+                            <a href="#" class="unset"><span id="setting"
+                                    class="primary-color icon fa-solid fa-gear"></span></a>
+                            <label for="setting">Settings</label>
+                        </li>
+                    </ul>
+                    <ul class="menu-down">
+                        <li>
+                            <a href="#" class="unset"><span id="bin"
+                                    class="primary-color icon fa-solid fa-trash"></span></a>
+                            <label for="bin">Bin</label>
+                        </li>
+                        <li>
+                            <a href="#" class="unset"><span id="logout"
+                                    class="primary-color icon fa-solid fa-arrow-right-from-bracket"></span></a>
+                            <label for="logout">logout</label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- End: Body Left Side -->
+            <!-- Start: Body Right Side -->
+            <section class="right d-flex align-center flex-grow">
+                <h1 class="primary-color">Dashboard</h1>
+            </section>
+            <!-- End: Body Right Side -->
+        </div>
+        <!-- End: Body Part -->
+    </div>
+</body>
+
+</html>

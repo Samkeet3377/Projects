@@ -1,0 +1,134 @@
+/* Universal Selectors */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Global Selctors */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+/* Helper Classes */
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.primary-color {
+    color: #438ffe;
+}
+
+.primary-bg-clr {
+    color: #438ffe;
+}
+
+.unset {
+    all: unset;
+}
+
+/* Header */
+#head {
+    padding: 20px;
+    height: 100px;
+    background-color: white;
+}
+
+.menu {
+    font-size: 25px;
+    padding: 10px;
+}
+
+/* .menu:: {
+    transform: translate(-300px);
+    width: 0px;
+    flex: 0 0 0;
+} */
+
+.search {
+    background-color: #f5f7f9;
+}
+
+.search .icon {
+    margin: 3px;
+}
+
+.btn {
+    background-color: #438ffe;
+    color: white;
+    padding: 10px 10px;
+}
+
+div .right-notification {
+    margin-right: 20px;
+    position: relative;
+    font-size: 25px;
+    padding: 3px;
+}
+
+.right-notification::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 5px;
+    width: 5px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: #438ffe;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Main */
+.s-main {display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#main { border: 1px solid red; 
+    padding-top: 5px;
+}
+
+/* Main Left */
+.side-bar {
+    background-color: white;
+    width: 300px;
+    font-size: 25px;
+    flex-direction: column;
+}
+.side-bar .icon { 
+    padding: 5px;
+}
+
+/* Main Right */
+.right { border: 1px solid blue; 
+    /* flex-grow: 1; */
+}
+.right h1{
+    padding: 5px;
+}
+#main{
+
+}
