@@ -128,11 +128,16 @@ img {
 }
 aside {
     transform: translateX(0);
-    transition: all 2s linear;
+    transition: all 0.5s linear;
 }
 #menu:checked + aside {
-    transform: translateX(-150px);
+    transform: translateX(-250px);
     width: 0;
+}
+#menu:checked + aside ul {
+    transform: translateX(-350px);
+    /* width: 0; */
+
 }
 /* Main Left */
 .side-bar { 
@@ -154,6 +159,13 @@ aside {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+aside>div{
+    width: 100%;
+}
+aside ul { 
+    width: 100%;
+    transition: all 0.5s linear;
 }
 ul li span {
     cursor: pointer;
@@ -204,14 +216,14 @@ aside li{
     background-color: white;
     position: relative;   
 }
-.card::after{
-content: "";
-position: absolute;
-height: 1px;
-width: 90%;
-background-color: grey;
-top: 80%;
-left: 20px;
+.card::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background-color: grey;
+    top: 80%;
+    left: 20px;
 
 }
 .card-icon {
@@ -247,6 +259,50 @@ left: 20px;
     position: absolute;
     bottom: 20px;
 }
+
+/* Data Part */
+
+.product { 
+    background-color: white;
+    padding: 20px;
+}
+.data-head { 
+    padding: 10px 10px 10px 10px;
+    font-weight: 900;
+    text-align: left;
+}
+.data-head tr {
+    padding: 10px 0 10px 10px;
+}
+.data-no {
+    padding-right: 20px;
+}
+.widt-no {
+    width: 100px;
+}
+.widt-name {
+    width: 250px;
+}
+.widt-cmn {
+    width: 120px;
+}
+.data-row tr { 
+    padding: 10px;
+    background-color: #f5f7f9;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.product-img {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+.product-img img {
+    height: auto;
+    max-width: 1000%;
+}
+
 
 /* media Part */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
