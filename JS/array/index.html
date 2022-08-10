@@ -13,11 +13,26 @@
 <body>
     <div class="main">
         <!-- Start: Blank Area -->
+        <div class="main-time-wrapper">
         <div class="js-part">
+            <div class="input-area">
+                <form class="input">
+                    <label for="country">Country</label>
+                    <select class="select-area" id="country" onchange="update()">
+                        <option value="#" selected disabled>Select Time</option>
+                        <option value="ind">India</option>
+                        <option value="aus">Australia</option>
+                        <option value="can">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    <!-- <input  type="button" value="Submit" class="btn"> -->
+                  </form>
+            </div>
             <div class="output-area">
-                 
+                <h3 id="output"></h3>
             </div>
         </div>
+    </div>
         <!-- End: Blank Area -->
         <!-- Start: Table Area -->
         <div class="tbl-area">
@@ -46,9 +61,7 @@
         </div>
         <!-- End: Table Area -->
     </div>
-    <script src="asset/js/script.js">
-
-    </script>
+    <script src="asset/js/script.js"></script>
 </body>
 
 </html>
