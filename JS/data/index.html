@@ -20,7 +20,7 @@
             </div>
             <div class="search">
                 <form action="">
-                    <input type="search" name="search" id="input" class="srch-box" autocomplete="off" >
+                    <input type="text" name="search" id="input" class="srch-box" autocomplete="off" onkeyup="mySearch()">
                     <button type="submit" class="btn-srch">Search</button>
                 </form>
                 
@@ -30,12 +30,17 @@
                 <table id="table">
                     <thead class="table-head">
                         <tr>
-                            <th>First Name</th>
+                            <!-- <th>First Name</th>
                             <th>Last Name</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Designation</th>
-                            <th>From</th>
+                            <th>From</th> -->
+                            <th>id</th>
+                            <th>name</th>
+                            <th>address</th>
+                            <th>company</th>
+                            <th>website</th>
                         </tr>
                     </thead>
                     <tbody class="table-body">
@@ -59,7 +64,7 @@
                     <div class="btn d-flex align-center align-justify">
                         <button type="submit" class="btn-pop">Add User</button>
                         <button type="reset" class="btn-pop">Reset</button>
-                        <button type="button" class="btn-pop" onclick="myFunction()">Cancel</button>
+                        <button type="button" class="btn-pop" onclick="myPopup()">Cancel</button>
                     </div>
                     </form>
                 </div>

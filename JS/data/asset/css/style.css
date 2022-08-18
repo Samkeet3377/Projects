@@ -108,6 +108,9 @@ thead {
 thead tr th {
     padding: 10px;
 }
+td {
+    padding: 5px;
+}
 
 tbody {
     background-color: aliceblue;
