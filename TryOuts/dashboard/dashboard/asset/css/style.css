@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.d-flex {
+    display: flex;
+}
+.d-align {
+    align-items: center;
+}
+.d-justify {
+    justify-content: center;
+}
+.d-column {
+    flex-direction: column;
+}
+.d-f-grow {
+    flex-grow: 1;
+}
+.space-between {
+    justify-content: space-between;
+}
+
+.super {
+    background-color: black;
+}
+.main {
+    background-color: #dce2e8;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.left-main-div {
+    background-color: #f1f5f8;
+    width: 15%;
+    padding: 10px;
+}
+.left-header h1 {
+    color: #027aff;
+}
+
+.menu-list {
+    margin-top: 20px;
+}
+.ul-list a { 
+    all: unset; 
+    color: gray;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.ul-list li{ 
+    padding: 10px 20px;
+    /* justify-content: space-between; */
+    color: gray;
+}
+.ul-list a:hover {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px lightblue ; 
+    color: #067cff;
+}
+
+.list-below { 
+    margin-top: 50px;
+    /* height: 150px; */
+}
+.y-logo { 
+    position: relative;
+    width: 50px;
+    height: 40px;
+    bottom: 30px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 2;
+}
+.help {
+    border: 1px solid salmon;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    padding-top: 20px;
+    text-align: center;
+    /* height: 100px; */
+}
+.help-1 {
+    padding-top: 20px;
+    border-bottom: 2px solid #a0c9f8;
+    /* padding-bottom: 20px; */
+}
+.help-2 {
+    color: #067cff;    
+}
+
+.right-main-div { 
+    background-color: #ffffff;
+    width: 85%;
+    padding: 20px;
+    padding-top: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #a0c9f8;
+}
+/* .right-header {
+
+    border: 1px solid red;
+} */
+.right-header h2 {
+    color: #757e8c;
+}
+
+.wrapper { 
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 1px rgba(135, 207, 235, 0.507) ;
+    border-top: 5px solid skyblue;
+    margin-top: 30px;
+}
+.wrapper-head {
+    padding: 20px;
+}
+.wrapper-head-info {
+    background-color: #ebf4ff;
+}
+.logo { 
+    background-color: white;
+    border-radius: 20%;
+    margin: 20px;
+    padding: 10px;
+    color: #027aff;
+}
