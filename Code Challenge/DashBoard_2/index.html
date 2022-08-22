@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- font-family: 'Poppins', sans-serif; -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard_2</title>
+</head>
+
+<body>
+    <!-- Start: Whole Body -->
+    <div class="wrapper d-flex flex-column">
+        <!-- Start: Header Part -->
+        <div class="header d-flex space-between">
+            <!-- Start: Left Header Part -->
+            <div class="left-header d-flex align-item">
+                <!-- <div> -->
+                <!-- <img src="asset/image/lineBarCode.png" alt="" style="width: auto; height: inherit;" class="bg-img">  -->
+                <label for="toggle" class="tgl"><span class="material-icons-outlined"> apps </span></label>
+                <h1 class="bg-text">TallyScan</h1>
+                <!-- </div> -->
+                <h2>Dashboard</h2>
+            </div>
+            <!-- End: Left Header Part -->
+            <!-- Start: Right Header Part -->
+            <div class="right-header d-flex align-item">
+                <div class="notification"><span class="material-icons-outlined"> notifications </span></div>
+                <div class="userInfo d-flex flex-justify">
+                    <img src="asset/image/user_pic.jpg" alt="UserPic">
+                    <span>Samkeet</span>
+                    <span class="material-icons-outlined"> arrow_drop_down </span>
+                </div>
+            </div>
+            <!-- End: Right Header Part -->
+        </div>
+        <!-- End: Header Part -->
+        <!-- Start: Main Pat -->
+        <main class="main d-flex flex-grow">
+            <!-- Start: Navigation Part -->
+            <!-- CheckBox For Toggle Sidebar -->
+            <input type="checkbox" name="" id="toggle" class="d-none">
+            <aside class="main_nav">
+                <!-- Start: Top Navigation Part -->
+                <div class="top-nav d-flex align-item">
+                    <ul>General
+                        <li class="text-muted"><span class="material-icons-outlined"> search </span><span>Search</span>
+                        </li>
+                        <li class="text-muted"><span class="material-icons-outlined"> notifications
+                            </span><span>Alerts</span></li>
+                        <li class="text-muted"><span class="material-icons-outlined"> local_offer
+                            </span><span>Tags</span></li>
+                    </ul>
+                </div>
+                <!-- End: Top Navigation Part -->
+                <!-- Start: Bottom Navigation Part -->
+                <div class="bottom-nav d-flex align-item">
+                    <ul>Others
+                        <li class="text-muted"><span class="material-icons-outlined"> settings
+                            </span><span>Settings</span></li>
+                        <li class="text-muted"><span class="material-icons-outlined"> wb_sunny </span><span>Tips</span>
+                        </li>
+                        <li class="text-muted"><span class="material-icons-outlined"> delete </span><span>Trash</span>
+                        </li>
+                        <li class="text-muted"><span class="material-icons-outlined"> logout </span><span>Logout</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End: Bottom Navigation Part -->
+            </aside>
+            <!-- End: Navigation Part -->
+            <!-- Start: Section Part -->
+            <section class="main-body d-flex flex-column">
+                <!-- Start: Filter / Search Part -->
+                <div class="search-wrapper">
+                    <div class="search-box unset">
+                        <input type="search" name="" id="input" onkeyup="mySearch()">
+                        <button>Search</button>
+                    </div>
+                </div>
+                <!-- End: Filter / Search Part -->
+                <!-- Start: Card Part -->
+                <!-- <div class="card-area">
+                    <div class="card">
+                        <div class="card-info">
+                            
+                        </div>
+                        <div class="card-icon">
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- End: Card Part -->
+                <!-- Start: Table Part -->
+                <div class="table-area">
+                    <h4>Recent Activity</h4>
+                    <table class="table">
+                        <thead class="tbl-head">
+                            <tr>
+                                <th>Item</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Est.Cost</th>
+                                <th>Last</th>
+                                <th>List</th>
+                                <th>Auto</th>
+                                <th>Buy</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbl-body">
+                           
+                        </tbody>
+                        <div id="err-msg" class="d-none">Data Not Found</div>
+                    </table>
+                </div>
+                <!-- End: Table Part -->
+            </section>
+            <!-- End: Section Part -->
+        </main>
+        <!-- End: Main Part -->
+    </div>
+    <!-- End: Whole Body -->
+    <script src="asset/js/script.js"></script>
+</body>
+
+</html>
