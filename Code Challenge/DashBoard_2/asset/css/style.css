@@ -7,16 +7,14 @@
 body, html {
     width: 100%;
     height: 100%;
+    transition: all .3s ease;
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fafafa;
+    background-color: var(--color-background);
+    color: var(--color-dark);
 }
 :root {
-    --color-primary: #7380ec;
-    --color-danger: #ff7782;
-    --color-success: #41f1b6;
-    --color-warning: #ffbb55;
     --color-white: #ffffff;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
@@ -25,8 +23,40 @@ body {
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
+
     --color-hover: #56be68;
     --color-bg-hover: #f2fcf4;
+
+    --color-search: #89c292;
+    --color-search-text: #363949;
+    --border-radius-1: 10px;
+    --dis-text-color: #d86467;
+    --dis-bg-color: #ffeeed;
+    --wnt-text-color: #13a331;
+    --wnt-bg-color: #f3fef3;
+    --waiting-text-color: #db983f;
+    --waiting-bg-color: #fff7e3;
+    --cancle-text-color: #050812;
+    --cancle-bg-color: #f6f6f6;
+}
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --dis-text-color: #edeffd;
+    --dis-bg-color: #202528;
+    --wnt-text-color: #edeffd;
+    --wnt-bg-color: #202528;
+    --cancle-text-color: #edeffd;
+    --cancle-bg-color: #202528;
+    --waiting-text-color: #edeffd;
+    --waiting-bg-color: #202528;
+    --color-hover: #edeffd;
+    --color-bg-hover: #202528;
+    --color-search: #202528;
+    --color-search-text: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, .4);
 }
 /* ----------Helper---------- */
 .d-flex {
@@ -62,16 +92,20 @@ img {
     all: unset;
 }
 .discard {
-    color: var(--color-danger);
+    color: var(--dis-text-color);
+    background-color: var(--dis-bg-color);
 }
 .want {
-    color: var(--color-success);
+    color: var(--wnt-text-color);
+    background-color: var(--wnt-bg-color);
 }
 .waiting {
-    color: var(--color-warning);
+    color: var(--waiting-text-color);
+    background-color: var(--waiting-bg-color);
 }
-.cancel {
-    color: var(--color-light);
+.cancle {
+    color: var(--cancle-text-color);
+    background-color: var(--cancle-bg-color);
 }
 /* ----------Whole Body---------- */
 .wrapper{
@@ -101,6 +135,31 @@ img {
 .userInfo span {
     margin-left: 8px;
 }
+/*----------Toggle Theme----------*/
+.header .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+.header .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .theme-toggler span.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+}
+/*----------Toggle Theme----------*/
 /* ----------Main---------- */
 .main { 
     height: 100%;
@@ -110,6 +169,7 @@ img {
 /* ----------Navigation---------- */
 #toggle:checked + .main_nav {
    transform: translateX(-300px);
+   width: 0;
 }
 .main_nav { 
     background-color: var(--color-white);
@@ -146,28 +206,38 @@ img {
 }
 /* ----------Search Box---------- */
 .search-box { 
+    border: 1px solid var(--color-search);
     float: right;
-    background-color: var(--color-white);
+    background-color: var(--color-search);
+    border-radius: 5px;
 }
-.search-box input { background-color: lightgreen;
-    font-size: 18px;
+.search-box input { 
+    padding: 7px;
     border: none;
     outline: none;
-    padding-left: 1px;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .search-box button {
-    font-size: 18px;
-    background-color: #89c292;
+    padding: 5px;
+    background-color: var(--color-search);
     border: none;
+    border-radius: 5px;
+    color: var(--color-search-text);
 }
-.search-box button:hover {
+.search-box:hover, .search-box:hover button {
     background-color: var(--color-hover);
 }
 /* ----------Table Area---------- */
+.table-area {
+    width: auto;
+    margin-top: 20px;
+}
 .table {
     margin-top: 10px;
     width: 99%;
-    /* border-collapse: collapse; */
+    border-spacing: 0px 5px;
 }
 .tbl-head tr th {
     font-weight: 500;
@@ -176,7 +246,11 @@ img {
 .tbl-body {
     background-color: var(--color-white);
     text-align: center;
+    overflow: scroll;
 }
-#err-msg {
-    color: var(--color-danger);
+th, td{
+    padding: 5px;
+}
+#err-msg { 
+    color: var(--dis-text-color);
 }

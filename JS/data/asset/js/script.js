@@ -1,5 +1,4 @@
 // const user = [
-<<<<<<< HEAD
 //     {
 //         'first_name': 'samkeet',
 //         'last_name': 'kevat',
@@ -41,7 +40,6 @@
 //         'from': 'valsad',
 //     }
 // ];
-=======
 // {
 //     'first_name': 'samkeet',
 //     'last_name': 'kevat',
@@ -85,12 +83,11 @@
 // ];
 
 // createtbl(user);
->>>>>>> d0b62e6fb341ff343f0a46ab4dcc496eeb4bbf79
 
 // Fetch Fake API with Await
 // let data;
 // async function fetchJSON() {
-    // const response = await fetch('https://jsonplaceholder.typicode.com/users');
+// const response = await fetch('https://jsonplaceholder.typicode.com/users');
 //     // console.log(response);
 //     data = await response.json();
 //     if (data.length) {
@@ -99,16 +96,15 @@
 // }
 // Fetch Fake API with .then
 fetchJSON();
-function fetchJSON (){
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then((response) => {return response.json()})
-  .then((data) => createtbl(data));
+function fetchJSON() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response) => { return response.json() })
+        .then((data) => createtbl(data));
 };
 // createtbl(user);
 function createtbl(data) {
-    const tblbody = document.querySelector('.table-body'); // put table data
-
-    const dataitem = data.map(item => {
+    var tblbody = document.querySelector('.table-body'); // put table data
+    var dataitem = data.map(item => {
         return {
             id: item.id,
             name: item.name,
@@ -117,26 +113,14 @@ function createtbl(data) {
             website: item.website
         }
     });
-
-
     // console.log('tblbody');
     dataitem.forEach((emp) => {
         var tblrow = document.createElement('tr'); // create row
         // console.log(emp);
         for (const key in emp) {
-<<<<<<< HEAD
-            //if (['first_name', 'last_name', 'contact', 'e_mail', 'designation', 'from'].includes(key)) {
-              //  if (['id', 'name', 'username', 'email'].includes(key)) {
-                const datakey = emp[key];
-                const tblcol = document.createElement('td'); // create column
-                // console.log(tblcol);
-                tblcol.textContent = datakey; // put properties/index value in td
-                tblrow.appendChild(tblcol); // put table row value to column
-            //}
-=======
             if (Object.hasOwnProperty.call(emp, key)) {
                 // if (['first_name', 'last_name', 'contact', 'e_mail', 'designation', 'from'].includes(key)) {
-                if (['id','name', 'username', 'email', 'website'].includes(key)) {
+                if (['id', 'name', 'username', 'email', 'website'].includes(key)) {
                     const datakey = emp[key];
                     const tblcol = document.createElement('td'); // create column
                     // console.log(tblcol);
@@ -144,7 +128,6 @@ function createtbl(data) {
                     tblrow.appendChild(tblcol); // put table row value to column
                 }
             }
->>>>>>> d0b62e6fb341ff343f0a46ab4dcc496eeb4bbf79
         }
         // put table column value to body
         tblbody.appendChild(tblrow);
@@ -152,39 +135,32 @@ function createtbl(data) {
     });
 }
 
-<<<<<<< HEAD
 // let inputdata = document.getElementById('input');
 
 function mySearch() {
-    // debugger
     const tableBody = document.querySelector(".table-body");
-    const searchBox = document.getElementById("input");
-    const table = document.getElementById("table");
+    const searchBox = document.querySelector("#input");
+    const table = document.querySelector("#table");
     const not_found = document.querySelector("#err-msg");
-    tableBody.textContent = "";
 
+    tableBody.textContent = "";
     let filterData = [];
-    console.log(data);
+
     if (searchBox.value !== "") {
         filterData = data.filter((item) => {
             return item.name.toUpperCase().includes(searchBox.value.toUpperCase());
         });
-
     } else {
         filterData = data;
     }
-
-// not found error msg  
-
-if(!filterData.length){
-    not_found.classList.remove("d-none");
-    table.classList.add("d-none");
-}
-else{
-    not_found.classList.add("d-none");
-    table.classList.remove("d-none");
-}
-
+    // not found error msg  
+    if (!filterData.length) {
+        not_found.classList.remove("d-none");
+        table.classList.add("d-none");
+    } else {
+        not_found.classList.add("d-none");
+        table.classList.remove("d-none");
+    }
     createtbl(filterData);
 }
 
@@ -208,7 +184,7 @@ else{
 //             } else {
 //                 tr[i].style.display = "none";
 //             }
-        
+
 //         if (find) {
 //             // msg.style.display = "none";
 //             msg.classList.add("d-none");
@@ -218,33 +194,27 @@ else{
 //         } }
 //     }
 // }
-
-
-=======
 // 
-function searchdata(){
-    const tblbody = document.querySelector('.table-body');
-    const inputsearch = document.querySelector('#input');
-    tblbody.textContent = '';
-    let filter = [];
+// function searchdata(){
+//     const tblbody = document.querySelector('.table-body');
+//     const inputsearch = document.querySelector('#input');
+//     tblbody.textContent = '';
+//     let filter = [];
 
-    if( inputsearch.value !== '' ) {
-        filter = user.filter((item) => {
-            return item.username.toLowerCase() === inputsearch.value.toLowerCase();
-        });
-    } else {
-        filter = user;
-    }
-    createtbl(filter);
-}
+//     if( inputsearch.value !== '' ) {
+//         filter = user.filter((item) => {
+//             return item.username.toLowerCase() === inputsearch.value.toLowerCase();
+//         });
+//     } else {
+//         filter = user;
+//     }
+//     createtbl(filter);
+// }
 
->>>>>>> d0b62e6fb341ff343f0a46ab4dcc496eeb4bbf79
 function myPopup() {
     let popUp = document.querySelector("#pop");
     popUp.classList.toggle("d-none");
 }
-<<<<<<< HEAD
-=======
 
 // const user = [];
 // fetch('https://jsonplaceholder.typicode.com/users')
@@ -252,14 +222,13 @@ function myPopup() {
 //     .then((data) => {
 //         user = data;
 //         createtbl(user);
-//     }); 
+//     });
 //  console.log(user);
 
-let user = [];
-async function userlist() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    user = await response.json();
-    createtbl(user);
-}
-userlist();
->>>>>>> d0b62e6fb341ff343f0a46ab4dcc496eeb4bbf79
+// let user = [];
+// async function userlist() {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     user = await response.json();
+//     createtbl(user);
+// }
+// userlist();

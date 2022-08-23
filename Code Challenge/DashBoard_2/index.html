@@ -35,6 +35,12 @@
             </div>
             <!-- End: Left Header Part -->
             <!-- Start: Right Header Part -->
+            <!-- ----------Toggle Theme---------- -->
+            <div class="theme-toggler">
+                <span class="material-icons-outlined active"> light_mode </span>
+                <span class="material-icons-outlined"> dark_mode </span>
+            </div>
+            <!-- ----------Toggle Theme---------- -->
             <div class="right-header d-flex align-item">
                 <div class="notification"><span class="material-icons-outlined"> notifications </span></div>
                 <div class="userInfo d-flex flex-justify">
@@ -85,7 +91,7 @@
                 <!-- Start: Filter / Search Part -->
                 <div class="search-wrapper">
                     <div class="search-box unset">
-                        <input type="search" name="" id="input" onkeyup="mySearch()">
+                        <input type="search" name="" id="input" onkeyup="myFunction()">
                         <button>Search</button>
                     </div>
                 </div>
@@ -104,8 +110,8 @@
                 <!-- End: Card Part -->
                 <!-- Start: Table Part -->
                 <div class="table-area">
-                    <h4>Recent Activity</h4>
-                    <table class="table">
+                    <h3>Recent Activity</h3>
+                    <table class="table" id="myTable">
                         <thead class="tbl-head">
                             <tr>
                                 <th>Item</th>
@@ -131,6 +137,7 @@
         <!-- End: Main Part -->
     </div>
     <!-- End: Whole Body -->
+    <script src="asset/js/list.js"></script>
     <script src="asset/js/script.js"></script>
 </body>
 
