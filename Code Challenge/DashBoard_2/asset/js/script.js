@@ -87,10 +87,10 @@ List.forEach(list => {
     const trContent = `
                     <td> ${list.item} </td>
                     <td> ${list.date} </td>
-                    <td class="${list.type === 'Discard' ? 'discard':
-                                 list.type === 'Want' ? 'want': 
-                                 list.type === 'Waiting' ? 'waiting':
-                                 list.type === 'Cancelled' ? 'cancle':''}"> ${list.type} </td>    
+                    <td class="${list.type === 'Discard' ? 'discard' :
+            list.type === 'Want' ? 'want' :
+                list.type === 'Waiting' ? 'waiting' :
+                    list.type === 'Cancelled' ? 'cancle' : ''}"> ${list.type} </td>    
                     <td> ${list.cost} </td>
                     <td> ${list.last} </td>
                     <td> ${list.list} </td>
@@ -105,11 +105,6 @@ List.forEach(list => {
     tbody.appendChild(tr);
     // console.log(tbody);
 })
-
-{/* <td class="${list.type === 'Discard' ? 'discard':
-             list.type === 'Want' ? 'want':
-             list.type === 'Waiting' ? 'waiting':
-             list.type === 'Cancelled' ? 'cancle'}"> $[list.type} </td> */}
 
 // Search Data / Give Error
 // function mySearch() {
@@ -157,25 +152,25 @@ function myFunction() {
                 tr[i].style.display = "";
                 flag = true;
             } else {
+
                 tr[i].style.display = "none";
                 //   flag = false;
             }
         }
-        if (flag) {
-            not_found.classList.add('d-none');
-            table.classList.remove('d-none');
-        } else {
-            not_found.classList.remove('d-none');
-            table.classList.add('d-none');
-        }
-
+    }
+    if (flag) {
+        not_found.classList.add('d-none');
+        table.classList.remove('d-none');
+    } else {
+        not_found.classList.remove('d-none');
+        // table.classList.add('d-none');
     }
     // createTable(filterdata);
 }
 
 var themeToggler = document.querySelector('.theme-toggler');
 
-themeToggler.addEventListener('click', ()=> {
+themeToggler.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme-variables');
     themeToggler.querySelector('span').classList.toggle('active');
 })

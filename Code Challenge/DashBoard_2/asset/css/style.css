@@ -155,7 +155,6 @@ img {
     justify-content: center;
 }
 .header .theme-toggler span.active {
-    background: var(--color-primary);
     color: var(--color-white);
     border-radius: var(--border-radius-1);
 }
@@ -232,12 +231,24 @@ img {
 /* ----------Table Area---------- */
 .table-area {
     width: auto;
+    height: 300px;
+    overflow-y: scroll;
     margin-top: 20px;
+    position: relative;
+}
+.table-area h3 {
+    position: sticky;
+    top: 0;
 }
 .table {
     margin-top: 10px;
     width: 99%;
     border-spacing: 0px 5px;
+    position: relative;
+}
+.tbl-head{
+    position: sticky;
+    top: 0;
 }
 .tbl-head tr th {
     font-weight: 500;
