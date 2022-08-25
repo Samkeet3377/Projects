@@ -1,0 +1,47 @@
+.header-wrapper { 
+    padding: 20px;
+    // background-color: $white-color;
+    background-color: lighten($primary-color, 20%);
+    color: $white-color;
+}
+.head-left {
+    h2 {
+        font-weight: 500;  
+        margin-left: 20px;
+        // color: $primary-color;
+    }
+    img {
+        height: 32px;
+        width: 32px;
+        margin-left: 10px;
+    }
+}
+.head-right {
+    .search-box{
+        border: 1px solid darken($searchbox-bg-color, 30%);
+        background-color: $searchbox-bg-color;
+        border-radius: $border-radius-10;
+        input {
+            border: none;            
+            background-color: $searchbox-bg-color;
+            border-radius: $border-radius-10;
+            outline: none;
+            padding:5px;
+        }
+        span {
+            color: $primary-color;
+        }
+    }
+    .user-info {
+        // color: $primary-color;
+        span {
+            margin-left: 5px;
+        }
+        img {
+            margin-left: 5px;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }    
+    }
+}

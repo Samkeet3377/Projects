@@ -1,0 +1,50 @@
+$main-body-bg-color: #ddd; 
+$primary-color: #095260;
+$white-color: #fff;
+$body-bg-color: #e1e1e1;
+$secondary1-color: #9c61f5;
+$secondary2-color: #f67887;
+$card-bg-color: #f7f7f7;
+$searchbox-bg-color: #f0f0f0;
+$border-radius-10: 10px;
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: $main-body-bg-color;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+.d-flex {
+    display: flex;
+}
+.align-center {
+    align-items: center;
+}
+.f-justify {
+    justify-content: center;
+}
+.f-grow {
+    flex-grow: 1;
+}
+.space-between {
+    justify-content: space-between;
+}
+.d-column {
+    flex-direction: column;
+}
+.d-none {
+    display: none;
+}
+li {
+    list-style: none;
+}

@@ -1,18 +1,7 @@
-*, 
-*::after, 
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body, html {
-    height: 100%;
-    width: 100%;
-}
+@import "root";
+@import "header";
+@import "sidebar";
 
-$primary-color: #095260;
-$white-color: #fff;
-$body-bg-color: #e1e1e1;
-$secondary1-color: #9c61f5;
-$secondary2-color: #f67887;
-$card-bg-color: #f7f7f7;
+.wrapper {
+    padding: 50px;
+}

@@ -1,0 +1,43 @@
+.main-body {
+    background-color: $primary-color;
+}
+
+.sidebar {
+    background-color: $white-color;
+    width: 180px;
+    margin-top: 2px;
+    transition: all 0.5s ease-in-out;
+    color: $primary-color;
+}
+
+ul {
+    li {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        padding: 15px;
+    }
+    .li-text{
+        padding-left: 20px;
+        // transform: translateX(0);
+        opacity: 1;
+        // color: red;
+        transition: transform 0.5s ease-in-out,opacity 0.8s ease-in-out;
+    }
+    li:hover {
+        background-color: lighten($primary-color, 20%);
+    }
+}
+#box {
+    display: none;
+    &:checked{
+        + .sidebar .li-text{ 
+            opacity: 0 ;
+            // transform: translateX(40px);
+        }
+       + .sidebar{
+            width: 55px;
+            overflow: hidden;
+        }
+    }
+}

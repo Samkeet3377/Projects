@@ -5,29 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="asset/css/style.css">
     <title>Dashboard With SCSS</title>
 </head>
 <body>
     <!-- Start: The Whole Body -->
-    <div class="wrapper">
+    <div class="wrapper d-flex d-column">
         <!-- Start: header Part -->
-        <header>
+        <header class="header-wrapper d-flex align-center space-between">
             <!-- Start: Header Left Side -->
-            <div class="head-left">
+            <div class="head-left d-flex">
+                <label for="box"><span class="material-icons-outlined">grid_4x4</span></label>
                 <img src="asset/image/DB+logo.jpg" alt="brandLogo">
                 <h2>Design Brand</h2>
             </div>
             <!-- End: Header Left Side -->
             <!-- Start: Header Right Side -->
-            <div class="head-right">
-                <div class="search-box">
+            <div class="head-right d-flex align-center">
+                <div class="search-box d-flex">
                     <input type="search" name="" id="srch">
                     <span class="material-icons-outlined">search</span>
                 </div>
-                <div class="user-info">
+                <div class="user-info d-flex align-center">
                     <span class="material-icons-outlined">expand_more</span>
                     <span>Hi,</span>
                     <span>Samkeet</span>
@@ -37,27 +38,28 @@
             <!-- End: Header Right Side -->
         </header>
         <!-- Start: Main Body -->
-        <main class="main-body">
+        <main class="main-body d-flex d-column">
             <!-- Start: Navigation -->
+            <input type="checkbox" name="" id="box">
             <div class="sidebar">
-                <aside>
+                <aside class="">
                     <div class="upper-menu">
-                        <ul>
-                            <li>Home</li>
-                            <li>Message</li>
+                        <ul class="">
+                            <li><span class="material-icons-outlined">home</span><span class="li-text">Home</span></li>
+                            <li><span class="material-icons-outlined">mail</span><span class="li-text">Message</span></li>
                         </ul>
                     </div>
                     <div class="middle-menu">
-                        <ul>
-                            <li>Progress</li>
-                            <li>Files</li>
-                            <li>Devices</li>
+                        <ul class="">
+                            <li><span class="material-icons-outlined">signal_cellular_alt</span><span class="li-text">Progress</span></li>
+                            <li><span class="material-icons-outlined">folder_open</span><span class="li-text">Files</span></li>
+                            <li><span class="material-icons-outlined">laptop</span><span class="li-text">Devices</span></li>
                         </ul>
                     </div>
                     <div class="lower-menu">
-                        <ul>
-                            <li>Pendings</li>
-                            <li>Account</li>
+                        <ul class="">
+                            <li><span class="material-icons-outlined">pending</span><span class="li-text">Pending</span></li>
+                            <li><span class="material-icons-outlined">person</span><span class="li-text">Account</span></li>
                         </ul>
                     </div>
                 </aside>
