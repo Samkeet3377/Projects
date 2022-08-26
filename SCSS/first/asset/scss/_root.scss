@@ -4,9 +4,14 @@ $white-color: #fff;
 $body-bg-color: #e1e1e1;
 $secondary1-color: #9c61f5;
 $secondary2-color: #f67887;
-$card-bg-color: #f7f7f7;
+$card-bg-color: #8bc34a;
 $searchbox-bg-color: #f0f0f0;
 $border-radius-10: 10px;
+$txt-mute-color: lightgrey; 
+$positive-bg-color: #94ac41;
+$positive-txt-color:#2b6405;
+
+
 
 *, 
 *::after, 
@@ -47,4 +52,49 @@ img {
 }
 li {
     list-style: none;
+}
+.txt-muted {
+    color: $txt-mute-color;
+}
+
+
+
+
+$theme-positive:(
+    "primary":$primary-color,
+    "secondary":$secondary1-color,
+    "success":$positive-txt-color,
+);
+
+@mixin content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@for $value from 1 to 4 {
+    .card-#{$value}{
+        // background-color: $card-bg-color;
+        height: 80px;
+        width: 120px;
+        border-radius: 5px;
+    @include content-center();
+        p {
+            margin-bottom: 15px;
+        }
+        .card-icon {
+            margin-left: 20px;
+            height: 40px;
+            width: 40px;
+            // background-color: $positive-bg-color;
+            // color: $positive-txt-color;
+            padding: 8px;
+        }
+    }
+}
+
+@each $color, $value in $theme-positive {
+    .bg-#{$color}{
+        background-color: #{$value};
+    }
+    
 }

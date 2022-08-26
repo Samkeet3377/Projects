@@ -49,6 +49,76 @@ li {
   list-style: none;
 }
 
+.txt-muted {
+  color: lightgrey;
+}
+
+.card-1 {
+  height: 80px;
+  width: 120px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-1 p {
+  margin-bottom: 15px;
+}
+.card-1 .card-icon {
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+}
+
+.card-2 {
+  height: 80px;
+  width: 120px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-2 p {
+  margin-bottom: 15px;
+}
+.card-2 .card-icon {
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+}
+
+.card-3 {
+  height: 80px;
+  width: 120px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-3 p {
+  margin-bottom: 15px;
+}
+.card-3 .card-icon {
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+}
+
+.bg-primary {
+  background-color: #095260;
+}
+
+.bg-secondary {
+  background-color: #9c61f5;
+}
+
+.bg-success {
+  background-color: #2b6405;
+}
+
 .header-wrapper {
   padding: 20px;
   background-color: #12a2bd;
@@ -128,6 +198,9 @@ ul li:hover {
   overflow: hidden;
 }
 
+.right-body {
+  padding: 40px;
+}
 .wrapper {
   padding: 50px;
 }
