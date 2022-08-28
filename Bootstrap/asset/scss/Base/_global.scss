@@ -1,0 +1,10 @@
+*, *::after, *::before {
+    margin: $m-0;
+    padding: $p-0;
+    box-sizing: border-box;
+}
+body, html {
+    height: $h-100;
+    width: $w-100;
+    margin: 0 auto;
+}

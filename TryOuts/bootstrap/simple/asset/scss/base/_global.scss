@@ -1,0 +1,40 @@
+@import "variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: $body-bg-clr;    
+}
+.wrapper {
+    position: relative;
+    height: 90%;
+    width: 100%;
+    top: 5%;
+    .main { 
+        .login-opt { background-color: lighten(lightblue, 20%);
+            border: 1px solid blue;
+            border-radius: 20px; 
+            padding: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+.divide:after,
+.divide:before {
+content: "";
+flex: 1;
+height: 1px;
+background: blue;
+}
+
+.email-part input, .pass-part input {
+    background-color: $clr-white;
+}

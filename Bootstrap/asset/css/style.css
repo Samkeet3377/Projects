@@ -1,3 +1,15 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -4682,6 +4694,44 @@ progress {
   .d-print-none {
     display: none !important;
   }
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border: 1px solid red;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.header h1 {
+  padding-right: 80px;
+}
+.header .head-right {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.body-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.sidebar {
+  border: 1px solid red;
+  width: 200px;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  border: 1px solid red;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

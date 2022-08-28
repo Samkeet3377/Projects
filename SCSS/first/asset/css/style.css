@@ -54,6 +54,7 @@ li {
 }
 
 .card-1 {
+  background-color: #8bc34a;
   height: 80px;
   width: 120px;
   border-radius: 5px;
@@ -68,10 +69,13 @@ li {
   margin-left: 20px;
   height: 40px;
   width: 40px;
+  background-color: #94ac41;
+  color: #2b6405;
   padding: 8px;
 }
 
 .card-2 {
+  background-color: #8bc34a;
   height: 80px;
   width: 120px;
   border-radius: 5px;
@@ -86,10 +90,13 @@ li {
   margin-left: 20px;
   height: 40px;
   width: 40px;
+  background-color: #94ac41;
+  color: #2b6405;
   padding: 8px;
 }
 
 .card-3 {
+  background-color: #8bc34a;
   height: 80px;
   width: 120px;
   border-radius: 5px;
@@ -104,6 +111,8 @@ li {
   margin-left: 20px;
   height: 40px;
   width: 40px;
+  background-color: #94ac41;
+  color: #2b6405;
   padding: 8px;
 }
 
@@ -123,6 +132,8 @@ li {
   padding: 20px;
   background-color: #12a2bd;
   color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .head-left h2 {
@@ -162,6 +173,8 @@ li {
 
 .main-body {
   background-color: #095260;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .sidebar {
@@ -170,6 +183,7 @@ li {
   margin-top: 2px;
   transition: all 0.5s ease-in-out;
   color: #095260;
+  border-bottom-left-radius: 5px;
 }
 
 ul li {
@@ -201,6 +215,10 @@ ul li:hover {
 .right-body {
   padding: 40px;
 }
+.right-body .card-area .card-1 {
+  margin-right: 20px;
+}
+
 .wrapper {
   padding: 50px;
 }

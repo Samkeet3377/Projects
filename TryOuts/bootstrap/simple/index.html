@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Log In/Out With Bootstrap</title>
+</head>
+
+<body>
+    <div class="wrapper d-flex">
+        <!-- Start: Main Body Part -->
+        <main class="main">
+            <!-- Start: Login Part -->
+            <div class="login-opt d-flex align-items-center justify-content-center h-100 row">
+                <form action="">
+                    <!-- Start: Social Media Opt Buttons -->
+                    <div class="btns d-flex align-items-center justify-content-center">
+                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                        <button type="button" class="btn-facebook btn btn-primary btn-floating mx-1">
+                            <!-- btn btn-primary btn-floating mx-1 -->
+                            <i class="bi bi-facebook"></i>
+                        </button>
+
+                        <button type="button" class="btn-tweeter btn btn-primary btn-floating mx-1">
+                            <i class="bi bi-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn-linkedin btn btn-primary btn-floating mx-1">
+                            <i class="bi bi-google"></i>
+                        </button>
+
+                        <button type="button" class="btn-linkedin btn btn-primary btn-floating mx-1">
+                            <i class="bi bi-github"></i>
+                        </button>
+
+                        <button type="button" class="btn-linkedin btn btn-primary btn-floating mx-1">
+                            <i class="bi bi-linkedin"></i>
+                        </button>
+                    </div>
+
+                    <div class="divide d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                    </div>
+                    <!-- End: Social Media Opt Buttons -->
+                    <!-- Email input -->
+                    <div class="email-part form-outline mb-1">
+                        <input type="email" id="email" class="form-control form-control-lg" placeholder="Enter a valid email address">
+                        <!-- <label class="form-label" for="email"></label> -->
+                        <!-- Email address -->
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="pass-part form-outline mb-3">
+                        <input type="password" id="pass" class="form-control form-control-lg" placeholder="Enter password">
+                        <!-- <label class="form-label" for="pass"></label> -->
+                        <!-- Password -->
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-0">
+                          <input class="form-check-input me-2" type="checkbox" value="" id="chkbox" />
+                          <label class="form-check-label" for="chkbox"> Remember me </label>
+                        </div>
+                        <a href="#" class="text-body">Forgot password?</a>
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="button" class="btn btn-primary btn-lg">Login</button>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#" class="link-danger">Register</a></p>
+                    </div>
+
+                </form>
+            </div>
+            <!-- End: Login Part -->
+        </main>
+        <!-- End: Main Body Part -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.header { border: $border-check; 
+    padding: 20px;
+    @include flex-center;
+    h1 {
+        padding-right: 80px;
+    }
+    .head-right {
+        display: flex; width: 100%;
+        justify-content: space-between;
+    }    
+}

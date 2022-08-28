@@ -1,5 +1,7 @@
 .main-body {
     background-color: $primary-color;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .sidebar {
@@ -8,6 +10,7 @@
     margin-top: 2px;
     transition: all 0.5s ease-in-out;
     color: $primary-color;
+    border-bottom-left-radius: 5px;
 }
 
 ul {

@@ -3,6 +3,8 @@
     // background-color: $white-color;
     background-color: lighten($primary-color, 20%);
     color: $white-color;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .head-left {
     h2 {

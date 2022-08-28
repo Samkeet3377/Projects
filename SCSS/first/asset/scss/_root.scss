@@ -58,8 +58,6 @@ li {
 }
 
 
-
-
 $theme-positive:(
     "primary":$primary-color,
     "secondary":$secondary1-color,
@@ -73,11 +71,11 @@ $theme-positive:(
 }
 @for $value from 1 to 4 {
     .card-#{$value}{
-        // background-color: $card-bg-color;
+        background-color: $card-bg-color;
         height: 80px;
         width: 120px;
         border-radius: 5px;
-    @include content-center();
+        @include content-center();
         p {
             margin-bottom: 15px;
         }
@@ -85,8 +83,8 @@ $theme-positive:(
             margin-left: 20px;
             height: 40px;
             width: 40px;
-            // background-color: $positive-bg-color;
-            // color: $positive-txt-color;
+            background-color: $positive-bg-color;
+            color: $positive-txt-color;
             padding: 8px;
         }
     }
