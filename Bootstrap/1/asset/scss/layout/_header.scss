@@ -1,0 +1,12 @@
+.header { 
+    padding-left: 15px;
+    height: 80px;
+    width: $header-w;
+    border-bottom: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    background-color: white;
+    span {
+        font-size: 35px;
+        padding-right: 10px;
+    }
+}

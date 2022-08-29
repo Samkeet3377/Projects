@@ -1,0 +1,35 @@
+.body-main {
+    background-color: #dfdfdf;
+    width: 100%;
+}
+
+.header-body {
+    padding-left: 15px;
+    height: 79px;
+    width: 100%;
+    background-color: white;
+    .left {
+        background-color: #fafafa;
+        border: 1px solid rgb(197, 197, 197);
+        font-size: 20px;
+        border-radius: 5px;
+        span {
+            color: $font-muted;
+        }
+        input {
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #fafafa;
+        }
+    }
+    .right {
+        span {
+            margin: 0 10px;
+        }
+        img {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}

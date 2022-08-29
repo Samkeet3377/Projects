@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard with Bootstrap</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/asset/css/style.css">
+</head>
+
+<body>
+    <!-- Start: Whole Body -->
+    <div class="main-wrapper d-flex h-100">
+        <!-- Start: Sidebar -->
+        <aside class="sidebar d-flex flex-column">
+            <!-- Start: header -->
+            <header class="header d-flex align-items-center">
+                <span class="material-icons-outlined">school</span>
+                <h2>Courses</h2>
+            </header>
+            <!-- End: header -->
+            <!-- Start: nav -->
+            <div class="aside-wrapper d-flex flex-column justify-content-between flex-grow-1">
+                <nav class="navigation">
+                    <!-- Start: Upper List -->
+                    <div class="upper-list d-flex flex-column">
+                        <h3>MENU</h3>
+                        <ul>
+                            <li class="act"><a href=""><span class="material-icons-outlined">class</span><span>My
+                                        Courses</span></a>
+                            </li>
+                            <li><a href=""><span class="material-icons-outlined">list_alt</span><span>Browse
+                                        Courses</span></a></li>
+                            <li><a href=""><span class="material-icons-outlined">category</span><span>My
+                                        Categories</span></a></li>
+                            <li><a href=""><span class="material-icons-outlined">mail</span><span>My Messages</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End: Upper List -->
+                    <!-- Start: Lower List -->
+                    <div class="lower-list d-flex flex-column">
+                        <h3>Groups</h3>
+                        <ul>
+                            <li><a href=""><span class="material-icons-outlined">circle</span><span>UI/UX</span></a>
+                            </li>
+                            <li><a href=""><span class="material-icons-outlined">circle</span><span>Industrial
+                                        Design</span></a></li>
+                            <li><a href=""><span
+                                        class="material-icons-outlined">circle</span><span>Architecture</span></a></li>
+                            <button class="btn btn-outline-primary">+ Add Group</button>
+                        </ul>
+                    </div>
+                    <!-- End: Lower List -->
+                </nav>
+                <!-- End: nav -->
+            </div>
+            <!-- Start: Bottom List -->
+            <div class="navigation">
+                <div class="bottom-list d-flex flex-column">
+                    <ul>
+                        <li><a href=""><span class="material-icons-outlined">dark_mode</span><span>Dark Mode</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End: Bottom List -->
+        </aside>
+        <!-- End: Sidebar -->
+        <!-- Start: Main Body -->
+        <main class="body-main flex-grow-1">
+            <!-- Start: Body Main Header -->
+            <header class="header-body d-flex align-items-center justify-content-between">
+                <!-- Start: Header Left -->
+                <div class="left d-flex align-items-center">
+                    <span class="material-icons-outlined">search</span>
+                    <input type="search" name="srch" id="srchbx">
+                </div>
+                <!-- End: Header Left -->
+                <!-- Start: Header Right -->
+                <div class="right d-flex align-items-center">
+                    <span class="material-icons-outlined">notifications</span>
+                    <img src="asset/image/user.png" alt="Ueser Pic">
+                    <span class="material-icons-outlined">expand_more</span>
+                </div>
+                <!-- End: Header Right -->
+            </header>
+            <!-- End: Body Main Header -->
+        </main>
+        <!-- End: Main Body -->
+    </div>
+    <!-- End: Whole Body -->
+</body>
+
+</html>
