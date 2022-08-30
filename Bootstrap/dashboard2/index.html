@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,38 +9,77 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <title>Dashboard 2 with Bootstrap</title>
 </head>
+
 <body>
     <!-- Start: Whole Body -->
-    <div class="wrapper">
+    <div class="wrapper d-flex h-100">
         <!-- Start: Primary Aside -->
-        <aside class="primary-aside">
+        <aside class="aside-primary d-flex flex-column p-3">
             <!-- Start: Head Aside -->
-            <div class="head">
-                aside head                
+            <div class="list-head mb-4">
+                <h5><i class="bi bi-stars pe-3 text-primary"></i>
+                    <span><span class="text-primary">Star</span>Mall</span>
+                </h5>
             </div>
             <!-- End: Head Aside -->
             <!-- Start: Aside Upper List -->
-            <div class="upper-list">
-                upper list
+            <div class="list-upper mt-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><span class="bi bi-grid-fill pe-3"></span>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-people-fill pe-3"></span>Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-bag-fill pe-3"></span>Shops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-geo-alt-fill pe-3"></span>Branches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-calendar-fill pe-3"></span>Events</a>
+                    </li>
+                </ul>
             </div>
             <!-- End: Aside Upper List -->
             <!-- Start: Aside Card -->
-            <div class="side-card">
-                card
+            <div class="list-card flex-grow-1">
+                <div class="card">
+
+                </div>
             </div>
             <!-- End: Aside Card -->
             <!-- Start: Aside Lower List -->
-            <div class="lower-list">
-                lower list
+            <div class="list-lower">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-gear-fill pe-3"></span>Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-box-arrow-right pe-3"></span>Log out</a>
+                    </li>
+                </ul>
             </div>
             <!-- End: Aside Lower List -->
         </aside>
         <!-- End: Primary Aside -->
         <!-- Start: Main Body -->
-        <main class="main-body">
+        <main class="main-body flex-grow-1">
             <!-- Start: Main Header -->
-            <header class="head">
-                main head
+            <header class="head py-4 px-3 d-flex">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control" type="search" placeholder="Search">
+                        <span class="">Search</span>
+                    </form>
+                </div>
+                <div class="notify">
+                    <div class="noti-1 d-flex align-items-center justify-content-center position-relative">
+                        <a class="nav-link" href="#"><span class="bi bi-envelope"></span></a>
+                            <span class="position-absolute top-0 start-100 badge rounded-circle bg-danger p-2">
+                    </div>
+                </div>
             </header>
             <!-- End: Main Header -->
             <!-- Start: Main Sub Body -->
@@ -50,7 +90,7 @@
                 </section>
                 <!-- End: Body Section -->
                 <!-- Start: Secondory Aside -->
-                <aside class="second-aside">
+                <aside class="aside-second">
                     second aside
                 </aside>
                 <!-- End: Secondory Aside -->
@@ -61,4 +101,5 @@
     </div>
     <!-- End: Whole Body -->
 </body>
+
 </html>

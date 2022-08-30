@@ -1,0 +1,35 @@
+.aside-primary {
+    // border: $border-chk;
+    width: $sidebar-w;
+    background-color: $clr-bg-sidebar;
+    color: $clr-white;
+}
+
+.nav {
+    &-link {
+        color: $nav-link-color;
+        border-radius: $nav-b-radius;
+    }
+    &-item {
+        &.active {
+            background-color: $clr-bg-act;
+            color: $clr-white;
+            border-radius: $nav-b-radius;
+        }   
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &:hover {
+            color: $clr-nav-hover;
+            background-color: $clr-white;
+            border-radius: $nav-b-radius;
+        }
+    }
+}
+
+
+.list {
+    &-head {
+        height: 50px;
+    }
+}
