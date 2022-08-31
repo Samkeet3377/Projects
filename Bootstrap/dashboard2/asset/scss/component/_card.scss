@@ -1,0 +1,16 @@
+.card {
+    background-color: $clr-bg-card;
+    color: $clr-text-card;
+    .card-img { 
+        top: 10%;
+    }
+    .card-icon {
+        height: 60px;
+        width: 60px;
+        font-size: 25px;
+    }
+}
+.card2-img {
+    height: 60px;
+    width: 60px;
+}

@@ -1,9 +1,23 @@
-.noti-1 {
-    height: 48px;
-    width: 48px;
-    background-color: lightcyan;
-    border-radius: 50%;
-    .nav-link{
-        font-size: 28px;
+.noti {
+    &-1 {
+        height: 40px;
+        width: 40px;
+        // background-color: lightcyan;
+        border: 3px solid $clr-primary;
+        border-radius: 50%;
+        .nav-link {
+            font-size: 20px;
+        }
+    }
+}
+.input-group {
+    background-color: #1b1e2a;
+    border-radius: 10px;
+    &-text {
+        background-color: #1b1e2a;
+        color: $nav-link-color;
+    }
+    .form-control { 
+        background-color: #1b1e2a;
     }
 }

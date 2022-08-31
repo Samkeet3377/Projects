@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons -->
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="asset/css/style.css">
     <title>Dashboard 2 with Bootstrap</title>
@@ -45,8 +47,14 @@
             <!-- End: Aside Upper List -->
             <!-- Start: Aside Card -->
             <div class="list-card flex-grow-1">
-                <div class="card">
-
+                <div class="card text-center mt-3 p-3 rounded-4 position-relative">
+                    <div class="card-img position-absolute start-50 translate-middle">
+                        <img src="asset/image/calendar-png_64x64.ico" alt="Calendar">
+                    </div>
+                    <div class="card-body pt-4">
+                        <p class="card-text">You can easily manage your events</p>
+                        <a href="#" class="btn btn-primary">Manage Events</a>
+                    </div>
                 </div>
             </div>
             <!-- End: Aside Card -->
@@ -67,26 +75,96 @@
         <!-- Start: Main Body -->
         <main class="main-body flex-grow-1">
             <!-- Start: Main Header -->
-            <header class="head py-4 px-3 d-flex">
-                <div class="container-fluid">
-                    <form class="d-flex">
-                        <input class="form-control" type="search" placeholder="Search">
-                        <span class="">Search</span>
-                    </form>
+            <header class="head py-4 px-3 d-flex align-items-center justify-content-between">
+                <!-- SearchBox -->
+                <div class="input-group me-3 px-2 py-1">
+                    <span class="bi bi-search input-group-text border-0"></span>
+                    <input type="search" class="form-control border-0">
+                    <span class="bi bi-ui-radios input-group-text border-0"></span>
                 </div>
-                <div class="notify">
-                    <div class="noti-1 d-flex align-items-center justify-content-center position-relative">
-                        <a class="nav-link" href="#"><span class="bi bi-envelope"></span></a>
-                            <span class="position-absolute top-0 start-100 badge rounded-circle bg-danger p-2">
+                <!-- Notification -->
+                <div class="noti d-flex">
+                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
+                        <a class="nav-link position-relative" href="#"><span class="bi bi-envelope"></span>
+                        <span class="b position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></a>
+                    </div>
+                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
+                        <a class="nav-link position-relative" href="#"><span class="bi bi-textarea"></span></a>
+                    </div>
+                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
+                        <a class="nav-link position-relative" href="#"><span class="bi bi-bell"></span>
+                            <span class="b position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></a>
+                    </div>
+                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
+                        <a class="nav-link position-relative" href="#"><span class="bi bi-calendar"></span></a>
                     </div>
                 </div>
             </header>
             <!-- End: Main Header -->
             <!-- Start: Main Sub Body -->
-            <div class="sub-body">
+            <div class="sub-body d-flex">
                 <!-- Start: Body Section -->
-                <section class="body-section">
-                    body section
+                <section class="body-section flex-grow-1 m-3">
+                    <!-- Start: First row -->
+                    <div class="row gx-0">
+                        <div class="col m-3">
+                            <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
+                                <div class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                    <span class="bi bi-bag"></span>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h5 class="card-title">Top Brands</h5>   
+                                    <p class="card-text">18 Brands</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m-3">
+                            <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
+                                <div class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                    <span class="bi bi-people-fill"></span>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h5 class="card-title">Top Staff</h5>   
+                                    <p class="card-text">9 People</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m-3">
+                            <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
+                                <div class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                    <span class="bi bi-bag"></span>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h5 class="card-title">Best Seller</h5>   
+                                    <p class="card-text">11 Products</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: First row -->
+                    <!-- Start: Second row -->
+                        <div class="row gx-0 border">
+                            <div class="col m-3 border">
+                                <div class="card rounded-4">
+                                    <!-- Card Head -->
+                                    <div class="card-head d-flex justify-content-between align-items-center justify-content-center p-3">
+                                        <h5>Staff Salary</h5>
+                                        <p>Show all
+                                        <span class="bi bi-chevron-right"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col m-3 border">
+                                <div class="row gx-0 border p-2">
+                                    
+                                </div>
+                                <div class="row gx-0 mt-3 border p-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    <!-- End: Second row -->
                 </section>
                 <!-- End: Body Section -->
                 <!-- Start: Secondory Aside -->
