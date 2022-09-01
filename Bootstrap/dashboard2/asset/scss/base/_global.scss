@@ -6,8 +6,31 @@
 body, html {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 img {
     height: 100%;
     width: 100%;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #363849; 
+    border-radius: 20px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666877; 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+//   ::-webkit-scrollbar-thumb:hover {
+//     background: #555; 
+//   }

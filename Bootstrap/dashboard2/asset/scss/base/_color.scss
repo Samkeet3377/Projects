@@ -1,3 +1,6 @@
+// :r{
+//     --bs-border-color: $clr-primary;
+//     }
 //global
 $clr-white: white;
 //primary
@@ -20,3 +23,10 @@ $clr-nav-hover: #0a58ca;
 //card
 $clr-bg-card: #2a2e3f;
 $clr-text-card: $nav-link-color;
+ //icon small
+ $clr-bg-icon: #414761;
+//border
+
+$clr-border: $clr-primary;
+// act2
+$clr-act-text: #0d6efd;

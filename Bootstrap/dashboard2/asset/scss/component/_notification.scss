@@ -1,13 +1,11 @@
 .noti {
     &-1 {
-        height: 40px;
-        width: 40px;
-        // background-color: lightcyan;
-        border: 3px solid $clr-primary;
-        border-radius: 50%;
         .nav-link {
             font-size: 20px;
         }
+    a {
+        border-color: $clr-primary;
+    }
     }
 }
 .input-group {

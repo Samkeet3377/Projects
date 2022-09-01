@@ -1,16 +1,44 @@
 .card {
     background-color: $clr-bg-card;
     color: $clr-text-card;
-    .card-img { 
-        top: 10%;
+    // height: 250px;
+    &-img { 
+        margin-top: -10px;
+        margin-left: 50%;
+        height: 60px;
+        width: 60px;
+        // transform: rotate(-20deg);
     }
     .card-icon {
         height: 60px;
         width: 60px;
         font-size: 25px;
     }
+    &-head {
+        // border-bottom-color: $clr-border;
+        border-bottom: 1px solid $clr-border;
+        .active {
+            color: $clr-act-text;
+        }
+    }
+    &-text.active {
+        color: $clr-act-text;
+    }
+    &-right {
+        .active {
+            color: $clr-act-text;
+        }
+    }
 }
 .card2-img {
     height: 60px;
     width: 60px;
+}
+.card {
+    .card-icon2 {
+        height: 20px;
+        width: 20px;
+        background-color: $clr-bg-icon;
+        color: $clr-white;
+    }
 }

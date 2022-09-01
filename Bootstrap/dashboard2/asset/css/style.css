@@ -8,6 +8,7 @@
 body, html {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 img {
@@ -15,6 +16,24 @@ img {
   width: 100%;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #363849;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666877;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -7462,14 +7481,11 @@ textarea.form-control-lg {
   --bs-btn-border-radius: 0.25rem;
 }
 
-.noti-1 {
-  height: 40px;
-  width: 40px;
-  border: 3px solid #1a1c29;
-  border-radius: 50%;
-}
 .noti-1 .nav-link {
   font-size: 20px;
+}
+.noti-1 a {
+  border-color: #1a1c29;
 }
 
 .input-group {
@@ -7488,18 +7504,40 @@ textarea.form-control-lg {
   background-color: #2a2e3f;
   color: #898c96;
 }
-.card .card-img {
-  top: 10%;
+.card-img {
+  margin-top: -10px;
+  margin-left: 50%;
+  height: 60px;
+  width: 60px;
 }
 .card .card-icon {
   height: 60px;
   width: 60px;
   font-size: 25px;
 }
+.card-head {
+  border-bottom: 1px solid #1a1c29;
+}
+.card-head .active {
+  color: #0d6efd;
+}
+.card-text.active {
+  color: #0d6efd;
+}
+.card-right .active {
+  color: #0d6efd;
+}
 
 .card2-img {
   height: 60px;
   width: 60px;
+}
+
+.card .card-icon2 {
+  height: 20px;
+  width: 20px;
+  background-color: #414761;
+  color: white;
 }
 
 .aside-primary {
@@ -7539,6 +7577,15 @@ textarea.form-control-lg {
   color: white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.head {
+  background-color: #222433;
+}
+
+.aside-second {
+  background-color: #2a2e3f;
+  color: #898c96;
 }
 
 /*# sourceMappingURL=style.css.map */

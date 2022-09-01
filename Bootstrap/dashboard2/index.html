@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- icons -->
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="asset/css/style.css">
     <title>Dashboard 2 with Bootstrap</title>
@@ -47,11 +47,11 @@
             <!-- End: Aside Upper List -->
             <!-- Start: Aside Card -->
             <div class="list-card flex-grow-1">
-                <div class="card text-center mt-3 p-3 rounded-4 position-relative">
-                    <div class="card-img position-absolute start-50 translate-middle">
+                <div class="card text-center mt-4 p-3 rounded-4">
+                    <div class="card-img translate-middle">
                         <img src="asset/image/calendar-png_64x64.ico" alt="Calendar">
                     </div>
-                    <div class="card-body pt-4">
+                    <div class="card-body d-flex flex-column">
                         <p class="card-text">You can easily manage your events</p>
                         <a href="#" class="btn btn-primary">Manage Events</a>
                     </div>
@@ -73,9 +73,9 @@
         </aside>
         <!-- End: Primary Aside -->
         <!-- Start: Main Body -->
-        <main class="main-body flex-grow-1">
+        <main class="main-body flex-grow-1 overflow-scroll">
             <!-- Start: Main Header -->
-            <header class="head py-4 px-3 d-flex align-items-center justify-content-between">
+            <header class="head py-4 px-3 d-flex align-items-center justify-content-between top-0 w-100 position-sticky">
                 <!-- SearchBox -->
                 <div class="input-group me-3 px-2 py-1">
                     <span class="bi bi-search input-group-text border-0"></span>
@@ -83,20 +83,39 @@
                     <span class="bi bi-ui-radios input-group-text border-0"></span>
                 </div>
                 <!-- Notification -->
-                <div class="noti d-flex">
-                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
-                        <a class="nav-link position-relative" href="#"><span class="bi bi-envelope"></span>
-                        <span class="b position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></a>
+                <div class="noti d-flex align-items-center justify-content-center justify-content-between">
+
+                    <div class="noti-1 d-flex position-relative me-2">
+                        <a class="nav-link border border-1 rounded-circle p-2" href="#">
+                            <span class="bi bi-envelope position-relative d-flex">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
+                            </span>
+                        </a>
                     </div>
-                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
-                        <a class="nav-link position-relative" href="#"><span class="bi bi-textarea"></span></a>
+                    <div class="noti-1 d-flex position-relative me-2">
+                        <a class="nav-link border border-1 rounded-circle p-2" href="#">
+                            <span class="bi bi-textarea position-relative d-flex">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
+                            </span>
+                        </a>
                     </div>
-                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
-                        <a class="nav-link position-relative" href="#"><span class="bi bi-bell"></span>
-                            <span class="b position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></a>
+                    <div class="noti-1 d-flex position-relative me-2">
+                        <a class="nav-link border border-1 rounded-circle p-2" href="#">
+                            <span class="bi bi-bell position-relative d-flex">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
+                            </span>
+                        </a>
                     </div>
-                    <div class="noti-1 d-flex align-items-center justify-content-center me-2">
-                        <a class="nav-link position-relative" href="#"><span class="bi bi-calendar"></span></a>
+                    <div class="noti-1 d-flex position-relative me-2">
+                        <a class="nav-link border border-1 rounded-circle p-2" href="#">
+                            <span class="bi bi-calendar position-relative d-flex">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -109,67 +128,257 @@
                     <div class="row gx-0">
                         <div class="col m-3">
                             <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
-                                <div class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                <div
+                                    class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
                                     <span class="bi bi-bag"></span>
                                 </div>
                                 <div class="card-body pt-3">
-                                    <h5 class="card-title">Top Brands</h5>   
+                                    <h5 class="card-title">Top Brands</h5>
                                     <p class="card-text">18 Brands</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col m-3">
                             <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
-                                <div class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                <div
+                                    class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
                                     <span class="bi bi-people-fill"></span>
                                 </div>
                                 <div class="card-body pt-3">
-                                    <h5 class="card-title">Top Staff</h5>   
+                                    <h5 class="card-title">Top Staff</h5>
                                     <p class="card-text">9 People</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col m-3">
                             <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
-                                <div class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                <div
+                                    class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
                                     <span class="bi bi-bag"></span>
                                 </div>
                                 <div class="card-body pt-3">
-                                    <h5 class="card-title">Best Seller</h5>   
+                                    <h5 class="card-title">Best Seller</h5>
                                     <p class="card-text">11 Products</p>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="col m-3">
+                            <div class="card d-flex align-items-center justify-content-center p-2 rounded-4">
+                                <div
+                                    class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                    <span class="bi bi-bag"></span>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h5 class="card-title">Best Seller</h5>
+                                    <p class="card-text">11 Products</p>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                     <!-- End: First row -->
                     <!-- Start: Second row -->
-                        <div class="row gx-0 border">
-                            <div class="col m-3 border">
-                                <div class="card rounded-4">
-                                    <!-- Card Head -->
-                                    <div class="card-head d-flex justify-content-between align-items-center justify-content-center p-3">
-                                        <h5>Staff Salary</h5>
-                                        <p>Show all
-                                        <span class="bi bi-chevron-right"></span></p>
+                    <div class="row gx-0">
+                        <div class="col m-3">
+                            <div class="card rounded-4">
+                                <!-- Card Head -->
+                                <div
+                                    class="card-head d-flex justify-content-between align-items-center justify-content-center p-3">
+                                    <h5>Staff Salary</h5>
+                                    <span class="active">Show all <span class="bi bi-chevron-right"></span> </span>
+                                </div>
+                                <!-- Card Body -->
+                                <!-- data1 -->
+                                <div class="card-body d-flex justify-content-between justify-content-center p-4">
+                                    <div class="card-left d-flex align-items-center ">
+                                        <div class="card-icon"><img src="asset/image/user_2.webp" alt=""></div>
+                                        <div class="card-text ms-4">
+                                            <span> Samkeet </span>
+                                            <h5> 5500 </h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <button type="button" class="btn btn-outline-primary btn-lg">Pay</button>
+                                    </div>
+                                </div>
+                                <!-- data2 -->
+                                <div class="card-body d-flex justify-content-between justify-content-center p-4">
+                                    <div class="card-left d-flex align-items-center ">
+                                        <div class="card-icon"><img src="asset/image/user_2.webp" alt=""></div>
+                                        <div class="card-text ms-4">
+                                            <span> Samkeet </span>
+                                            <h5> 5500 </h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <button type="button" class="btn btn-outline-primary btn-lg">Pay</button>
+                                    </div>
+                                </div>
+                                <!-- data3 -->
+                                <div class="card-body d-flex justify-content-between justify-content-center p-4">
+                                    <div class="card-left d-flex align-items-center ">
+                                        <div class="card-icon"><img src="asset/image/user_2.webp" alt=""></div>
+                                        <div class="card-text ms-4">
+                                            <span> Samkeet </span>
+                                            <h5> 5500 </h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <button type="button" class="btn btn-outline-primary btn-lg">Pay</button>
+                                    </div>
+                                </div>
+                                <!-- Data Over -->
+                            </div>
+                        </div>
+
+                        <div class="col m-3">
+                            <!-- row2 -->
+                            <div class="row gx-0">
+                                <div class="col">
+                                    <!-- card -->
+                                    <div class="card rounded-4">
+                                        <!-- Card Head -->
+                                        <div
+                                            class="card-body d-flex justify-content-between justify-content-center p-4">
+                                            <!-- Card Left -->
+                                            <div class="card-left d-flex align-items-center">
+                                                <div
+                                                    class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                                    <span class="bi bi-balloon"></span>
+                                                </div>
+                                                <div class="card-text ms-4">
+                                                    <span> Upcoming </span>
+                                                    <h5> Diacount Party </h5>
+                                                </div>
+                                            </div>
+                                            <!-- Card Right -->
+                                            <div class="card-right d-flex align-items-center justify-content-center">
+                                                <span class="active">Deatails<span class="bi bi-chevron-right"></span>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row2 -->
+                            <div class="row gx-0">
+                                <div class="col mt-4">
+                                    <div class="card rounded-4">
+                                        <!-- Card Head -->
+                                        <div
+                                            class="card-head d-flex justify-content-between align-items-center justify-content-center p-3">
+                                            <h5>Contract Status</h5>
+                                            <span class="active"> <span class="bi bi-chevron-left"></span> <span
+                                                    class="bi bi-chevron-right"></span> </span>
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div
+                                            class="card-body d-flex justify-content-between justify-content-center p-4">
+                                            <div class="card-left d-flex align-items-center ">
+                                                <div
+                                                    class="card-icon me-3 d-flex align-items-center justify-content-center rounded-5 border border-2">
+                                                    <span class="bi bi-apple"></span>
+                                                </div>
+                                                <div class="card-text ms-4">
+                                                    <h5>Apple Store</h5>
+                                                    <span>Expires in 2 months </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-right">
+                                                <button type="button"
+                                                    class="btn btn-outline-primary btn-lg">Informs</button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col m-3 border">
-                                <div class="row gx-0 border p-2">
-                                    
-                                </div>
-                                <div class="row gx-0 mt-3 border p-2">
-                                    
-                                </div>
-                            </div>
                         </div>
+                    </div>
                     <!-- End: Second row -->
+                    <!-- Start: Third row -->
+                    <div class="row gx-0">
+                        <div class="col mt-4">
+                            <img src="asset/image/grouped-bar-example-1.png" alt="example" style="height: 50%;">
+                        </div>
+                    </div>
+                    <!-- End: Third row -->
                 </section>
                 <!-- End: Body Section -->
                 <!-- Start: Secondory Aside -->
-                <aside class="aside-second">
-                    second aside
+                <aside class="aside-second me-4 mt-4 rounded-4 d-flex flex-column" style="width: 220px;">
+                    <div class="side-head p-2">
+                        <div class="card rounded-4">
+                            <!-- Card Head -->
+                            <div class="card-head">
+                                <span class="active d-flex p-2 justify-content-between">
+                                    <h6>Top Brands</h6>
+                                    <div class="card-icon2 d-flex align-items-center justify-content-center rounded-5">
+                                        <span class="bi bi-x"></span>
+                                    </div>
+                                </span>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div class="side-body p-2 d-flex flex-column">
+                        <div class="card rounded-4">   
+                            <!-- Card Body -->
+                            <div class="card-body ">
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>1</span> </div>
+                                    <div> <span class="bi bi-bi bi-android2 text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Android</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>2</span> </div>
+                                    <div> <span class="bi bi-apple text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Apple</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>3</span> </div>
+                                    <div> <span class="bi bi-microsoft text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Microsoft</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>4</span> </div>
+                                    <div> <span class="bi bi-nintendo-switch text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Nintendo</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>5</span> </div>
+                                    <div> <span class="bi bi-playstation text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Playstation</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>1</span> </div>
+                                    <div> <span class="bi bi-bi bi-android2 text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Android</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>2</span> </div>
+                                    <div> <span class="bi bi-apple text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Apple</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>3</span> </div>
+                                    <div> <span class="bi bi-microsoft text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Microsoft</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>4</span> </div>
+                                    <div> <span class="bi bi-nintendo-switch text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Nintendo</span> </div>
+                                </div>
+                                <div class="card-text d-flex p-2 border rounded-3 my-3">
+                                    <div> <span>5</span> </div>
+                                    <div> <span class="bi bi-playstation text-white ms-4"></span> </div>
+                                    <div> <span class="text-white ms-4">Playstation</span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </aside>
                 <!-- End: Secondory Aside -->
             </div>
