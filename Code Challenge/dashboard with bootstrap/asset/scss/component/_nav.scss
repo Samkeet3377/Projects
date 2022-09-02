@@ -1,0 +1,17 @@
+.nav {
+    .nav-item {
+        &:none(:last-child) {
+            margin-bottom: 10px;
+        }
+        .nav-link {
+            color: $link-color;
+            &:hover {
+                background-color: $nav-link-bg-Hover;
+                color: $nav-link-Hover;
+            }
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}

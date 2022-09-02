@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Dashboard with Bootstrap</title>
+</head>
+
+<body>
+    <!-- Start: Main Wrapper -->
+    <div class="main-wrapper d-flex h-100">
+        <!-- Star: SideBar -->
+        <aside class="d-flex flex-column">
+            <div class="side-head d-flex align-items-center justify-content-center py-4 text-muted">
+                <span class="c-logo material-icons-outlined pe-3">favorite_border</span>
+                <span class="c-name"> FITTLE </span>
+            </div>
+            <!-- Start: List -->
+            <div class="list">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3 active position-relative">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">speed</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">speaker_group</span>
+                            <span>My Subscription</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">home</span>
+                            <span>My Studio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">work_outline</span>
+                            <span>Post A Job</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">event</span>
+                            <span>My Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">mark_email_unread</span>
+                            <span>Notification</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                            <span class="material-icons-outlined mb-3">settings</span>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End: List -->
+        </aside>
+        <!-- End: SideBar -->
+        <main class="border d-flex flex-column flex-grow-1">
+            <!-- Start: Header -->
+            <header class="border d-flex align-items-center p-4 justify-content-between sticky-top">
+                <!-- Start: SearchBar -->
+                <div class="input-group me-3 px-2 py-1 d-flex flex-grow-1">
+                    <span class="srch-icon material-icons-outlined input-group-text pe-2 border-0">search</span>
+                    <input type="search" class="srch-box form-control w-100 border-0" placeholder="Search">
+                </div>
+                <!-- End: SearchBar -->
+                <!-- Start: Noti/User Info -->
+                <div class="noti d-flex align-items-center justify-content-center">
+                    <div class="noti-1 d-flex me-2">
+                        <a class="nav-link d-flex" href="#">
+                            <span class="material-icons-outlined position-relative">notifications
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle">
+                                </span></span>
+                        </a>
+                    </div>
+                    <div class="ms-2">
+                        <span>Samkeet</span>
+                    </div>
+                    <div class="u-img ms-2">
+                        <img src="asset/image/user_2.webp" alt="">
+                    </div>
+                </div>
+                <!-- End: Noti/User Info -->
+            </header>
+            <!-- End: Header -->
+            <!-- Start: Main Body -->
+            <section class="main-body p-5 flex-grow-1">
+                <!-- Start: body Head -->
+                <div class="body-head">
+                    <h4 class="mb-3">Dashboard</h4>
+                    <small class="mt-4">Hello, Samkeet! Check out what's happening today!</small>
+                </div>
+                <!-- End: body Head -->
+                <!-- Start: body Info -->
+                <!-- Info-1 -->
+                <div class="body-info bg-white mt-4 d-flex align-items-center justify-content-between">
+                    <div class="info-left d-flex align-items-center justify-content-center p-4">
+                        <div class="me-3"><span class="material-icons-outlined">error</span></div>
+                        <div class="me-3">Thanks for joining YPC! Go ahed and </div>
+                        <div class="me-3"> <button type="button" class="btn btn-primary btn-sm rounded-4 px-3 py-1 border-0">Create now</button> </div>
+                    </div>
+                    <div class="info-right">
+                        <span class="material-icons-outlined me-4">close</span>
+                    </div>
+                </div>
+                <!-- Info-2 -->
+                <div class="body-info bg-white mt-4 d-flex align-items-center justify-content-between">
+                    <div class="info-left d-flex align-items-center justify-content-center p-4">
+                        <div class="me-3"><span class="material-icons-outlined">error</span></div>
+                        <div class="me-3">You have <span>2</span> unread notifications.</div>
+                        <div class="me-3"> <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0">Cheak now</button> </div>
+                    </div>
+                    <div class="info-right">
+                        <span class="material-icons-outlined me-4">close</span>
+                    </div>
+                </div>
+                <!-- End: body Info -->
+                <!-- Start: Table Info -->
+                <div class="mt-5">
+                    <div class="row">
+                        <!-- Start: Table-Left -->
+                        <div class="h col-6">
+                            <!-- Table Head -->
+                            <div class="tbl-head d-flex justify-content-between p-3 bg-white sticky-top">
+                                <div class="tbl-h-left">
+                                    <h4>New Brisbane Instructors - 02</h4>
+                                </div>
+                                <div class="tbl-h-right d-flex align-items-center justify-content-center">
+                                    <span class="material-icons-outlined pe-3">visibility</span>
+                                    <span>View All</span>
+                                    <span class="material-icons-outlined ps-3">arrow_right</span>
+                                </div>
+                            </div>
+                            <!-- Table Body -->
+                            <!-- 1 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>Thomas Budiman</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center">
+                                    <span>24 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>1050 Brown Street, Brisbane</span>
+                                </div>
+                                <div class="btns my-4">
+                                    <button type="button" class="btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Part Time</button>
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Aerial Yoga</button>
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Yoga</button>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>Fitness & Pilates Instructor</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center">
+                                    <span>24 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>1050 Brown Street, Brisbane</span>
+                                </div>
+                                <div class="btns my-4">
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Part Time</button>
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Full Time</button>
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Yoga</button>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>This is the opportunity for you</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center">
+                                    <span>24 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>1050 Brown Street, Brisbane</span>
+                                </div>
+                                <div class="btns my-4">
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Part Time</button>
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Aerial Yoga</button>
+                                    <button type="button" class="b btn btn-primary btn-sm rounded-4 px-3 py-1 border-0 me-2">Casual</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End: Table-Left -->
+                        <!-- Start: Table-Right -->
+                        <div class="h col-6">
+                            <!-- Table Head -->
+                            <div class="tbl-head d-flex justify-content-between p-3 bg-white sticky-top">
+                                <div class="tbl-h-left">
+                                    <h4>Most Popular Brisbane Classes + 02</h4>
+                                </div>
+                                <div class="tbl-h-right d-flex align-items-center justify-content-center">
+                                    <span class="material-icons-outlined pe-3">visibility</span>
+                                    <span>View All</span>
+                                    <span class="material-icons-outlined ps-3">arrow_right</span>
+                                </div>
+                            </div>
+                            <!-- Table Body -->
+                            <!-- 1 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>Yoga Master Class</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center my-3">
+                                    <span>24 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>1050 Brown Street, Brisbane</span>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>Crossfit Professional Meetup</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center my-3">
+                                    <span>12 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>Melbourne, Victoria, Australia</span>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>Pilates, Yoga and Barre Instructors</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center my-3">
+                                    <span>24 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>Sydney CBD, New South Wales, Australia</span>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="tbl-data p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="right">
+                                        <h5>Studio Assistant/Educator</h5>
+                                    </div>
+                                    <div class="left d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-outlined m-2">schedule</span>
+                                        <span>5 Min</span>
+                                    </div>
+                                </div>
+                                <div class="left align-items-center my-3">
+                                    <span>24 Hours Fitness</span>
+                                    <span>|</span>
+                                    <span>1050 Brown Street, Brisbane</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- End: Table-Right -->
+                    </div>
+                </div>
+                <!-- End: Table Info -->
+            </section>
+            <!-- End: Main Body -->
+        </main>
+    </div>
+    <!-- End: Main Wrapper -->
+</body>
+
+</html>

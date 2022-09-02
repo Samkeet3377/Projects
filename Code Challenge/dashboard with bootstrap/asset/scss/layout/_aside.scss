@@ -1,0 +1,17 @@
+aside {
+    width: 210px;
+    box-shadow: $shadow;
+    z-index: 1;
+    .list {
+        font-size: 25px;
+    }
+    .side-head {
+        height: $head-h;
+        .c-logo {
+            color: $nav-link-Hover;
+        }
+        .c-name {
+            font-weight: 700;
+        }
+    }
+}

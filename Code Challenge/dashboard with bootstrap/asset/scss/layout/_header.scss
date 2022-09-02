@@ -1,0 +1,25 @@
+header {
+    height: $head-h;
+    box-shadow: $shadow;
+}
+.noti {
+    .noti-1 {
+        color: $link-color;
+    }
+    .u-img {
+        height: 40px;
+        width: 40px;
+    }
+}
+.input-group {
+    .srch-icon {
+        color: $link-color;
+        
+    }
+    .srch-box {
+        outline: none;
+        &::placeholder {
+            color: $link-color;
+        }
+    }
+}

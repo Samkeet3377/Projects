@@ -1,0 +1,107 @@
+.main-body {
+    background-color: $main-body-bg;
+
+    .body-head {
+        small {
+            color: $link-color;
+        }
+    }
+
+    .body-info {
+        box-shadow: $shadow;
+
+        .info-left {
+            color: $link-color;
+
+            .btn {
+                color: $btn-clr;
+                background-color: $btn-bg-clr;
+                box-shadow: $btn-shadow;
+            }
+
+            .b {
+                color: $btn-s-clr;
+                background-color: $btn-s-bg-clr;
+                box-shadow: $btn-shadow;
+            }
+        }
+
+        .info-right {
+            span {
+                color: $link-color;
+            }
+        }
+    }
+}
+
+.h {
+    height: 500px;
+    overflow-y: auto;
+    &::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: $btn-s-bg-clr;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $btn-s-clr;
+        border-radius: 5px;
+    }
+}
+
+.tbl-head {
+    box-shadow: $shadow;
+    z-index: 2;
+    
+    .tbl-h-right {
+        span {
+            color: $link-color;
+        }
+    }
+}
+
+.tbl-data { 
+    opacity: .8;
+    border-bottom: 1px solid $link-color;
+    background-color: $white;
+    z-index: 0;
+    // width: calc(100% - 20px);
+    // overflow-y: auto;
+    // &::-webkit-scrollbar-track {
+    //     background-color: #F5F5F5;
+    //     border-radius: 5px;
+    // }
+    // &::-webkit-scrollbar {
+    //     width: 5px;
+    //     background-color: $btn-s-bg-clr;
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: $btn-s-clr;
+    //     border-radius: 5px;
+    // }
+
+    .left {
+        span {
+            color: $link-color;
+            margin-right: 5px;
+        }
+    }
+
+    .btns {
+        .btn {
+            color: $btn-clr;
+            background-color: $btn-bg-clr;
+            box-shadow: $btn-shadow;
+        }
+
+        .b {
+            color: $btn-s-clr;
+            background-color: $btn-s-bg-clr;
+            box-shadow: $btn-shadow;
+        }
+    }
+}

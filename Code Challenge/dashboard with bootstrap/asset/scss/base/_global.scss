@@ -1,0 +1,38 @@
+*, *::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    width: auto;
+    height: 100%;
+}
+.text-muted {
+    color: #94a5ac;
+}
+.active {
+    color: $nav-link-Hover;
+    background-color: $nav-link-bg-Hover;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        right: 0;
+        bottom: 0;
+        border: 5px solid $nav-link-Hover;
+        border-left: 5px solid transparent;
+        border-top: 5px solid transparent;
+    }
+}
+// .container {
+//     padding-left: 0;
+//     padding-right: 0;
+//     margin-left: 0;
+//     margin-right: 0;
+// }
