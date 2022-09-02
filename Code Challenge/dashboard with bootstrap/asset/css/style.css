@@ -6958,11 +6958,11 @@ header {
   border-radius: 5px;
 }
 .h::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
   background-color: #e8f7f4;
 }
 .h::-webkit-scrollbar-thumb {
-  background-color: #1ea295;
+  background-color: #94a5ac;
   border-radius: 5px;
 }
 
