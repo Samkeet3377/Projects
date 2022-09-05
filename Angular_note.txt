@@ -1,0 +1,34 @@
+v13	vs	v14
+-------------------
+v13 
+1.	uses typescript 4.4 
+2.	have gitHub issues
+3.	add title with route.title
+v14
+1.	uses typscript 4.7
+2.	resolve all gitHub issues
+3.	no need to add route.title
+
+
+tilde(~)	vs	caret(^)
+--------------------------------
+Syntex (major.minor.patch)
+tilde(~) :-	its atumatically updates its Latest PATCH version in Dependency
+caret(^) :-	its atumatically updates its Latest MINOR and PATCH version in Dependency
+If we dont use any notation then it consider as Caret notation by defult
+
+
+Dependency vs	devDependency	vs peerDependency
+-------------------------------------------------
+Dependency :- it contains all packages that are used in project with its version number in dependency
+devDependency :- it contain all packages that are used in project. in its development phase and not in the production or testing envronment with its version number
+peerDependency :- it contain all packages that are excactly required in the project (Custom Dependency by altering in Package.JSON file)
+
+-------------------------------------------------
+workplace :- ng new wrok_name
+	workplace contain more than 1 project
+projects :- ng new prjct_name
+	project contains more than 1 liabrary
+liabrary :- ng generate/g liabrary/lib lib_name
+
+	
