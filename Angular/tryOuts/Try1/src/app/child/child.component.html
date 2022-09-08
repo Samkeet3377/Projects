@@ -1,0 +1,7 @@
+<p>child works!</p>
+<ul>
+    <li *ngFor="let user of userList" (click)="onSelectedUser(user)">
+        {{ user.name }}
+    </li>
+</ul>
+

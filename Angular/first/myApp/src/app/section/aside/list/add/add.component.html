@@ -1,11 +1,18 @@
 <p>add works!</p>
 <div class="list cstm-list bg-white rounded-2 d-flex">
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+      <!-- <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Name"> 
         <label for="floatingInput">Name</label>
       </div>
-    <div class="form-floating mb-3">
+      <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="Surname">
         <label for="floatingInput">Surname</label>
+      </div> -->
+      <div> 
+        <ul>User List
+          <li *ngFor="let user of userList"> {{user}} </li>
+      </ul>  
       </div>
   </div>
+
+  <app-list></app-list>
