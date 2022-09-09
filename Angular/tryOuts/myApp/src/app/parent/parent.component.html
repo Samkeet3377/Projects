@@ -1,0 +1,12 @@
+<p>parent works!</p>
+<p *ngFor="let user of userList">{{ user }}</p>
+<div class="container bg-light p-3 w-50">
+    <app-child [userData]="userList" (addUserEvent)="addUser($event)"></app-child>
+</div>
+
+<div>
+    
+    <button class="btn btn-outline-dark btn-sm" (click)="size = size + 5">+</button>
+    <button class="btn btn-outline-dark btn-sm" (click)="size = size - 5">-</button>
+    <p [ngStyle] = "{'font-size': size + 'px'}">Hello</p>
+</div>

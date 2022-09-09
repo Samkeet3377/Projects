@@ -1,9 +1,0 @@
-<p>chil2 works!</p>
-<div *ngIf="selectedUser">
-    <span> {{ selectedUser.name }} </span> <span class="bi bi-x" (click)="onClickRemove();"></span>
-</div>
-<div class="input-group">
-    <button type="button" class="btn btn-secondary btn-sm" #add> Add</button>
-    <input type="text" class="form-control">
-</div>
-<app-child [userList]="users" (onSelected)="onSelectedUser($event)"></app-child>
