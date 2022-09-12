@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
-import { bindCallback } from 'rxjs';
 
 @Component({
   selector: 'app-parent',
@@ -9,24 +7,35 @@ import { bindCallback } from 'rxjs';
 })
 export class ParentComponent implements OnInit {
 
-  constructor() { }
+  size:number = 16;
+  userList: any = [];
+  localItem: any;
+
+  constructor() {
+    this.localItem = localStorage.getItem('userList');
+    if(this.localItem == null) {
+      this.userList =[];
+    } else {
+      this.userList = JSON.parse(this.localItem);
+    }
+   }
 
   ngOnInit(): void {
   }
-  size = 16;
-  color = '';
-  // userList = [
-  //   { id:1, name: 'Samkeet', sname: 'Kevat'},
-  //   { id:2, name: 'Ravi', sname: 'Singh'},
-  //   { id:3, name: 'Kapil', sname: 'Kuntal'},
-  //   { id:4, name: 'Raj', sname: 'Patel'},
-  // ]
-
-  userList = [ 
-    'samkeet', 'ravi', 'kapil'
-  ]
-
-  addUser(newUser: any) {
-    this.userList.push(newUser);
+  
+  deleteUser(user:any) {
+    const index = this.userList.indexOf(user);
+    this.userList.splice(index, 1);
+    localStorage.setItem("userList", JSON.stringify(this.userList));
   }
+  addUser(user:any){
+    this.userList.push(user); 
+    localStorage.setItem("useList", JSON.stringify(this.userList));
+  }
+  toggleUser(user:any){ 
+    const index = this.userList.indexOf(user);
+    this.userList[index].active = !this.userList[index].active;
+    localStorage.setItem("useList", JSON.stringify(this.userList));
+  }
+   
 }

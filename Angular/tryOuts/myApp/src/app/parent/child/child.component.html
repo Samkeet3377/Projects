@@ -1,6 +1,7 @@
 <p>child works!</p>
-<!-- <div><p *ngFor="let user of userData"> {{ user }} </p></div> -->
-<div>
-    <input type="text" name="" id="" #newUser>
-    <button (click)="addNewUser(newUser.value)">Add</button>
+<div class="container">
+    <!-- <h4 [ngClass]="{strike: !userList.active}"> {{userList.name}} </h4> -->
+    <h4> {{userList.name}} </h4>
+    <input type="checkbox" class="form-check-input" id="user{{i}}" (click)="onCheckboxClick(userList)" [checked]="!userList.active">
+    <label class="form-check-label" for="user{{i}}">Done</label>
 </div>

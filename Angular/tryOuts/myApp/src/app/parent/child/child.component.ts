@@ -7,17 +7,21 @@ import { Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-  
+  @Input() userList: any;
+  @Input() i: any;
+  @Output() userDelete: EventEmitter<any> = new EventEmitter();
+  @Output() userCheckbox: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  @Input() userData :any = [];
-  @Output() addUserEvent= new EventEmitter<any>()
-
-  addNewUser(value: any) {
-    this.addUserEvent.emit(value);
+  onClick(user: any){
+    this.userDelete.emit(user);
   }
-  
+  onCheckboxClick(user:any){
+    this.userCheckbox.emit(user);
+  }
+
 }
