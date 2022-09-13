@@ -15,7 +15,7 @@ export class UserlistComponent implements OnInit {
 
   onClicked(dltUser:any) {
     this.userDelete.emit(dltUser);
-    console.log('ku6Bhi');
+    // console.log('ku6Bhi');
   }
 
 }

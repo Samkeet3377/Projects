@@ -55,7 +55,7 @@
 
 .tbl-head {
     box-shadow: $shadow;
-    z-index: 2;
+    // z-index: 2;
     
     .tbl-h-right {
         span {
@@ -65,7 +65,7 @@
 }
 
 .tbl-data { 
-    opacity: .8;
+    // opacity: .8;
     border-bottom: 1px solid $link-color;
     background-color: $white;
     z-index: 0;

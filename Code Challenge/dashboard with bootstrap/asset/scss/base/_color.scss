@@ -1,4 +1,5 @@
-$nav-link-Hover: #1ea295;
+$primary:#1ea295;
+$nav-link-Hover: $primary;
 $nav-link-bg-Hover: #f6fafd;
 
 $link-color:#94a5ac;
@@ -10,3 +11,8 @@ $btn-bg-clr: #1da597;
 
 $btn-s-clr: $nav-link-Hover;
 $btn-s-bg-clr: #e8f7f4;
+
+$nav-link-color: $nav-link-Hover;
+$nav-link-hover-color: $nav-link-bg-Hover;
+
+$nav-link-color:$primary;

@@ -1,17 +1,23 @@
 aside {
-    width: 210px;
+    width: 170px;
     box-shadow: $shadow;
-    z-index: 1;
-    .list {
-        font-size: 25px;
-    }
+    // z-index: 1;
+    
     .side-head {
         height: $head-h;
         .c-logo {
-            color: $nav-link-Hover;
+            color: $nav-link-color;
         }
         .c-name {
             font-weight: 700;
         }
     }
 }
+.nav .nav-item .nav-link span:first-child {
+    font-size: 25px;
+}
+.nav-link{
+            padding: 25px 0;
+            margin: 0;
+        }
+

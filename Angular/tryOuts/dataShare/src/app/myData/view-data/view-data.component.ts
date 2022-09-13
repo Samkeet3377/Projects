@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ViewDataComponent implements OnInit {
 
   users:any []
-
   constructor() {
     this.users = [
       { id:1, name: 'samkeet', sname: 'kevat', active: true },
@@ -20,8 +19,10 @@ export class ViewDataComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  dltUser(event:any) {
-    const index = this.users.indexOf(event);
-    this.users.splice(index, 1);
+  dltUser(event:number) {
+    this.users.forEach((value,index_id)=>{
+      if(value.id==event) this.users.splice(index_id,1);
+    });
   }
+
 }
