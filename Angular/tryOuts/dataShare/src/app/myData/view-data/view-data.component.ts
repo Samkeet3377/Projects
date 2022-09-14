@@ -25,4 +25,10 @@ export class ViewDataComponent implements OnInit {
     });
   }
 
+  addUser(event:number) {
+    this.users.forEach((value,index_id)=>{
+      if(value.id==event) this.users.push(index_id,1);
+    });
+  }
+
 }

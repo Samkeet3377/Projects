@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddUserComponent implements OnInit {
 
+  @Output() userAdd: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  dataAdd = new FormGroup({
+    uid : new FormControl(''),
+    uname : new FormControl(''),
+    sname : new FormControl('')
+  });
+
+  onClicked(addUser:any) {
+    this.userAdd.emit(addUser);
+  }
 }

@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddUserComponent } from './myData/add-user/add-user.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,13 @@ import { AddUserComponent } from './myData/add-user/add-user.component';
     FooterComponent,
     SidebarComponent,
     UserlistComponent,
-    AddUserComponent
+    AddUserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
