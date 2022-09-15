@@ -1,6 +1,0 @@
-<div class="container">
-  <app-add-user></app-add-user>
-</div>
-<div class="container w-25 float-start" *ngFor="let user of users">
-  <app-userlist [users]="user" (userDelete)="dltUser(user.id)"></app-userlist>
-</div>

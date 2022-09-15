@@ -1,0 +1,23 @@
+<div class="container-fluid m-5">
+  <!-- inline style -->
+  <div [ngStyle]="{ 'background-color': 'gray','color': 'blue' }">
+    <h5>hello</h5>
+  </div>
+  <!-- inline style with SwitchCase -->
+  <!-- ngStyle -->
+  <div>
+    <ul *ngFor="let person of list">
+      <li [ngStyle]="{ color: getColor(person.city) }">
+        {{ person.name }}--{{ person.city }}
+      </li>
+    </ul>
+  </div>
+  <!-- style.color -->
+  <div>
+    <ul *ngFor="let person of list">
+      <li [style.color]='blue'>
+        {{ person.name }}--{{ person.city }}
+      </li>
+    </ul>
+  </div>
+</div>
