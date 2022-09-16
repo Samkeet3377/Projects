@@ -1,23 +1,37 @@
 <div class="container-fluid m-5">
   <!-- inline style -->
-  <div [ngStyle]="{ 'background-color': 'gray','color': 'blue' }">
+  <p> ngStyle : adding bg-color, color and width:200px to DIV</p>
+  <div [ngStyle]="{ 'background-color': 'gray','color': 'blue', 'width': '200px' }" class="mb-5">
     <h5>hello</h5>
+  </div>
+  <!-- inline style -->
+  <div class="mb-5">
+    <p> ngStyle : adding bg-color, color and display:inline to h5 in Div</p>
+    <h5 [ngStyle]="{ 'background-color': 'gray','color': 'blue', 'display': 'inline' }">hello</h5>
   </div>
   <!-- inline style with SwitchCase -->
   <!-- ngStyle -->
-  <div>
+  <div class="mb-5">
+    <p> ngStyle : adding bg-color based on Diff cities via switch case</p>
     <ul *ngFor="let person of list">
-      <li [ngStyle]="{ color: getColor(person.city) }">
+      <li [ngStyle]="{ 'background-color': getColor(person.city), 'display': 'inline' }">
         {{ person.name }}--{{ person.city }}
       </li>
     </ul>
   </div>
   <!-- style.color -->
-  <div>
+  <div class="mb-5">
+    <p> style.color : adding color based on Diff cities via switch case</p>
     <ul *ngFor="let person of list">
-      <li [style.color]='blue'>
+      <!-- <li [style.color]='blue'> -->
+        <li [style.color]="getColor(person.city)">
         {{ person.name }}--{{ person.city }}
       </li>
     </ul>
   </div>
+  <!-- ngStyle -->
+  <p> </p>
+  <button class="btn btn-outline-secondary" (click)="sizeChange(true)">+</button>  <button class="btn btn-outline-secondary" (click)="sizeChange(false)">-</button>
+  <p [ngStyle]="{ 'font.size.px': '16' }"> hello </p>
+
 </div>

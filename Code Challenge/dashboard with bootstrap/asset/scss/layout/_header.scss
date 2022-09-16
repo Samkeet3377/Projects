@@ -1,6 +1,7 @@
 header {
     height: $head-h;
     box-shadow: $shadow;
+    z-index: 0;
 }
 .noti {
     .noti-1 {

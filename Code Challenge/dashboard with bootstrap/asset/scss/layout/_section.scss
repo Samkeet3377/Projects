@@ -1,6 +1,23 @@
 .main-body {
     background-color: $main-body-bg;
 
+    overflow-y: scroll;
+    overflow-x: none;
+    &::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        background-color: $btn-s-bg-clr;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $link-color;
+        border-radius: 5px;
+    }
+
     .body-head {
         small {
             color: $link-color;
@@ -17,12 +34,19 @@
                 color: $btn-clr;
                 background-color: $btn-bg-clr;
                 box-shadow: $btn-shadow;
+                font-weight: 500;
+                font-size: 15px;
             }
 
             .b {
                 color: $btn-s-clr;
                 background-color: $btn-s-bg-clr;
-                box-shadow: $btn-shadow;
+                box-shadow: none;
+                font-weight: 600;
+            }
+            .noti-err {
+                font-size: 25px;
+                color: $noti-clr;
             }
         }
 
@@ -34,9 +58,10 @@
     }
 }
 
-.h {
+.tbl-info { 
     height: 500px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: none;
     &::-webkit-scrollbar-track {
         background-color: #F5F5F5;
         border-radius: 5px;
@@ -55,8 +80,8 @@
 
 .tbl-head {
     box-shadow: $shadow;
-    // z-index: 2;
-    
+    z-index: 1;
+    background-color: white;
     .tbl-h-right {
         span {
             color: $link-color;
@@ -66,9 +91,8 @@
 
 .tbl-data { 
     // opacity: .8;
-    border-bottom: 1px solid $link-color;
+    border-bottom: 1px solid $border-clr;
     background-color: $white;
-    z-index: 0;
     // width: calc(100% - 20px);
     // overflow-y: auto;
     // &::-webkit-scrollbar-track {
@@ -96,12 +120,15 @@
             color: $btn-clr;
             background-color: $btn-bg-clr;
             box-shadow: $btn-shadow;
+            font-weight: 500;
+            font-size: 15px;
         }
 
         .b {
             color: $btn-s-clr;
             background-color: $btn-s-bg-clr;
-            box-shadow: $btn-shadow;
+            box-shadow: none;
+            font-weight: 600;
         }
     }
 }

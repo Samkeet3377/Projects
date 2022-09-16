@@ -1,7 +1,7 @@
 aside {
     width: 170px;
     box-shadow: $shadow;
-    // z-index: 1;
+    z-index: 1;
     
     .side-head {
         height: $head-h;
@@ -17,7 +17,7 @@ aside {
     font-size: 25px;
 }
 .nav-link{
-            padding: 25px 0;
+            padding: 24px 0;
             margin: 0;
         }
 

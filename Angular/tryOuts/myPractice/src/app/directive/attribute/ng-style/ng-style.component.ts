@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-style.component.scss']
 })
 export class NgStyleComponent implements OnInit {
-blue:any='gray';
+  blue:any='gray';
+  fontsize = 16;
   list: any[]
   public constructor() {
     this.list = [
@@ -31,6 +32,10 @@ blue:any='gray';
       default :
         return 'green';
     }
+  }
+
+  sizeChange(isIncrement:Boolean){
+    this.fontsize = (isIncrement) ? this.fontsize + 5 : this.fontsize - 5 ;
   }
 
 }
