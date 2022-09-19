@@ -1,18 +1,31 @@
 <div class="d-flex h-100">
   <div class="p-4 bg-light sidebar">
-    <button class="btn btn-sm btn-outline-dark my-2" routerLink="home">Home</button> <br>
-    <button class="btn btn-sm btn-outline-dark" routerLink="ngstyle">ngStyle</button>
 
-    <!-- <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="ngstyle">ngStyle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="user-list">User-List</a>
+      </li>
+    </ul>
+    <!-- <button class="btn btn-sm btn-outline-dark my-2" routerLink="home">Home</button> <br>
+    <button class="btn btn-sm btn-outline-dark" routerLink="ngstyle">ngStyle</button> -->
+
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div> -->
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
 
   </div>
   <div class="p-4 flex-grow-1">
