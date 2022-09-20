@@ -1,0 +1,102 @@
+<div class="container w-50">
+  <form class="form-floating" [formGroup]="form">
+    <div class="row g-3 my-2">
+      <div class="col-6 has-validation">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Name" required formControlName="name"/>
+        <div *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)"
+          class="text-danger">
+          <p *ngIf="f['name'].touched && f['name'].errors?.['required']">Please choose a name.</p>
+          <p *ngIf="f['name'].errors?.['maxlength']">Please enter name below 20 char.</p>
+          <p *ngIf="f['name'].errors?.['minlength'] && f['name'].touched">Please enter name above 4 char.</p>
+          <p *ngIf="f['name'].errors?.['pattern'] "> Only use Characters</p>
+        </div>
+        <div *ngIf="f['name'].valid && f['name'].touched " class="text-success"> Looks good! </div>
+      </div>
+      <div class="col-6">
+        <label for="inputSurname" class="form-label">Surname</label>
+        <input type="text" class="form-control" id="inputSurname" placeholder="Surname" />
+      </div>
+    </div>
+
+    <div class="row g-3 my-2">
+      <div class="col-6">
+        <label for="inputUserName" class="form-label">User Name</label>
+        <input type="text" class="form-control" id="inputUserName" placeholder="User Name" />
+      </div>
+      <div class="col-6">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="text" class="form-control" id="inputPassword" placeholder="Password" />
+      </div>
+    </div>
+
+    <div class="row g-3 my-2">
+      <div class="col-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email" />
+      </div>
+      <div class="col-6">
+        <label for="inputContact" class="form-label">Contact</label>
+        <input type="text" class="form-control" id="inputinputContact" placeholder="Contact" />
+      </div>
+    </div>
+
+    <div class="row g-3 my-2">
+      <div class="col">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Address" />
+      </div>
+    </div>
+
+    <div class="row g-3 my-2">
+      <div class="col-4">
+        <label for="inputCity" class="form-label">City</label>
+        <select id="inputCity" class="form-select">
+          <option>Bilimora</option>
+          <option>Valsad</option>
+          <option>Umargam</option>
+          <option>Daman</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <label for="inputState" class="form-label">State</label>
+        <input type="text" class="form-control" id="inputState" />
+      </div>
+      <div class="col-4">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip" />
+      </div>
+    </div>
+
+    <div class="row g-3 my-2">
+      <div class="col">
+        <label class="form-label me-5">Gender</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
+          <label class="form-check-label" for="inlineRadio1">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
+          <label class="form-check-label" for="inlineRadio2">Female</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="othef">
+          <label class="form-check-label" for="inlineRadio3">Other</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+          <label class="form-check-label" for="autoSizingCheck"> Remember me </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 my-2">
+      <div class="col">
+        <button type="submit" class="btn btn-primary" (click)="onclick()">Sign in</button>
+      </div>
+    </div>
+
+  </form>
+</div>

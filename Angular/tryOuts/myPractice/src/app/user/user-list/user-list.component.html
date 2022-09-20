@@ -1,24 +1,22 @@
 <div class="container-fluid">
-<table class="table w-25 caption-top">
-  <caption>List of Users</caption>
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">city</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <th scope="row">{{user.id}}</th>
-      <td>{{user.name}}</td>
-      <td>{{user.city}}</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table w-25 caption-top">
+    <caption> List of Users </caption>
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns"> {{col}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td> {{user.id}} </td>
+        <td> {{user.name}} </td>
+        <td> {{user.city}} </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="d-grid d-md-block">
-  <button class="btn btn-outline-primary me-1" type="button" routerLink="../update">Update</button>
+  <button class="btn btn-outline-primary me-1" type="button" routerLink="../update" > Update </button>
   <!-- <button class="btn btn-outline-primary me-1" type="button">Edit</button> -->
 </div>

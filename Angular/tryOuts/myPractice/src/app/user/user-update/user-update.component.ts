@@ -20,24 +20,21 @@ export class UserUpdateComponent implements OnInit {
   formData:users;
 
   constructor( private dataShareSevice: DataShareService ) {
-    this.formData = new users
+    this.formData = new users( 'id', 'name', 'city' )
    }
 
   ngOnInit(): void {
   }
 
   addUser() {
-    this.dataShareSevice.getUser(this.formRef?.nativeElement.value);
+    this.dataShareSevice.getUser();
   }
 
   userUpdate(userData:any) {
     console.log(this.userform)
     const name = userData.form.value.name;
     const city = userData.form.value.city;
-    this.dataPush.push('',name,city)
-    // this.formData.assign('',name,city);
     console.log(name,city);
-    console.log(this.dataPush)
   }
 
 }

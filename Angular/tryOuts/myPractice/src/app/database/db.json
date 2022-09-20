@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "id":1, "name": "samkeet", "city": "bilimora" },
+    { "id":2, "name": "kapil", "city": "valsad" },
+    { "id":3, "name": "ravi", "city": "umargam" },
+    { "id":4, "name": "amresh", "city": "daman" }
+  ]
+}

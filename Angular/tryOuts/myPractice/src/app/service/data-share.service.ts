@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { users } from '../modal/userModal';
 
@@ -6,15 +7,11 @@ import { users } from '../modal/userModal';
 })
 export class DataShareService {
 
-  private userData: users[] = []
-  constructor() { }
+  url : string = "http://localhost:3000/users/"
 
-  getUserData() {
-    return this.userData;
-  }
+  constructor(private http : HttpClient) { }
 
-  getUser(data:any) {
-    const obj = { id: '',name: data, city: data };
-    this.userData.push(obj);
+  getUser() {
+    return this.http.get<users[]>(this.url);
   }
 }

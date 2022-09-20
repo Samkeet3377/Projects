@@ -9,24 +9,15 @@ import { DataShareService } from 'src/app/service/data-share.service';
 })
 export class UserListComponent implements OnInit {
 
-
-  users:any=[]
+  columns = ['Id','Name','City'];
+  users : users []= [];
 
   constructor( private dataShareSevice: DataShareService ) {
-    this.users = [
-      { id:1, name: 'samkeet', city: 'bilimora' },
-      { id:2, name: 'kapil', city: 'valsad' },
-      { id:3, name: 'ravi', city: 'umargam' },
-      { id:4, name: 'amresh', city: 'daman' }
-    ]
+
    }
 
   ngOnInit(): void {
-
+    this.dataShareSevice.getUser().subscribe( (rspns:any) => { this.users = rspns }, (error:any) => console.log("Error: "+error) );
   }
 
-  pushUser(data:any) {
-    const obj = { id: '', name: data, city: data };
-    this.users.push(obj);
-  }
 }
