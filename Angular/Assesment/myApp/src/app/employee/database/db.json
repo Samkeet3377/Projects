@@ -1,0 +1,7 @@
+{
+  "employee": [
+    { "name": "samkeet", "gender": "male", "dob": "21-09-22", "salary": "10000" },
+    { "name": "patanahi", "gender": "female", "dob": "21-09-22", "salary": "10000" },
+    { "name": "ravi", "gender": "male", "dob": "21-09-22", "salary": "10000" }
+  ]
+}

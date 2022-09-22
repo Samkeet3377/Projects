@@ -1,0 +1,57 @@
+<h3>Add Employee</h3>
+<div class="coantainer-fluid w-50">
+  <form [formGroup]="form">
+    <div class="row mb-3">
+      <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputName" formControlName="name" required />
+      </div>
+      <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)" class="text-danger">
+        <!-- for match pattern -->
+        <p *ngIf="form.controls['name'].errors?.['pattern'] && form.controls['name'].dirty "> use only Alphabates </p>
+        <!-- for minimum lenght required -->
+        <p *ngIf="form.controls['name'].errors?.['minlength'] "> minimum 3 char. Required </p>
+        <!-- for field required -->
+        <p *ngIf="(form.controls['name'].touched && form.controls['name'].errors?.['required'])"> Field Required </p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputGender" class="col-sm-2 col-form-label">Gender</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputGender" formControlName="gender" required />
+      </div>
+      <div *ngIf="form.controls['gender'].invalid && (form.controls['gender'].dirty || form.controls['gender'].touched)" class="text-danger">
+        <p *ngIf="form.controls['gender'].errors?.['pattern']"> use only m / f / o  </p>
+        <p *ngIf="form.controls['gender'].touched && form.controls['gender'].errors?.['required']"> Field Required </p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputDOB" class="col-sm-2 col-form-label">D O B</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="inputDOB" formControlName="dob" required />
+      </div>
+      <div *ngIf="form.controls['dob'].invalid && (form.controls['dob'].dirty || form.controls['dob'].touched) " class="text-danger">
+        <p *ngIf="form.controls['dob'].touched && form.controls['dob'].errors?.['required']"> Field Required </p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputSalary" class="col-sm-2 col-form-label">Salary</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputSalary" formControlName="salary" required />
+      </div>
+      <div *ngIf=" form.controls['salary'].invalid && (form.controls['salary'].dirty || form.controls['salary'].touched) " class="text-danger">
+        <p *ngIf="form.controls['salary'].errors?.['pattern']">use only Digits</p>
+        <p *ngIf="form.controls['salary'].touched && form.controls['salary'].errors?.['required']"> Field Required </p>
+      </div>
+    </div>
+
+    <button type="reset" class="btn btn-primary mx-2" (click)="onReset()"> Reset </button>
+    <button type="button" class="btn btn-primary mx-2" (click)="onSubmit()"> Save </button>
+    <!-- routerLink="../emp-detail" -->
+  </form>
+</div>
+
+<div class="container-fluid my-3">
+  <app-emp-list [empDetail]="formdata"></app-emp-list>
+  <!-- [empDetail]='formdata' -->
+</div>

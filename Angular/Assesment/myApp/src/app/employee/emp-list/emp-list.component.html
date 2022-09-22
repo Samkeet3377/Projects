@@ -1,0 +1,30 @@
+<h3>Employee List</h3>
+<div class="container-fluid w-50">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">D.O.B</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empDetail">
+        <td>{{emp.name | titlecase }}</td>
+        <td>{{emp.gender | uppercase }}</td>
+        <td>{{emp.dob | date:'longDate' }}</td>
+        <td>{{emp.salary | currency:'INR' }}</td>
+
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" (click)="view(emp);">Details</button>
+            <button type="button" class="btn btn-primary">Edit</button>
+            <button type="button" class="btn btn-primary" (click)="onDelete(emp)">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
