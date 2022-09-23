@@ -14,14 +14,15 @@
       <tr *ngFor="let emp of empDetail">
         <td>{{emp.name | titlecase }}</td>
         <td>{{emp.gender | uppercase }}</td>
-        <td>{{emp.dob | date:'longDate' }}</td>
+        <td>{{emp.dob }}</td>
         <td>{{emp.salary | currency:'INR' }}</td>
-
+        <!-- <td>{{emp.id}}</td> -->
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary" (click)="view(emp);">Details</button>
             <button type="button" class="btn btn-primary">Edit</button>
-            <button type="button" class="btn btn-primary" (click)="onDelete(emp)">Delete</button>
+            <button type="button" class="btn btn-primary" (click)="userDelete(emp.id)" >Delete</button>
+            <!-- (click)="onDelete(emp)"  -->
           </div>
         </td>
       </tr>

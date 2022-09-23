@@ -7,6 +7,7 @@ import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmpFormComponent } from './emp-form/emp-form.component';
 import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DataShareService } from './service/data-share.service';
 
 
 @NgModule({
@@ -24,5 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   // exports: [
   //   EmpFormComponent
   // ],
+  // providers: [
+  //   DataShareService
+  // ]
 })
 export class EmployeeModule { }

@@ -1,7 +1,11 @@
 {
   "employee": [
-    { "name": "samkeet", "gender": "male", "dob": "21-09-22", "salary": "10000" },
-    { "name": "patanahi", "gender": "female", "dob": "21-09-22", "salary": "10000" },
-    { "name": "ravi", "gender": "male", "dob": "21-09-22", "salary": "10000" }
+    {
+      "name": "samkeet",
+      "gender": "m",
+      "dob": "2022-01-01",
+      "salary": "1234",
+      "id": 1
+    }
   ]
 }
