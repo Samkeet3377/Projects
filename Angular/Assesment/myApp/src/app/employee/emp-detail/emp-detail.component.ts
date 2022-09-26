@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { emp } from '../emp';
+import { DataShareService } from '../service/data-share.service';
 
 @Component({
   selector: 'app-emp-detail',
@@ -7,13 +9,29 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./emp-detail.component.scss']
 })
 export class EmpDetailComponent implements OnInit {
+  id: any
+  empdata: emp
 
-  empdata: any
+  constructor(public actRoute: ActivatedRoute,
+    public dataService: DataShareService) {
+    this.empdata = new emp
 
-  constructor(public router: ActivatedRoute) { }
+    this.id = ''
+    this.actRoute.params.subscribe(res => {
+      this.id = res['id'];
+      this.getEmpById();
+    })
+  }
 
   ngOnInit(): void {
-    this.router.queryParamMap.subscribe(param => this.empdata = param);
+
+  }
+
+
+  getEmpById() {
+    this.dataService.getEmpById((this.id)).subscribe(params => {
+      this.empdata = params;
+    })
   }
 
 }

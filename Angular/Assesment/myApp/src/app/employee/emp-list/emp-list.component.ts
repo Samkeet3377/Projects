@@ -13,7 +13,7 @@ export class EmpListComponent implements OnInit {
   @Input()  empDetail :emp[]
 
   @Output() item: EventEmitter<any> = new EventEmitter
-  // empList : emp[] = []
+  empList : emp[] = []
 
   constructor( public router: Router,
             public dataService: DataShareService
@@ -38,8 +38,16 @@ export class EmpListComponent implements OnInit {
   private getEmpList(): void {
     this.dataService.getEmp().subscribe( (rspns: emp[]) => { this.empDetail = rspns } );
   }
-  view(emp:any) {
-    this.router.navigate(['employee/emp-detail'], { queryParams: emp });
+  // view(emp:any) {
+  //   this.router.navigate(['employee/emp-detail'], { queryParams: emp });
+  // }
+
+  viewUser(id:any) {
+    this.router.navigate(['employee/emp-detail', + id])
+  }
+
+  editUser(id:any) {
+    this.router.navigate(['employee/list',+id]);
   }
 
 }

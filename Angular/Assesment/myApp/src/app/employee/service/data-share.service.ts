@@ -26,4 +26,13 @@ export class DataShareService {
     const url = this.baseUrl + 'employee/' + id;
     return this.http.delete(url);
   }
+  editEmp(data:emp[], id:number): Observable<any> {
+    const url = this.baseUrl + 'employee/' + id;
+    return this.http.put(url, data);
+  }
+
+  getEmpById(id:number){
+    const url = this.baseUrl + 'employee/' + id;
+    return this.http.get(url);
+  }
 }

@@ -4,8 +4,22 @@
       "name": "samkeet",
       "gender": "m",
       "dob": "2022-01-01",
-      "salary": "1234",
+      "salary": "12345",
       "id": 1
+    },
+    {
+      "name": "ravi",
+      "gender": "m",
+      "dob": "2022-09-15",
+      "salary": "12000",
+      "id": 2
+    },
+    {
+      "name": "amresh",
+      "gender": "m",
+      "dob": "2022-01-01",
+      "salary": "12343",
+      "id": 3
     }
   ]
 }

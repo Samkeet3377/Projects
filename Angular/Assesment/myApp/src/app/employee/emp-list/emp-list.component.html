@@ -19,8 +19,8 @@
         <!-- <td>{{emp.id}}</td> -->
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary" (click)="view(emp);">Details</button>
-            <button type="button" class="btn btn-primary">Edit</button>
+            <button type="button" class="btn btn-primary" (click)="viewUser(emp.id);">Details</button>
+            <button type="button" class="btn btn-primary" (click)="editUser(emp.id)">Edit</button>
             <button type="button" class="btn btn-primary" (click)="userDelete(emp.id)" >Delete</button>
             <!-- (click)="onDelete(emp)"  -->
           </div>

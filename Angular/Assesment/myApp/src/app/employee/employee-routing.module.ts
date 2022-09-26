@@ -10,7 +10,8 @@ const routes: Routes = [
       children:[
         { path:'', redirectTo:'emp-form', pathMatch:'full' },
         { path:'emp-form', component:EmpFormComponent },
-        { path:'emp-detail', component:EmpDetailComponent }
+        { path:'emp-detail/:id', component:EmpDetailComponent },
+        {path:'list/:id', component:EmpFormComponent }
       ]
   },
 ];
