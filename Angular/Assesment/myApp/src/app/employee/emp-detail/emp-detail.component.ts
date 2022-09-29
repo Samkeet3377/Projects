@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { emp } from '../emp';
 import { DataShareService } from '../service/data-share.service';
 
+
 @Component({
   selector: 'app-emp-detail',
   templateUrl: './emp-detail.component.html',
@@ -24,6 +25,7 @@ export class EmpDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
 
   }
 
