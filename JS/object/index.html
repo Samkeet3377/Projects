@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+    <style>
+      table,
+      th,
+      td {
+        border: solid 1px #ddd;
+        border-collapse: collapse;
+        padding: 2px 3px;
+        text-align: center;
+      }
+
+      th {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="empTable">
+        <thead>
+            <tr>
+              <th id="name">Name</th>
+              <th id="date">Date</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr> <td>J</td> <td>01/01/2010</td> </tr>
+            <tr> <td>C</td> <td>01/01/2003</td> </tr>
+            <tr> <td>H</td> <td>01/01/2008</td> </tr>
+            <tr> <td>G</td> <td>01/01/2007</td> </tr>
+            <tr> <td>A</td> <td>01/01/2001</td> </tr>
+            <tr> <td>I</td> <td>01/01/2009</td> </tr>
+            <tr> <td>F</td> <td>01/01/2006</td> </tr>
+            <tr> <td>B</td> <td>01/01/2002</td> </tr>
+            <tr> <td>D</td> <td>01/01/2004</td> </tr>
+            <tr> <td>E</td> <td>01/01/2005</td> </tr>
+        </tbody>
+    </table>
+
+    <p><select name="select" id="opt">
+        <option value="">--Select a Value--</option>
+        <option value="name">Name</option>
+        <option value="date">Date</option></select>
+    </p>
+
+    <p><input type="button" id="bt" value="Show Table Data" onclick="showTableData()" /></p> <br>
+    <!-- <button id="button">Sort by date</button> -->
+    <p id="info" style="font-style:italic;"></p>
 
     <script src="asset/js/script.js"></script>
-</body>
+  </body>
 </html>

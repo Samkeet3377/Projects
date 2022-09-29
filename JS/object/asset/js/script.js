@@ -54,5 +54,40 @@
 // console.log(b); //it's return id property 1 not 2
 //              Keys Method
 // return Objecat KeyValues in ordered
-const a = { "name":"samkeet", "surname":"kevat" };
-console.log(Object.keys(a));
+// const a = { "name":"samkeet", "surname":"kevat" };
+// console.log(Object.keys(a));
+
+// Filter Via Data
+
+let sampleDate =  new Date().getFullYear();
+console.log(sampleDate);
+
+function showTableData() { 
+    document.getElementById('info').innerHTML = ""; 
+    var myTab = document.getElementById('empTable'); 
+    var date = document.getElementById("opt").value; 
+    var index = document.getElementById(date).cellIndex; 
+    
+    for (i = 1; i < myTab.rows.length; i++) { 
+        var objCells = myTab.rows.item(i).cells; 
+        
+        for (var j = index; j <= index; j++) { 
+            info.innerHTML = info.innerHTML + ' ' + objCells.item(j).innerHTML; 
+        }      
+        info.innerHTML = info.innerHTML + '<br />'; 
+    } 
+}
+
+let dates = ["01.22.2020", "01.18.2020", "02.02.2020","01.01.2019"];
+let datesFormatted = [];
+
+dates.forEach(i => {datesFormatted.push(new Date(i).getFullYear())});
+
+datesFormatted.sort(function(a, b) {
+  if (a > b) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+console.info(datesFormatted);
