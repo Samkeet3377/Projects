@@ -34,7 +34,11 @@ export class EmpFormComponent implements OnInit {
 
     this.actRoute.params.subscribe(params=>{
       this.id=params['id']
-      this.getEmpById()
+
+      if(this.id){
+
+        this.getEmpById()
+      }
 
     })
   }

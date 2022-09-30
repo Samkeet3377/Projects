@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { forkJoin, interval, Observable, of, Subject, takeUntil, timer } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    //observer
     const observe = new Observable((observe)=> {
       observe.next('Ku6Bhi');
     });
@@ -52,8 +52,7 @@ export class ContactComponent implements OnInit {
         console.log('complete');
       }
     });
-
-
+    //Subject
     this.normalSubject.next('First');
 
     this.sub1 = this.normalSubject.subscribe({
@@ -69,6 +68,40 @@ export class ContactComponent implements OnInit {
     });
 
     this.normalSubject.next('Second');
+    this.normalSubject.next('Third');
+
+    const observable = forkJoin({
+      foo: of(1, 2, 3, 4,10),
+      bar: Promise.resolve(59),
+      baz: timer(100)
+    });
+    observable.subscribe({
+     next: value => console.log(value),
+     complete: () => console.log('This is how it ends!'),
+    });
+
+
+
+    //test
+    // Build a Date object that marks the
+// next minute.
+// const currentDate = new Date();
+// const startOfNextMinute = new Date(
+//   currentDate.getFullYear(),
+//   currentDate.getMonth(),
+//   currentDate.getDate(),
+//   currentDate.getHours(),
+//   currentDate.getMinutes() + 1
+// );
+
+// // This could be any observable stream
+// const source = interval(1000);
+
+// const result = source.pipe(
+//   takeUntil(timer(startOfNextMinute))
+// );
+
+// result.subscribe(console.log);
 
   }
 
