@@ -1,0 +1,35 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "email": "admin@test.com",
+      "password": "admin123"
+    }
+  ],
+  "signupUsers": [
+    {
+      "id": 1,
+      "username": "samkeet",
+      "email": "samkeet@test.com",
+      "password": "test#123"
+    },
+    {
+      "username": "Samkeet Kevat",
+      "email": "samkeet@gmail.com",
+      "password": "teat",
+      "id": 2
+    },
+    {
+      "username": "Ravi Singh",
+      "email": "ravi@test.com",
+      "password": "ravi#123",
+      "id": 3
+    },
+    {
+      "username": "Amresh Prasad",
+      "email": "amresh@test.com",
+      "password": "amresh#123",
+      "id": 4
+    }
+  ]
+}
