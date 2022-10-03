@@ -41,7 +41,8 @@ export class LoginComponent implements OnInit {
     this.isText ? this.type = 'text' : this.type = 'password';
   }
 
-  onLogin() { this.userIsAuthenticated = true;
+  onLogin() {
+
     if(this.loginForm.valid) {
     //   console.log(this.loginForm.value);
         this.dataService.getUser().subscribe((result)=> {
@@ -49,15 +50,18 @@ export class LoginComponent implements OnInit {
             return u.email === this.loginForm.value.email && u.password === this.loginForm.value.password
           });
           if(user) {
+            this.userIsAuthenticated = true;
             alert('Login Successfully');
             this.loginForm.reset();
             this.router.navigate(['/home']);
           } else {
             alert('User Not Registered');
+            this.userIsAuthenticated = false;
           }
         });
     } else {
       console.log('Invalid Form');
+
     }
   }
 
