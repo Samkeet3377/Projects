@@ -1,11 +1,19 @@
-<div class="d-flex flex-column h-100 w-100">
+<div class="h-100 ">
+
   <div>
     <app-header></app-header>
   </div>
+
   <div class="">
-    <router-outlet></router-outlet>
+
+    <div class="overflow-hidden">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="position-absolute start-0 bottom-0 end-0">
+      <app-footer></app-footer>
+    </div>
+
   </div>
-  <div>
-    <app-footer></app-footer>
-  </div>
+
 </div>

@@ -30,6 +30,12 @@
       "email": "amresh@test.com",
       "password": "amresh#123",
       "id": 4
+    },
+    {
+      "username": "shivam",
+      "email": "shivam@gmail.com",
+      "password": "1234",
+      "id": 5
     }
   ]
 }

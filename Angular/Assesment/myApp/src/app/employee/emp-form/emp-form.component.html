@@ -4,13 +4,15 @@
     <div class="row mb-3">
       <label for="inputName" class="col-sm-2 col-form-label">Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="inputName" formControlName="name" required />
+        <input type="text" class="form-control" id="inputName" formControlName="name" required
+          [ngClass]="{ 'is-valid': form.controls['name'].valid,
+          'is-invalid': (form.controls['name'].invalid && form.controls['name'].touched) || (form.controls['name'].invalid && form.controls['name'].dirty && form.controls['name'].errors?.['required'])}"/>
       </div>
       <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)" class="text-danger">
         <!-- for match pattern -->
-        <p *ngIf="form.controls['name'].errors?.['pattern'] && form.controls['name'].dirty "> use only Alphabates </p>
+        <p *ngIf="form.controls['name'].errors?.['pattern'] && form.controls['name'].dirty"> use only Alphabates </p>
         <!-- for minimum lenght required -->
-        <p *ngIf="form.controls['name'].errors?.['minlength'] "> minimum 3 char. Required </p>
+        <p *ngIf="form.controls['name'].errors?.['minlength'] && (form.controls['name'].pristine || form.controls['name'].touched)  "> minimum 3 char. Required </p>
         <!-- for field required -->
         <p *ngIf="(form.controls['name'].touched && form.controls['name'].errors?.['required'])"> Field Required </p>
       </div>
