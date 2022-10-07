@@ -3,23 +3,30 @@
     {
       "name": "samkeet",
       "gender": "m",
-      "dob": "2022-01-01",
-      "salary": "12345",
+      "dob": "2022-10-07",
+      "salary": "1234",
       "id": 1
+    },
+    {
+      "name": "ayush",
+      "gender": "m",
+      "dob": "2022-10-07",
+      "salary": "4321",
+      "id": 2
     },
     {
       "name": "ravi",
       "gender": "m",
-      "dob": "2022-09-15",
-      "salary": "12000",
-      "id": 2
+      "dob": "2022-10-07",
+      "salary": "12345",
+      "id": 3
     },
     {
       "name": "amresh",
       "gender": "m",
-      "dob": "2022-01-01",
-      "salary": "12343",
-      "id": 3
+      "dob": "2022-10-06",
+      "salary": "1234",
+      "id": 4
     }
   ]
 }

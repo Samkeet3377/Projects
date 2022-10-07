@@ -8,9 +8,9 @@ import { EmployeeComponent } from './employee.component';
 const routes: Routes = [
   { path: '', component: EmployeeComponent,
       children:[
-        { path:'', redirectTo:'emp-form', pathMatch:'full' },
-        { path:'emp-form', component:EmpFormComponent },
-        { path:'emp-detail/:id', component:EmpDetailComponent },
+        { path:'', redirectTo:'form', pathMatch:'full' },
+        { path:'form', component:EmpFormComponent },
+        { path:'detail/:id', component:EmpDetailComponent },
         {path:'list/:id', component:EmpFormComponent }
       ]
   },
