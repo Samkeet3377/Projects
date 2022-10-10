@@ -54,6 +54,6 @@
 </div>
 
 <div class="container-fluid my-3">
-  <app-emp-list [empDetail]="formdata"></app-emp-list>
+  <app-emp-list [empDetail]="formdata" (empData)="onEdit($event)"></app-emp-list>
   <!-- [empDetail]='formdata' -->
 </div>

@@ -13,28 +13,28 @@ export class DataShareService {
   constructor(private http : HttpClient) { }
 
   // get data from API
-  getEmp(): Observable<any> {
+  getEmp(): Observable<emp[]> {
     const url = this.baseUrl + 'employee';
-    return this.http.get(url);
+    return this.http.get<emp[]>(url);
   }
   // add data to API
-  addEmp(data:emp[]): Observable<any> {
+  addEmp(data:emp): Observable<emp> {
     const url = this.baseUrl + 'employee';
-    return this.http.post(url,data);
+    return this.http.post<emp>(url,data);
   }
   // delete data from API via ID
-  deleteEmp(id:number): Observable<any> {
+  deleteEmp(id:number): Observable<emp> {
     const url = this.baseUrl + 'employee/' + id;
-    return this.http.delete(url);
+    return this.http.delete<emp>(url);
   }
   // edit data from API via ID
-  editEmp(data:emp[], id:number): Observable<any> {
+  editEmp(data:emp, id:number): Observable<emp> {
     const url = this.baseUrl + 'employee/' + id;
-    return this.http.put(url, data);
+    return this.http.put<emp>(url, data);
   }
   // get specific ID from API
-  getEmpById(id:number){
+  getEmpById(id:number): Observable<emp>{
     const url = this.baseUrl + 'employee/' + id;
-    return this.http.get(url);
+    return this.http.get<emp>(url);
   }
 }

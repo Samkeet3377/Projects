@@ -6,6 +6,8 @@ import { ProductComponent } from './product.component';
 import { BikeComponent } from './bike/bike.component';
 import { CarComponent } from './car/car.component';
 import { ViewComponent } from './view/view.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { ViewComponent } from './view/view.component';
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+
   ]
 })
 export class ProductModule { }

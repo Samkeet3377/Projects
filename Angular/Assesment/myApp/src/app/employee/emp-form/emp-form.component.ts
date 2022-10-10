@@ -57,10 +57,14 @@ export class EmpFormComponent implements OnInit {
         this.dataService.editEmp(this.form.value, this.id).subscribe(res => {
           this.getEmpList();
           this.onReset();
-          this.router.navigate(['./form'],{ relativeTo: this.actRoute.parent
-          }) });
+          this.router.navigate(['./form'],{ relativeTo: this.actRoute.parent })
+        });
       } else {
-        this.dataService.addEmp(this.form.value).subscribe((Response) => { this.getEmpList(); this.onReset(); this.toastSuccess(); });
+        this.dataService.addEmp(this.form.value).subscribe((Response) => {
+          this.getEmpList();
+          this.onReset();
+          this.toastSuccess();
+        });
       }
 
       this.onReset();
@@ -76,6 +80,10 @@ export class EmpFormComponent implements OnInit {
 
   onReset() {
     this.form.reset();
+  }
+
+  onEdit(data: emp){
+    this.form.patchValue(data);
   }
 
   // Toast Service Fns
