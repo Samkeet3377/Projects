@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './modules/core/core.module';
 import { HomeComponent } from './component/home/home.component';
-import { ProductModule } from './modules/product/product.module';
 import { AdminModule } from './modules/admin/admin.module';
 
 @NgModule({
@@ -19,9 +18,7 @@ import { AdminModule } from './modules/admin/admin.module';
     AppRoutingModule,
     NgbModule,
     CoreModule,
-    // ProductModule,
-    // AdminModule
-
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
