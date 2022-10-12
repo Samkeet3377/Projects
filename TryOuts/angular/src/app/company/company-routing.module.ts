@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CompanyComponent } from './company.component';
 import { FormComponent } from './form/form.component';
-import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo:'list', pathMatch:'full',
+  {
+    path: '', component: CompanyComponent,
     children: [
-      { path:'', redirectTo:'list', pathMatch:'full' },
-      { path:'list', component: ListComponent },
-      { path:'form', component: FormComponent }
+      { path: 'form', component: FormComponent }
     ]
-}
+  }
 ];
 
 @NgModule({

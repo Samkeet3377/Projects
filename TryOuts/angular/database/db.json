@@ -1,0 +1,6 @@
+{
+  "company": [
+    { "id":1, "name": "samkeet", "description": "front-end" },
+    { "id":2, "name": "ravi", "description": "front-end" }
+  ]
+}

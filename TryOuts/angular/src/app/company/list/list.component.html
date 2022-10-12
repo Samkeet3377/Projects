@@ -1,19 +1,19 @@
-<div class="sidebar bg-light">
+<div class="sidebar bg-light border border-dark">
 
-  <div class="p-2 border">
-    <div class="d-flex item-align-center justify-content-between">
-      <p>Clients</p>
-      <i class="bi bi-plus-circle"></i>
+  <div class="border-bottom border-dark p-2">
+    <div class="d-flex item-align-center justify-content-center justify-content-between">
+      <span>Clients</span>
+      <i class="bi bi-plus-circle fs-5"></i>
     </div>
     <div class="w-100">
       <input type="text" class="form-control" placeholder="Search">
     </div>
   </div>
 
-  <ul class="nav d-flex border item-align-center justify-content-center justify-content-between">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="../form" routerLinkActive="active">Link</a>
-    </li>
-    <i class="bi bi-plus-circle"></i>
+  <ul class="nav p-2 d-flex border item-align-center justify-content-center justify-content-between"
+      *ngFor="let company of companyList">
+    <span class="rounded-circle border border-dark logo">{{ company.name | slice:0:2 | uppercase }}</span>
+    <span routerLink="form">{{ company.name }}</span>
+    <span><i class="bi bi-plus-circle fs-5"></i></span>
   </ul>
 </div>
