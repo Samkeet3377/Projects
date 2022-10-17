@@ -1,0 +1,28 @@
+{
+  "admin": [{ "id":1, "name": "admin", "password": "admin" }],
+  "users": [{ "id":1, "name": "testuser", "password": "testpass" }],
+  "bikes": [
+    { "id": 1, "category": "bike", "title": "TVS" },
+    { "id": 2, "category": "bike", "title": "Honda" },
+    { "id": 3, "category": "bike", "title": "Royal Enfield" },
+    { "id": 4, "category": "bike", "title": "Hero" },
+    { "id": 5, "category": "bike", "title": "Bajaj" },
+    { "id": 6, "category": "bike", "title": "Yamaha" },
+    { "id": 7, "category": "bike", "title": "Suzuki" },
+    { "id": 8, "category": "bike", "title": "Jawa" },
+    { "id": 9, "category": "bike", "title": "KTM" },
+    { "id": 10, "category": "bike", "title": "Yezdi" }
+  ],
+  "cars": [
+    { "id": 1, "category": "car", "title": "Maruti Suzuki" },
+    { "id": 2, "category": "car", "title": "Hyundai" },
+    { "id": 3, "category": "car", "title": "Tata" },
+    { "id": 4, "category": "car", "title": "Mahindra" },
+    { "id": 5, "category": "car", "title": "Toyota" },
+    { "id": 6, "category": "car", "title": "Kia" },
+    { "id": 7, "category": "car", "title": "Honda" },
+    { "id": 8, "category": "car", "title": "Volkswagen" },
+    { "id": 9, "category": "car", "title": "Skoda" },
+    { "id": 10, "category": "car", "title": "MG" }
+  ]
+}

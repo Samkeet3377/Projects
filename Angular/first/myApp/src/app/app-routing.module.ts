@@ -6,10 +6,10 @@ import { AddComponent } from './section/aside/list/add/add.component';
 
 
 const routes: Routes = [
+  { path:'', redirectTo:'home', pathMatch: 'full' },
   { path:'home', component: HomeComponent },
   { path:'about', component: AboutComponent },
-  { path:'add', component: AddComponent },
-  { path:'', component: HomeComponent, pathMatch: 'full' }
+  { path:'add', component: AddComponent }
 ];
 
 @NgModule({

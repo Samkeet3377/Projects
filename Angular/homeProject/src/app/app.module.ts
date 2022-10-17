@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './modules/core/core.module';
 import { HomeComponent } from './component/home/home.component';
 import { AdminModule } from './modules/admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdminModule } from './modules/admin/admin.module';
     AppRoutingModule,
     NgbModule,
     CoreModule,
-    AdminModule
+    AdminModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
