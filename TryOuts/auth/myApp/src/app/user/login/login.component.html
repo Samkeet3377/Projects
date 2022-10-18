@@ -1,0 +1,36 @@
+
+<div class="d-flex">
+
+  <div class="card shadow" style="width: 350px;">
+    <div class="card-body">
+      <div class="text-center">
+        <h4>Login Here</h4>
+      </div>
+      <div class="card-text">
+        <form [formGroup]="loginForm" >
+          <div class="my-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email" />
+          </div>
+
+          <div class="my-3">
+            <label for="password" class="form-label">Password</label> <span class="float-end"><a class="bi bi-{{eyeIcon}} text-muted" (click)="iconChage()"></a></span>
+            <input type="{{inputType}}" class="form-control" id="password" placeholder="password" formControlName="password" />
+            <div class="float-end">
+              <small><a class="text-muted" href=""> forgate password? </a></small>
+            </div>
+          </div>
+
+          <div class="my-5">
+            <button type="button" class="btn btn-outline-primary w-100" (click)="onLogin()">LogIn</button>
+          </div>
+
+          <div class="text-center">
+            <small><a class="text-muted" routerLink="../signup"> Create an account? </a></small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
