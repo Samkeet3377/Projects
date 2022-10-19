@@ -1,4 +1,4 @@
-<div class="d-flex">
+<div class="d-flex justify-content-center">
 
   <div class="card shadow" style="width: 350px;">
     <div class="card-body">
@@ -7,21 +7,21 @@
       </div>
       <div class="card-text">
 
-        <form>
+        <form [formGroup]="signupForm">
           <div class="my-3">
             <label for="userName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="userName" placeholder="Enter Name" />
+            <input type="text" class="form-control" id="userName" placeholder="Enter Name" formControlName='username'/>
           </div>
           <div class="my-3">
             <label for="userEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="userEmail" placeholder="Enter Email" />
+            <input type="email" class="form-control" id="userEmail" placeholder="Enter Email" formControlName='email' />
           </div>
           <div class="my-3">
             <label for="userPassword" class="form-label">Password</label> <span class="float-end"><a class="bi bi-{{eyeIcon}} text-muted" (click)="iconChage()"></a></span>
-            <input type="{{inputType}}" class="form-control" id="userPassword" placeholder="Enter Password" />
+            <input type="{{inputType}}" class="form-control" id="userPassword" placeholder="Enter Password" formControlName='password' />
           </div>
           <div class="my-5">
-            <button type="submit" class="btn btn-outline-info w-100">Create Account</button>
+            <button type="submit" class="btn btn-outline-info w-100" (click)="onSubmit()">Create Account</button>
           </div>
           <div class="text-center">
             <small><a class="text-muted" routerLink="../login"> Already have an account </a></small>

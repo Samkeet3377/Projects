@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthGuardService } from 'src/app/service/api/auth-guard.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,12 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  eyeIcon: any;
+  eyeIcon: string;
   inputType: string;
 
-  constructor() {
+  signupForm: FormGroup
+
+  constructor(
+    formB: FormBuilder,
+    private authService: AuthGuardService
+  ) {
     this.eyeIcon = 'eye-slash-fill';
     this.inputType = 'password';
+
+    this.signupForm = formB.group({
+      username: ['',Validators.required],
+      email: ['',Validators.required],
+      password: ['',Validators.required],
+    });
   }
 
   ngOnInit(): void {
@@ -26,6 +39,25 @@ export class SignupComponent implements OnInit {
       this.eyeIcon = 'eye-slash-fill';
       this.inputType = 'password';
     }
+  }
+
+  onSubmit(){
+    this.addNewUser();
+  }
+
+  addNewUser() {
+    if(this.signupForm.valid) {
+      this.authService.addUser(this.signupForm.value).subscribe((result)=> {
+        this.reset();
+      });
+    }
+    else {
+      alert('Invalid');
+    }
+  }
+
+  reset(){
+    this.signupForm.reset();
   }
 
 }

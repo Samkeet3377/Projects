@@ -1,33 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthGuardService } from 'src/app/service/api/auth-guard.service';
-import { UserComponent } from '../user.component';
+import { user } from '../model/user';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
-  eyeIcon: any;
+  eyeIcon: string;
   inputType: string;
-  userData: any;
+  public userData: user[];
   loginForm: FormGroup;
+
+  public isAuth: boolean;
   constructor(
     private authService: AuthGuardService,
     formB: FormBuilder,
-    private router: Router,
-    private actRoute: ActivatedRoute
+    private router: Router
   ) {
     this.eyeIcon = 'eye-slash-fill';
     this.inputType = 'password';
+
     this.userData = [];
+    this.isAuth = false;
 
     this.loginForm = formB.group({
-      email: ['',[Validators.required]],
-      password: ['',[Validators.required]]
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
   }
 
@@ -46,20 +48,30 @@ export class LoginComponent implements OnInit {
   }
 
   getUserData() {
-    this.authService.getUser().subscribe((result: any) => {
-      this.userData = result[0];
-      console.log(this.userData);
-      localStorage.setItem('email', this.userData.email);
-      localStorage.setItem('password', this.userData.password);
+    this.authService.getUser().subscribe((user: user[]) => {
+      this.userData = user;
     });
   }
 
   onLogin() {
-    if (this.loginForm.value.email === this.userData.email && this.loginForm.value.password === this.userData.password) {
-      this.router.navigate(['user']);
-    } else {
-      alert('You are not register User. Please SignUp first');
-      this.router.navigate(['signup'], { relativeTo: this.actRoute.parent });
+    if (this.loginForm.valid) {
+
+      const tempData: any = this.userData.find((test: user) => test.email == this.loginForm.value.email);
+      if (tempData.password == this.loginForm.value.password) {
+
+        this.isAuth = true;
+        this.authService.auth.next(this.isAuth);
+        this.router.navigate(['home']);
+
+        localStorage.setItem('user',tempData.username);
+
+      } else {
+        alert('You are not register User. Please SignUp first');
+        this.isAuth = false;
+        this.authService.auth.next(this.isAuth);
+        this.router.navigate(['signup']);
+      }
+
     }
   }
 

@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AuthGuard } from '../service/guard/auth.guard';
 import { AuthGuardService } from '../service/api/auth-guard.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [
     AuthGuard,

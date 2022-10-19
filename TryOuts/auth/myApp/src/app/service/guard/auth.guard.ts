@@ -10,7 +10,7 @@ import { AuthGuardService } from '../api/auth-guard.service';
 )
 export class AuthGuard implements CanActivate {
 
-
+isAuth:boolean=false
   constructor(
     private authService: AuthGuardService,
     private router: Router
@@ -21,7 +21,10 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    this.authService.auth.subscribe((res) => {
+      this.isAuth= res
+    })
+    return this.isAuth
   }
 
 }
