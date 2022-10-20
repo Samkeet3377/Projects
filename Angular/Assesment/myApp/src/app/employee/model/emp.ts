@@ -4,6 +4,4 @@ export class emp {
   public dob?: string;
   public salary?: string;
   public id!: number;
-
-
 }

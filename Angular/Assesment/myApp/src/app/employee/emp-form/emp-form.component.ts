@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataShareService } from 'src/app/employee/service/data-share.service';
-import { emp } from '../emp';
+import { emp } from '../model/emp';
 import { ToastService } from '../service/toast.service';
 
 @Component({
@@ -14,8 +14,8 @@ import { ToastService } from '../service/toast.service';
 export class EmpFormComponent implements OnInit {
 
   form: FormGroup;
-  public formdata: emp[]
-  public id: any
+  public formdata: emp[];
+  public id: any;
 
   constructor(
     private formB: FormBuilder,
@@ -57,6 +57,7 @@ export class EmpFormComponent implements OnInit {
         this.dataService.editEmp(this.form.value, this.id).subscribe(res => {
           this.getEmpList();
           this.onReset();
+          this.toastInfo();
           this.router.navigate(['./form'],{ relativeTo: this.actRoute.parent })
         });
       } else {
@@ -68,7 +69,7 @@ export class EmpFormComponent implements OnInit {
       }
 
       this.onReset();
-    } else { alert("fill up form") }
+    } else { alert("fill up form Correctlly") }
 
   }
 
@@ -88,7 +89,10 @@ export class EmpFormComponent implements OnInit {
 
   // Toast Service Fns
   public toastSuccess() {
-    this.toaster.onSuccess('Data Add Successfully','', { timeOut: 3000, progressBar: true, closeButton: true });
+    this.toaster.onSuccess('Data Add Successfully','Message');
+  }
+  public toastInfo() {
+    this.toaster.onSuccess('Data Edit Successfully','Message');
   }
 
 

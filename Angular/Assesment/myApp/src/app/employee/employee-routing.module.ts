@@ -6,13 +6,14 @@ import { EmpFormComponent } from './emp-form/emp-form.component';
 import { EmployeeComponent } from './employee.component';
 
 const routes: Routes = [
-  { path: '', component: EmployeeComponent,
-      children:[
-        { path:'', redirectTo:'form', pathMatch:'full' },
-        { path:'form', component:EmpFormComponent },
-        { path:'detail/:id', component:EmpDetailComponent },
-        {path:'list/:id', component:EmpFormComponent }
-      ]
+  {
+    path: '', component: EmployeeComponent,
+    children: [
+      { path: '', redirectTo: 'form', pathMatch: 'full' },
+      { path: 'form', component: EmpFormComponent },
+      { path: 'detail/:id', component: EmpDetailComponent },
+      { path: 'list/:id', component: EmpFormComponent }
+    ]
   },
 ];
 

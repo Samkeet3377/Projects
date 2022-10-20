@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataShareService } from 'src/app/employee/service/data-share.service';
-import { emp } from '../emp';
+import { emp } from '../model/emp';
+import { ToastService } from '../service/toast.service';
 
 @Component({
   selector: 'app-emp-list',
@@ -18,7 +19,8 @@ export class EmpListComponent implements OnInit {
   constructor(
     public router: Router,
     public dataService: DataShareService,
-    public actRouter: ActivatedRoute
+    public actRouter: ActivatedRoute,
+    public toaster: ToastService
   ) {
     this.empList = [];
     this.empDetail = [];
@@ -33,8 +35,12 @@ export class EmpListComponent implements OnInit {
     this.dataService.getEmp().subscribe((rspns: emp[]) => { this.empDetail = rspns });
   }
 
-  public userDelete(id: any): void {
-    this.dataService.deleteEmp(id).subscribe((rspns) => { this.getEmpList() });
+  public userDelete(data: any): void {
+    this.dataService.deleteEmp(data.id).subscribe((rspns) => {
+      this.getEmpList();
+      alert('Are you Sure? to Delete '+ data.name +' Employee');
+      this.toastWarning();
+     });
   }
 
   public viewUser(id: any): void {
@@ -44,6 +50,10 @@ export class EmpListComponent implements OnInit {
   public editUser(empData: emp): void {
     this.empData.emit(empData);
     this.router.navigate(['./list', +empData.id], { relativeTo: this.actRouter.parent });
+  }
+
+  public toastWarning(){
+    this.toaster.onWarning('Employee Deleted Successfully','Message');
   }
 
 }

@@ -12,10 +12,12 @@ import { user } from '../model/user';
 export class LoginComponent implements OnInit {
   eyeIcon: string;
   inputType: string;
+
   public userData: user[];
   loginForm: FormGroup;
 
-  public isAuth: boolean;
+  public isAuth: string;
+
   constructor(
     private authService: AuthGuardService,
     formB: FormBuilder,
@@ -25,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.inputType = 'password';
 
     this.userData = [];
-    this.isAuth = false;
+    this.isAuth = '';
 
     this.loginForm = formB.group({
       email: ['', [Validators.required]],
@@ -59,7 +61,7 @@ export class LoginComponent implements OnInit {
       const tempData: any = this.userData.find((test: user) => test.email == this.loginForm.value.email);
       if (tempData.password == this.loginForm.value.password) {
 
-        this.isAuth = true;
+        this.isAuth = 'true';
         this.authService.auth.next(this.isAuth);
         this.router.navigate(['home']);
 
@@ -67,7 +69,7 @@ export class LoginComponent implements OnInit {
 
       } else {
         alert('You are not register User. Please SignUp first');
-        this.isAuth = false;
+        this.isAuth = 'false';
         this.authService.auth.next(this.isAuth);
         this.router.navigate(['signup']);
       }

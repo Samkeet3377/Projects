@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
-import { AuthGuard } from './service/guard/auth.guard';
+import { AuthGuard } from './core/guard/auth.guard';
 import { AuthGuardService } from './service/api/auth-guard.service';
 
 @NgModule({

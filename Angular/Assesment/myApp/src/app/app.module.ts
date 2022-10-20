@@ -8,11 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { CoreModule } from './core/core.module';
 import { EmployeeModule } from './employee/employee.module';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,13 @@ import { SharedModule } from './shared/shared.module';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      "closeButton": true,
+      "progressBar": true,
+      "timeOut": 3000,
+      "extendedTimeOut": 1000,
+      "positionClass": "toast-top-center"
+    }),
     BrowserAnimationsModule
   ],
   providers: [],

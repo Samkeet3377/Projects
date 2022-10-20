@@ -12,7 +12,13 @@ export class ToastService {
     public toaster: ToastrService
   ) { }
 
-  onSuccess(msg: string, title: string, timer: any) {
-    this.toaster.success(msg, title, timer)
+  onSuccess(msg: string, title: string) {
+    this.toaster.success(msg, title)
+  }
+  onInfo(msg: string, title: string) {
+    this.toaster.success(msg, title)
+  }
+  onWarning(msg: string, title: string) {
+    this.toaster.success(msg, title)
   }
 }

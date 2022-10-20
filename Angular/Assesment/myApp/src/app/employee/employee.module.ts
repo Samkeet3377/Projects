@@ -8,8 +8,6 @@ import { EmpFormComponent } from './emp-form/emp-form.component';
 import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DataShareService } from './service/data-share.service';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastService } from './service/toast.service';
 
 
@@ -24,12 +22,8 @@ import { ToastService } from './service/toast.service';
     CommonModule,
     ReactiveFormsModule,
     EmployeeRoutingModule,
-    // ToastrModule.forRoot(),
-    // BrowserAnimationsModule
+
   ],
-  // exports: [
-  //   EmpFormComponent
-  // ],
   providers: [
     DataShareService,
     ToastService

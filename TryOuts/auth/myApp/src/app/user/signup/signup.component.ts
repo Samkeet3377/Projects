@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthGuardService } from 'src/app/service/api/auth-guard.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     formB: FormBuilder,
-    private authService: AuthGuardService
+    private authService: AuthGuardService,
+    private router: Router
   ) {
     this.eyeIcon = 'eye-slash-fill';
     this.inputType = 'password';
@@ -49,6 +51,7 @@ export class SignupComponent implements OnInit {
     if(this.signupForm.valid) {
       this.authService.addUser(this.signupForm.value).subscribe((result)=> {
         this.reset();
+        this.router.navigate(['login']);
       });
     }
     else {

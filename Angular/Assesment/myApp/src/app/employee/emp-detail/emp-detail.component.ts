@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { emp } from '../emp';
+import { emp } from '../model/emp';
 import { DataShareService } from '../service/data-share.service';
 
 
@@ -10,7 +10,7 @@ import { DataShareService } from '../service/data-share.service';
   styleUrls: ['./emp-detail.component.scss']
 })
 export class EmpDetailComponent implements OnInit {
-  id: any
+  id: any;
   empdata: emp
 
   constructor(public actRoute: ActivatedRoute,

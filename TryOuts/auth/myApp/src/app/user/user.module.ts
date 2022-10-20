@@ -5,7 +5,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { AuthGuard } from '../service/guard/auth.guard';
+import { AuthGuard } from '../core/guard/auth.guard';
 import { AuthGuardService } from '../service/api/auth-guard.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';

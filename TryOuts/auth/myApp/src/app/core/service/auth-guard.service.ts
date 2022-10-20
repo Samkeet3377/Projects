@@ -10,7 +10,7 @@ import { user } from 'src/app/user/model/user';
 )
 export class AuthGuardService {
 
-  auth: Subject<boolean>
+  auth: Subject<string>
   baseUrl: string;
 
   constructor(
