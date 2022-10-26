@@ -6,13 +6,26 @@
       "gender": "m",
       "dob": "2022-10-07",
       "salary": "12345",
+      "roles": [
+        "Front-End"
+      ],
       "id": 1
     },
     {
       "name": "ayush",
       "gender": "m",
       "dob": "2022-10-07",
-      "salary": "4321",
+      "salary": "14321",
+      "roles": [
+        {
+          "id": 2,
+          "name": "Back-End"
+        },
+        {
+          "id": 1,
+          "name": "Front-End"
+        }
+      ],
       "id": 2
     },
     {
@@ -20,6 +33,9 @@
       "gender": "m",
       "dob": "2022-10-07",
       "salary": "12345",
+      "roles": [
+        "Front-End"
+      ],
       "id": 3
     },
     {
@@ -27,6 +43,9 @@
       "gender": "m",
       "dob": "2022-10-06",
       "salary": "1234",
+      "roles": [
+        "Back-End"
+      ],
       "id": 4
     }
   ]

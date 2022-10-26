@@ -2,6 +2,7 @@
 <div class="d-flex align-item-center justify-content-center">
   <div class="coantainer-fluid card p-3 shadow-sm" style="width: 600px">
     <form [formGroup]="form">
+
       <div class="row mb-3">
         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
         <div class="col-sm-10">
@@ -28,6 +29,7 @@
           </p>
         </div>
       </div>
+
       <div class="row mb-3">
         <label for="inputGender" class="col-sm-2 col-form-label">Gender</label>
         <div class="col-sm-10">
@@ -45,6 +47,7 @@
           </p>
         </div>
       </div>
+
       <div class="row mb-3">
         <label for="inputDOB" class="col-sm-2 col-form-label">D O B</label>
         <div class="col-sm-10">
@@ -59,6 +62,7 @@
           </p>
         </div>
       </div>
+
       <div class="row mb-3">
         <label for="inputSalary" class="col-sm-2 col-form-label">Salary</label>
         <div class="col-sm-10">
@@ -74,6 +78,16 @@
           <p *ngIf="form.controls['salary'].touched && form.controls['salary'].errors?.['required']">
             Field Required
           </p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="inputTags" class="col-sm-2 col-form-label">Tags</label>
+        <div class="col-sm-10">
+          <ng-select class="form-control" id="inputTags" formControlName="roles" required
+                    [items]="tags" bindLabel="name" [hideSelected]="true"
+                    [multiple]="true" [closeOnSelect]="false" placeholder="Select Role">
+          </ng-select>
         </div>
       </div>
 

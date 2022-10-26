@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataShareService } from 'src/app/employee/service/data-share.service';
@@ -28,19 +29,21 @@ export class EmpListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.getEmpList();
   }
 
   public getEmpList(): void {
-    this.dataService.getEmp().subscribe((rspns: emp[]) => { this.empDetail = rspns });
+    this.dataService.getEmp().subscribe((rspns: emp[]) => {
+      this.empList = rspns;
+    });
   }
 
   public userDelete(data: any): void {
     this.dataService.deleteEmp(data.id).subscribe((rspns) => {
       this.getEmpList();
-      alert('Are you Sure? to Delete '+ data.name +' Employee');
+      alert('Are you Sure? to Delete ' + data.name + ' Employee');
       this.toastWarning();
-     });
+    });
   }
 
   public viewUser(id: any): void {
@@ -49,11 +52,11 @@ export class EmpListComponent implements OnInit {
 
   public editUser(empData: emp): void {
     this.empData.emit(empData);
-    this.router.navigate(['./list', +empData.id], { relativeTo: this.actRouter.parent });
+    this.router.navigate(['./list', + empData.id], { relativeTo: this.actRouter.parent });
   }
 
-  public toastWarning(){
-    this.toaster.onWarning('Employee Deleted Successfully','Message');
+  public toastWarning() {
+    this.toaster.onWarning('Employee Deleted Successfully', 'Message');
   }
 
 }

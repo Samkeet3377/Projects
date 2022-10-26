@@ -17,23 +17,33 @@ export class EmpFormComponent implements OnInit {
   public formdata: emp[];
   public id: any;
 
+  public tags: any;
+  public temp: number;
+
   constructor(
-    private formB: FormBuilder,
+    public formB: FormBuilder,
     public dataService: DataShareService,
     public actRoute: ActivatedRoute,
     public router: Router,
     public toaster: ToastService
   ) {
+
+    this.temp = 0;
+    this.tags = [
+      { id: 1, name: 'Front-End' }, { id: 2, name: 'Back-End' }
+    ];
+
     this.form = this.formB.group({
       name: ['', [Validators.required, Validators.minLength(3), Validators.pattern('^[a-zA-Z][a-zA-Z ]*$')]],
       gender: ['', [Validators.required, Validators.pattern('^[m|f|o|M|F|O]$')]],
       dob: ['', [Validators.required]],
-      salary: ['', [Validators.required, Validators.pattern('^[0-9]*$')]]
+      salary: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      roles: ['', [Validators.required]]
     })
 
     this.formdata = []
 
-    this.actRoute.params.subscribe(params => {
+    this.actRoute.params.subscribe((params: any) => {
       this.id = params['id'];
       if (this.id) {
         this.getEmpById();
@@ -54,14 +64,14 @@ export class EmpFormComponent implements OnInit {
     if (this.form.valid) {
 
       if (this.id) {
-        this.dataService.editEmp(this.form.value, this.id).subscribe(res => {
+        this.dataService.editEmp(this.form.value, this.id).subscribe((result) => {
           this.getEmpList();
           this.onReset();
           this.toastInfo();
-          this.router.navigate(['./form'],{ relativeTo: this.actRoute.parent })
+          this.router.navigate(['./form'], { relativeTo: this.actRoute.parent })
         });
       } else {
-        this.dataService.addEmp(this.form.value).subscribe((Response) => {
+        this.dataService.addEmp(this.form.value).subscribe((result) => {
           this.getEmpList();
           this.onReset();
           this.toastSuccess();
@@ -74,8 +84,8 @@ export class EmpFormComponent implements OnInit {
   }
 
   getEmpById() {
-    this.dataService.getEmpById(this.id).subscribe(res => {
-      this.form.patchValue(res);
+    this.dataService.getEmpById(this.id).subscribe((result) => {
+      this.form.patchValue(result);
     })
   }
 
@@ -83,16 +93,16 @@ export class EmpFormComponent implements OnInit {
     this.form.reset();
   }
 
-  onEdit(data: emp){
+  onEdit(data: emp) {
     this.form.patchValue(data);
   }
 
   // Toast Service Fns
   public toastSuccess() {
-    this.toaster.onSuccess('Data Add Successfully','Message');
+    this.toaster.onSuccess('Data Add Successfully', 'Message');
   }
   public toastInfo() {
-    this.toaster.onSuccess('Data Edit Successfully','Message');
+    this.toaster.onSuccess('Data Edit Successfully', 'Message');
   }
 
 

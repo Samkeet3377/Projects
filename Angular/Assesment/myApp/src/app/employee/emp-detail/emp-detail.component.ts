@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { emp } from '../model/emp';
 import { DataShareService } from '../service/data-share.service';
 
@@ -13,7 +13,9 @@ export class EmpDetailComponent implements OnInit {
   id: any;
   empdata: emp
 
-  constructor(public actRoute: ActivatedRoute,
+  constructor(
+    public router: Router,
+    public actRoute: ActivatedRoute,
     public dataService: DataShareService) {
     this.empdata = new emp
 
@@ -24,16 +26,16 @@ export class EmpDetailComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-
-
-  }
-
+  ngOnInit(): void { }
 
   getEmpById() {
     this.dataService.getEmpById((this.id)).subscribe(params => {
       this.empdata = params;
     })
+  }
+
+  toBack() {
+    this.router.navigate(['form'], { relativeTo: this.actRoute.parent })
   }
 
 }

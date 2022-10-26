@@ -1,28 +1,30 @@
 <hr>
 <h3 class="text-center my-4">Employee List</h3>
-<div class="container-fluid w-50">
+<div class="container-fluid text-center">
   <table class="table">
     <thead>
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Gender</th>
         <th scope="col">D.O.B</th>
+        <th scope="col">Roles</th>
         <th scope="col">Salary</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let emp of empDetail">
-        <td>{{emp.name | titlecase }}</td>
-        <td>{{emp.gender | uppercase }}</td>
-        <td>{{emp.dob }}</td>
-        <td>{{emp.salary | currency:'INR' }}</td>
+      <tr *ngFor="let emp of empList ">
+        <td>{{ emp.name | titlecase }}</td>
+        <td>{{ emp.gender | uppercase }}</td>
+        <td>{{ emp.dob | date:'mediumDate' }}</td>
+        <td>{{ emp.roles | json }}</td>
+        <td>{{ emp.salary | currency:'INR' }}</td>
         <!-- <td>{{emp.id}}</td> -->
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-info" (click)="viewUser(emp.id);">Details</button>
             <button type="button" class="btn btn-outline-warning" (click)="editUser(emp)">Edit</button>
-            <button type="button" class="btn btn-danger" (click)="userDelete(emp)" >Delete</button>
+            <button type="button" class="btn btn-danger" (click)="userDelete(emp)">Delete</button>
             <!-- (click)="onDelete(emp)"  -->
           </div>
         </td>
