@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { user } from '../../model/user';
 import { AuthService } from '../../service/auth.service';
 
@@ -15,11 +16,14 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   userList: user[];
+  public data: boolean;
 
   constructor(
+    private route: Router,
     formB: FormBuilder,
     private authService: AuthService
   ) {
+    this.data = false;
     this.eyeIcon = 'eye-slash-fill';
     this.inputType = 'password';
 
@@ -47,17 +51,18 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-this.authService.getUser().subscribe((res:user[])=>{
-  console.log(res);
-let user= res.find((user:user)=>{user.email===this.loginForm.controls['email'].value})
-console.log(user);
+    console.log('clicked');
 
+    this.authService.getUser().subscribe((res) => {
+      let findUser = res.find((user: user) => (user.email === this.loginForm.value.email && user.password === this.loginForm.value.password));
+      if (findUser) {
+        this.route.navigate(['home']);
+        localStorage.setItem('isAuth', 'true');
+      } else {
+        alert('you are unregistered user');
+      }
+    });
 
-})
-  }
-
-  getAllUser() {
-    this.authService.getUser().subscribe((result) => { this.userList = result });
   }
 
 }
