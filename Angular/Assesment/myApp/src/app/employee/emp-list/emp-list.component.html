@@ -13,12 +13,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let emp of empList ">
+      <tr *ngFor="let emp of empList" >
         <td>{{ emp.name | titlecase }}</td>
         <td>{{ emp.gender | uppercase }}</td>
         <td>{{ emp.dob | date:'mediumDate' }}</td>
         <td>{{ emp.roles | json }}</td>
+
         <td>{{ emp.salary | currency:'INR' }}</td>
+        <div  *ngFor="let b of tempRole" >
+          <td>{{b.roles}}</td>
+        </div>
         <!-- <td>{{emp.id}}</td> -->
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">

@@ -17,7 +17,7 @@ import { ToastService } from './service/toast.service';
     EmployeeComponent,
     EmpListComponent,
     EmpFormComponent,
-    EmpDetailComponent
+    EmpDetailComponent,
   ],
   imports: [
     CommonModule,

@@ -16,6 +16,7 @@ export class EmpListComponent implements OnInit {
 
   @Output() empData: EventEmitter<emp>
   empList: emp[];
+  tempRole:any;
 
   constructor(
     public router: Router,
@@ -24,6 +25,7 @@ export class EmpListComponent implements OnInit {
     public toaster: ToastService
   ) {
     this.empList = [];
+    this.tempRole = [];
     this.empDetail = [];
     this.empData = new EventEmitter();
   }

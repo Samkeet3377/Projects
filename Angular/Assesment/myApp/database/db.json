@@ -1,5 +1,18 @@
 {
-  "user": [],
+  "user": [
+    {
+      "username": "samkeet",
+      "email": "Samkeet@test.com",
+      "password": "samkeet#123",
+      "id": 1
+    },
+    {
+      "username": "amresh",
+      "email": "amresh@test.com",
+      "password": "amresh#123",
+      "id": 2
+    }
+  ],
   "employee": [
     {
       "name": "samkeet",
@@ -34,7 +47,14 @@
       "dob": "2022-10-07",
       "salary": "12345",
       "roles": [
-        "Front-End"
+        {
+          "id": 2,
+          "name": "Back-End"
+        },
+        {
+          "id": 1,
+          "name": "Front-End"
+        }
       ],
       "id": 3
     },
@@ -44,7 +64,14 @@
       "dob": "2022-10-06",
       "salary": "1234",
       "roles": [
-        "Back-End"
+        {
+          "id": 2,
+          "name": "Back-End"
+        },
+        {
+          "id": 1,
+          "name": "Front-End"
+        }
       ],
       "id": 4
     }

@@ -13,7 +13,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -28,6 +28,7 @@ import { BrowserModule } from '@angular/platform-browser';
     AppRoutingModule,
     CoreModule,
     SharedModule,
+    UserModule,
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -39,6 +40,7 @@ import { BrowserModule } from '@angular/platform-browser';
       "extendedTimeOut": 1000,
       "positionClass": "toast-top-center"
     }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
