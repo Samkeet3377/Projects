@@ -16,9 +16,9 @@ export class ToastService {
     this.toaster.success(msg, title)
   }
   onInfo(msg: string, title: string) {
-    this.toaster.success(msg, title)
+    this.toaster.info(msg, title)
   }
   onWarning(msg: string, title: string) {
-    this.toaster.success(msg, title)
+    this.toaster.warning(msg, title)
   }
 }

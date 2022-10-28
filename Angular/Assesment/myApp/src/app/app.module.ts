@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations' ;
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserModule } from './user/user.module';
-
+import { OverlayModule } from "@angular/cdk/overlay"
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import { UserModule } from './user/user.module';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
+    OverlayModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       "closeButton": true,

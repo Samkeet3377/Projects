@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { user } from '../model/user';
 
 @Injectable(
@@ -10,19 +10,24 @@ import { user } from '../model/user';
 export class AuthService {
 
   baseUrl: string;
+  visibleBS: BehaviorSubject<boolean>;
 
   constructor(
     private route: Router,
     private http: HttpClient
   ) {
-    this.baseUrl = 'http://localhost:3000/'
+    this.baseUrl = 'http://localhost:3000/';
+
+    this.visibleBS = new BehaviorSubject(false)
   }
 
   isAuth() {
     let isAuth = localStorage.getItem('isAuth');
     if (isAuth == 'true') {
+      this.visibleBS.next(true);
       return true;
     } else {
+      this.visibleBS.next(false);
       return false;
     }
   }
