@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    console.log('clicked');
+    // console.log('clicked');
 
     this.authService.getUser().subscribe((res) => {
       let findUser = res.find((user: user) => (user.email === this.loginForm.value.email && user.password === this.loginForm.value.password));

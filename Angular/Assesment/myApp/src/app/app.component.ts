@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   public visible: boolean;
   constructor(
-    private authService: AuthService
+    public authService: AuthService
   ) {
     this.visible = false;
   }

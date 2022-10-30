@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { bike, car } from 'src/app/modules/product/model/model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { bikeInfo } from 'src/app/modules/product/model/model';
 import { ApiService } from 'src/app/modules/share/service/api.service';
 
 @Component({
@@ -9,11 +10,15 @@ import { ApiService } from 'src/app/modules/share/service/api.service';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(
+
+  ) {
+
+  }
 
   ngOnInit(): void {
-    // this.getBikes();
-    // this.getCars();
+
   }
 
 }

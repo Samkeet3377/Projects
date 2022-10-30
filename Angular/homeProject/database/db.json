@@ -1,28 +1,154 @@
 {
-  "admin": [{ "id":1, "name": "admin", "password": "admin" }],
-  "users": [{ "id":1, "name": "testuser", "password": "testpass" }],
+  "admin": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "admin"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "testuser",
+      "password": "testpass"
+    }
+  ],
   "bikes": [
-    { "id": 1, "category": "bike", "title": "TVS" },
-    { "id": 2, "category": "bike", "title": "Honda" },
-    { "id": 3, "category": "bike", "title": "Royal Enfield" },
-    { "id": 4, "category": "bike", "title": "Hero" },
-    { "id": 5, "category": "bike", "title": "Bajaj" },
-    { "id": 6, "category": "bike", "title": "Yamaha" },
-    { "id": 7, "category": "bike", "title": "Suzuki" },
-    { "id": 8, "category": "bike", "title": "Jawa" },
-    { "id": 9, "category": "bike", "title": "KTM" },
-    { "id": 10, "category": "bike", "title": "Yezdi" }
+    {
+      "id": 1,
+      "category": "bike",
+      "title": "TVS",
+      "company_id": "tvs_01"
+    },
+    {
+      "id": 2,
+      "category": "bike",
+      "title": "Honda",
+      "company_id": "honda_02"
+    },
+    {
+      "id": 3,
+      "category": "bike",
+      "title": "Royal Enfield",
+      "company_id": "royal_enfield_03"
+    },
+    {
+      "id": 4,
+      "category": "bike",
+      "title": "Hero",
+      "company_id": "hero_04"
+    },
+    {
+      "id": 5,
+      "category": "bike",
+      "title": "Bajaj",
+      "company_id": "bajaj_05"
+    },
+    {
+      "id": 6,
+      "category": "bike",
+      "title": "Yamaha",
+      "company_id": "yamaha_06"
+    },
+    {
+      "id": 7,
+      "category": "bike",
+      "title": "Suzuki",
+      "company_id": "suzuki_07"
+    },
+    {
+      "id": 8,
+      "category": "bike",
+      "title": "Jawa",
+      "company_id": "jawa_08"
+    },
+    {
+      "id": 9,
+      "category": "bike",
+      "title": "KTM",
+      "company_id": "ktm_09"
+    },
+    {
+      "id": 10,
+      "category": "bike",
+      "title": "Yezdi",
+      "company_id": "yezdi_10"
+    }
   ],
   "cars": [
-    { "id": 1, "category": "car", "title": "Maruti Suzuki" },
-    { "id": 2, "category": "car", "title": "Hyundai" },
-    { "id": 3, "category": "car", "title": "Tata" },
-    { "id": 4, "category": "car", "title": "Mahindra" },
-    { "id": 5, "category": "car", "title": "Toyota" },
-    { "id": 6, "category": "car", "title": "Kia" },
-    { "id": 7, "category": "car", "title": "Honda" },
-    { "id": 8, "category": "car", "title": "Volkswagen" },
-    { "id": 9, "category": "car", "title": "Skoda" },
-    { "id": 10, "category": "car", "title": "MG" }
+    {
+      "id": 1,
+      "category": "car",
+      "title": "Maruti Suzuki"
+    },
+    {
+      "id": 2,
+      "category": "car",
+      "title": "Hyundai"
+    },
+    {
+      "id": 3,
+      "category": "car",
+      "title": "Tata"
+    },
+    {
+      "id": 4,
+      "category": "car",
+      "title": "Mahindra"
+    },
+    {
+      "id": 5,
+      "category": "car",
+      "title": "Toyota"
+    },
+    {
+      "id": 6,
+      "category": "car",
+      "title": "Kia"
+    },
+    {
+      "id": 7,
+      "category": "car",
+      "title": "Honda"
+    },
+    {
+      "id": 8,
+      "category": "car",
+      "title": "Volkswagen"
+    },
+    {
+      "id": 9,
+      "category": "car",
+      "title": "Skoda"
+    },
+    {
+      "id": 10,
+      "category": "car",
+      "title": "MG"
+    }
+  ],
+  "base-info": [
+    {
+      "id": 1,
+      "company_id": "tvs_01",
+      "name": "TVS XL100 Comfort",
+      "img_url": "",
+      "cc": 99.7,
+      "kmpl": 51.5,
+      "bhp": 4.3,
+      "kg": 86,
+      "price": 45110
+    },
+    {
+      "id": 2,
+      "company_id": "tvs_01",
+      "name": "TVS XL100 Heavy Duty",
+      "img_url": "",
+      "cc": 99.7,
+      "kmpl": 55,
+      "bhp": 4.3,
+      "kg": 88,
+      "price": 47237
+    }
   ]
 }

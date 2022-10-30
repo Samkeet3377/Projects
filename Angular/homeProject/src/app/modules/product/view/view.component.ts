@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../share/service/api.service';
+import { bikeInfo } from '../model/model';
 
 @Component({
   selector: 'app-view',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit {
 
-  constructor() { }
+  public bikeInfo: bikeInfo[];
+
+  constructor(
+    private bikeInfoService: ApiService
+  ) {
+    this.bikeInfo = [];
+  }
 
   ngOnInit(): void {
+    this.getTVSBikeInfo();
+  }
+
+  getTVSBikeInfo() {
+    this.bikeInfoService.getBikesData().subscribe((result) => {
+      this.bikeInfo = result;
+    });
   }
 
 }
