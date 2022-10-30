@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^14.2.8",
     "@angular/platform-browser-dynamic": "^14.2.8",
     "@angular/router": "^14.2.8",
+    "@angular/upgrade": "^14.2.8",
     "@ng-select/ng-select": "^9.0.2",
     "bootstrap": "^5.2.1",
     "json-server": "^0.17.0",
