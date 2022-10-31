@@ -4,12 +4,14 @@
       "username": "samkeet",
       "email": "samkeet@test.com",
       "password": "123",
+      "role": "user",
       "id": 1
     },
     {
       "username": "amresh",
       "email": "amresh@test.com",
-      "password": "amresh#123",
+      "password": "amresh123",
+      "role": "admin",
       "id": 2
     }
   ],
@@ -74,6 +76,19 @@
         }
       ],
       "id": 4
+    },
+    {
+      "name": "qwe",
+      "gender": "m",
+      "dob": "2022-10-01",
+      "salary": "123455",
+      "roles": [
+        {
+          "id": 1,
+          "name": "Front-End"
+        }
+      ],
+      "id": 5
     }
   ]
 }

@@ -10,7 +10,6 @@ export class AuthService {
   baseUrl: string;
   visibleBS: BehaviorSubject<boolean>;
 
-  // isAuthorized: boolean;
 
   constructor(
     private route: Router,
@@ -20,17 +19,14 @@ export class AuthService {
 
     this.visibleBS = new BehaviorSubject(false);
 
-    // this.isAuthorized = false;
   }
 
   isAuth() {
     let isAuth = localStorage.getItem('isAuth');
     if (isAuth == 'true') {
-      // this.isAuthorized = true;
       this.visibleBS.next(true);
       return true;
     } else {
-      // this.isAuthorized = false;
       this.visibleBS.next(false);
       return false;
     }
@@ -45,5 +41,8 @@ export class AuthService {
     const url = this.baseUrl + 'user';
     return this.http.post<user>(url, data);
   }
+
+  //temp
+
 
 }

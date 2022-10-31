@@ -58,6 +58,9 @@ export class LoginComponent implements OnInit {
       if (findUser) {
         this.route.navigate(['home']);
         localStorage.setItem('isAuth', 'true');
+        const role = findUser.role;
+        localStorage.setItem('role', role);
+        // this.loginForm.reset();
       } else {
         alert('you are unregistered user');
       }

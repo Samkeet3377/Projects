@@ -16,7 +16,7 @@ export class EmpListComponent implements OnInit {
 
   @Output() empData: EventEmitter<emp>
   empList: emp[];
-  tempRole:any;
+  tempRole: any;
 
   constructor(
     public router: Router,
@@ -60,5 +60,8 @@ export class EmpListComponent implements OnInit {
   public toastWarning() {
     this.toaster.onWarning('Employee Deleted Successfully', 'Message');
   }
+
+  //test destructure JSON
+
 
 }
