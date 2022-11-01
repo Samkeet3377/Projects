@@ -5,3 +5,29 @@
 .pointer {
   cursor: pointer;
 }
+.curPosition{
+  padding: 0;
+  margin: 0;
+  margin-top: 13px;
+  color: slategray;
+}
+
+.example-list {
+  width: 100px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  background: #fff;
+  // text-align: center;
+  padding: 10px;
+  margin-top: 2px;
+}
+
+.example-list > li {
+  list-style-type: none;
+  // border-bottom: solid 1px #8b8b8b;
+  padding: 8px 0;
+}
+
+.example-list > li:last-child {
+  border-bottom: none;
+}

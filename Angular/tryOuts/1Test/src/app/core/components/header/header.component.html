@@ -15,10 +15,22 @@
       <li class="nav-item">
         <a class="nav-link bi bi-clipboard-pulse fs-2 pointer"></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item d-flex">
+        <!-- (click)="openOverlay()" -->
         <a class="nav-link bi bi-person-circle fs-2 pointer"></a>
+        <a class="bi bi-caret-down-fill pointer curPosition" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
+          (click)="isOpen = !isOpen"></a>
       </li>
     </ul>
+
+    <!-- (detach)="isOpen = false" (backdropClick)="isOpen = false" -->
+    <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]=" isOpen"
+      (detach)="isOpen = false" (backdropClick)="isOpen = false">
+      <ul class="example-list">
+        <li>Edit Profile</li>
+        <li>Logout</li>
+      </ul>
+    </ng-template>
 
   </div>
 </nav>
