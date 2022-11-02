@@ -1,0 +1,172 @@
+<div class="container w-100 d-flex flex-column align-items-center py-5 justify-content-center">
+  <div class="card p-3 shadow-sm w-100">
+    <h4 class="card-title"><span class="text-danger">1</span>Rhythm</h4>
+    <h3 class="card-title text-center">Register your Account</h3>
+    <div class="card-body">
+      <form [formGroup]="signupForm">
+        <!-- Start: Row for First name Last name -->
+        <div class="row">
+
+          <div class="col-12 col-md-6">
+            <div class="my-2">
+              <label for="inputFirstName" class="form-label">First Name*</label>
+              <input type="text" class="form-control" id="inputFirstName" formControlName="firstName" [ngClass]="{ 'is-valid': signupForm.controls['firstName'].valid,
+                'is-invalid': (signupForm.controls['firstName'].invalid && signupForm.controls['firstName'].touched) ||
+              (signupForm.controls['firstName'].dirty &&  signupForm.controls['firstName'].errors?.['required']) ||
+              (signupForm.controls['firstName'].dirty &&  signupForm.controls['firstName'].errors?.['maxlength'] )  }">
+            </div>
+            <div *ngIf="signupForm.controls['firstName'].invalid && signupForm.controls['firstName'].errors && signupForm.controls['firstName'].dirty ||
+              signupForm.controls['firstName'].touched">
+              <span class="text-danger"
+                *ngIf="signupForm.controls['firstName'].errors?.['required'] && signupForm.controls['firstName'].touched ">
+                Please enter your First Name
+              </span>
+              <span class="text-danger" *ngIf="signupForm.controls['firstName'].errors?.['maxlength']">
+                max Length is 25 character
+              </span>
+              <span class="text-danger"
+                *ngIf="signupForm.controls['firstName'].errors?.['minlength'] && signupForm.controls['firstName'].touched ">
+                min Length is 3 character
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="my-2">
+              <label for="inputLastName" class="form-label">Last Name*</label>
+              <input type="text" class="form-control" id="inputLastName" formControlName="lastName" [ngClass]="{ 'is-valid': signupForm.controls['lastName'].valid,
+                'is-invalid': (signupForm.controls['lastName'].invalid && signupForm.controls['lastName'].touched) ||
+              (signupForm.controls['lastName'].dirty && signupForm.controls['lastName'].invalid && signupForm.controls['lastName'].errors?.['required']) ||
+              (signupForm.controls['lastName'].errors?.['maxlength'] ) }">
+            </div>
+            <div *ngIf="signupForm.controls['lastName'].invalid && signupForm.controls['lastName'].errors && signupForm.controls['lastName'].dirty ||
+              signupForm.controls['lastName'].touched">
+              <span class="text-danger"
+                *ngIf="signupForm.controls['lastName'].errors?.['required'] && signupForm.controls['lastName'].touched ">
+                Please enter your Last Name
+              </span>
+              <span class="text-danger" *ngIf="signupForm.controls['lastName'].errors?.['maxlength']">
+                max Length is 25 character
+              </span>
+              <span class="text-danger"
+                *ngIf="signupForm.controls['lastName'].errors?.['minlength'] && signupForm.controls['lastName'].touched ">
+                min Length is 3 character
+              </span>
+            </div>
+          </div>
+
+        </div>
+        <!-- End: Row for First name Last name -->
+
+        <!-- Start: Row for Email Password -->
+        <div class="row">
+
+          <div class="col-12 col-md-6">
+            <div class="my-2">
+              <label for="inputEmail" class="form-label">Email Address*</label>
+              <input type="email" class="form-control" id="inputEmail" formControlName="email">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="my-2 position-relative">
+              <label for="inputPassword" class="form-label">password*</label>
+              <input type="{{buttonType}}" class="form-control" id="inputPassword" formControlName="password">
+              <a class="bi bi-{{eyeIcon}} position-absolute top-50 end-0 icon-position" (click)="changeIcon()"></a>
+            </div>
+          </div>
+
+        </div>
+        <!-- End: Row for Email Password -->
+
+        <!-- Start: Row for PhoneNumber State City -->
+        <div class="row">
+
+          <div class="col-12 col-md-6">
+            <div class="my-2">
+              <label for="inputPhoneNumber" class="form-label">Phone Number*</label>
+              <input type="email" class="form-control" id="inputPhoneNumber" formControlName="phoneNumber">
+            </div>
+          </div>
+          <div class="col-12 col-md-6" formGroupName="address">
+            <div class="my-2">
+              <div class="row">
+
+                <div class="col-12 col-md-6">
+                  <label for="inputState" class="form-label">Select State*</label>
+                  <select class="form-select" id="inputState" formControlName="state">
+                    <option disabled selected>--Select--</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                  <label for="inputCity" class="form-label">Select City*</label>
+                  <select class="form-select" id="inputCity" formControlName="city">
+                    <option disabled selected>--Select--</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- End: Row for PhoneNumber State City -->
+
+        <!-- Start: Row for UserType AddPic -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="d-md-flex  align-items-center my-2">
+
+              <label for="inputUserType" class="form-label me-1">Select User Type*</label>
+              <select class="form-select w-50" id="inputUserType" formControlName="type">
+                <option disabled selected>--Select--</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+
+          </div>
+
+          <div class="col-12 col-md-6">
+
+            <div class="my-2 d-flex flex-column">
+              <label type="button" class="btn btn-outline-info" for="imageFile">Add Picture</label>
+              <input type="file" class="d-none" name="" formControlName='image' id="imageFile">
+              <img src="" alt="a">
+              <span>{{''}}</span>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End: Row for UserType AddPic -->
+        <div class="row">
+          <div class="col">
+            <div class="my-2 text-center">
+              <button type="button" class="btn btn-outline-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="my-2 text-center">
+              <small>
+                <span>Already a member?</span>
+                <span> <a routerLink="/login">Click here to Login</a></span>
+              </small>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

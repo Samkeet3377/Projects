@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  eyeIcon: string;
+  buttonType: string;
+
+  constructor() {
+    this.eyeIcon = 'eye-slash';
+    this.buttonType = 'password';
+  }
 
   ngOnInit(): void {
+  }
+
+  changeIcon() {
+    if (this.eyeIcon === 'eye-slash') {
+      this.eyeIcon = 'eye';
+      this.buttonType = 'text';
+    } else {
+      this.eyeIcon = 'eye-slash';
+      this.buttonType = 'password';
+    }
   }
 
 }

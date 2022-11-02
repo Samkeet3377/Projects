@@ -1,9 +1,9 @@
-<nav class="navbar  navbar-expand-lg bg-light p-0 border-dark border-bottom">
+<nav class="navbar navbar-expand bg-light p-0 border-dark border-bottom">
   <div class="container-fluid">
 
     <a class="navbar-brand text-danger pointer">1 <span class="text-dark">Rhythm</span> </a>
 
-    <form class="d-flex align-items-center position-relative">
+    <form class="d-flex align-items-center position-relative d-none d-sm-flex">
       <span class="bi bi-search position-absolute set"></span>
       <input class="form-control rounded-4 px-4" type="search" placeholder="Search">
     </form>
@@ -15,20 +15,19 @@
       <li class="nav-item">
         <a class="nav-link bi bi-clipboard-pulse fs-2 pointer"></a>
       </li>
-      <li class="nav-item d-flex">
-        <!-- (click)="openOverlay()" -->
-        <a class="nav-link bi bi-person-circle fs-2 pointer"></a>
-        <a class="bi bi-caret-down-fill pointer curPosition" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
-          (click)="isOpen = !isOpen"></a>
+      <li class="nav-item d-flex profile-wrapper" (click)="isOpen = !isOpen">
+        <a class="bi bi-person-circle fs-2 pointer"></a>
+        <a class="bi bi-caret-down-fill pointer curPosition" cdkOverlayOrigin #trigger="cdkOverlayOrigin"></a>
+
       </li>
     </ul>
-
     <!-- (detach)="isOpen = false" (backdropClick)="isOpen = false" -->
     <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]=" isOpen"
-      (detach)="isOpen = false" (backdropClick)="isOpen = false">
+      [cdkConnectedOverlayHasBackdrop]="true" cdkConnectedOverlayBackdropClass="profileDropdownOverlay"
+      (detach)="isOpen = false" (backdropClick)="isOpen = false " cdkpos>
       <ul class="example-list">
-        <li>Edit Profile</li>
-        <li>Logout</li>
+        <li class="pointer" (click)="openOverlay()">Edit Profile</li>
+        <li class="pointer">Logout</li>
       </ul>
     </ng-template>
 

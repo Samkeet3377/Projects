@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  public OTP!: string;
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  generateOTP() {
+    let digits = '0123456789';
+    let otp = '';
+    for (let i = 0; i < 6; i++) {
+      otp += digits[Math.floor(Math.random() * 10)];
+    }
+    this.OTP = otp;
+    return otp;
   }
 
 }

@@ -25,6 +25,5 @@ export class HeaderComponent implements OnInit {
   openOverlay() {
     this.overlayService.open(ProfileComponent)
   }
-  backClick() {
-  }
+
 }

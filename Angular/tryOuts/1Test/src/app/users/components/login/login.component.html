@@ -1,18 +1,26 @@
 <div class="container-fluid d-flex flex-column align-items-center justify-content-center h-100">
   <div class="card p-3 shadow-sm" style="width: 350px;">
-    <h3 class="card-title text-center">Login</h3>
+    <h4 class="card-title text-center"><span class="text-danger">1</span>Rhythm</h4>
+    <h3 class="card-title text-center">Login to your Account</h3>
     <div class="card-body">
       <form>
         <div class="my-2">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Input Email">
+          <label for="inputEmail" class="form-label">Email Address*</label>
+          <input type="email" class="form-control" id="inputEmail">
         </div>
-        <div class="my-2">
-          <label for="inputPassword" class="form-label">password</label>
-          <input type="password" class="form-control" id="inputPassword" placeholder="Input Password">
+        <div class="my-2 position-relative">
+          <label for="inputPassword" class="form-label">password*</label>
+          <input type="{{buttonType}}" class="form-control" id="inputPassword">
+          <a class="bi bi-{{eyeIcon}} position-absolute top-50 end-0 icon-position" (click)="changeIcon()"></a>
         </div>
-        <div class="mt-4 text-center">
+        <div class="my-4 text-center">
           <button type="submit" class="btn btn-sm btn-outline-primary">Login</button>
+        </div>
+        <div class="my-2 text-center">
+          <small>
+            <span>New Here?</span>
+            <span> <a routerLink="/register">Click here to Register</a></span>
+          </small>
         </div>
       </form>
     </div>
