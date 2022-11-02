@@ -64,7 +64,24 @@
           <div class="col-12 col-md-6">
             <div class="my-2">
               <label for="inputEmail" class="form-label">Email Address*</label>
-              <input type="email" class="form-control" id="inputEmail" formControlName="email">
+              <input type="email" class="form-control" id="inputEmail" formControlName="email" [ngClass]="{ 'is-valid': signupForm.controls['email'].valid,
+              'is-invalid': (signupForm.controls['email'].invalid && signupForm.controls['email'].touched) ||
+            (signupForm.controls['email'].dirty && signupForm.controls['email'].invalid && signupForm.controls['email'].errors?.['required']) ||
+            (signupForm.controls['email'].errors?.['maxlength'] ) }">
+            </div>
+            <div *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].errors && signupForm.controls['email'].dirty ||
+              signupForm.controls['email'].touched">
+              <span class="text-danger"
+                *ngIf="signupForm.controls['email'].errors?.['required'] && signupForm.controls['email'].touched ">
+                Please enter your Email Address
+              </span>
+              <span class="text-danger" *ngIf="signupForm.controls['email'].errors?.['maxlength']">
+                max Length is 25 character
+              </span>
+              <span class="text-danger"
+                *ngIf="signupForm.controls['email'].errors?.['minlength'] && signupForm.controls['email'].touched ">
+                min Length is 8 character
+              </span>
             </div>
           </div>
           <div class="col-12 col-md-6">
