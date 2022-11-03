@@ -87,8 +87,29 @@
           <div class="col-12 col-md-6">
             <div class="my-2 position-relative">
               <label for="inputPassword" class="form-label">password*</label>
-              <input type="{{buttonType}}" class="form-control" id="inputPassword" formControlName="password">
-              <a class="bi bi-{{eyeIcon}} position-absolute top-50 end-0 icon-position" (click)="changeIcon()"></a>
+              <input type="{{buttonType}}" class="form-control" id="inputPassword" formControlName="password" [ngClass]="{ 'is-valid': signupForm.controls['password'].valid,
+              'is-invalid': (signupForm.controls['password'].invalid && signupForm.controls['password'].touched) ||
+            (signupForm.controls['password'].dirty && signupForm.controls['password'].invalid && signupForm.controls['password'].errors?.['required']) ||
+            (signupForm.controls['password'].errors?.['maxlength'] ) }">
+              <a class="bi bi-{{eyeIcon}} position-absolute top-0 end-0 icon-position" (click)="changeIcon()"></a>
+            </div>
+            <div *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].errors && signupForm.controls['password'].dirty ||
+              signupForm.controls['password'].touched">
+              <span class="text-danger"
+                *ngIf="signupForm.controls['password'].errors?.['required'] && signupForm.controls['password'].touched ">
+                Please enter your Password
+              </span>
+              <span class="text-danger"
+                *ngIf="signupForm.controls['password'].errors?.['pattern'] && signupForm.controls['password'].touched ">
+                Use Atleast 1 Uppecase, 1 Digit and 1 Special character
+              </span>
+              <span class="text-danger" *ngIf="signupForm.controls['password'].errors?.['maxlength']">
+                max Length is 30 character
+              </span>
+              <span class="text-danger"
+                *ngIf="signupForm.controls['password'].errors?.['minlength'] && signupForm.controls['password'].touched && signupForm.controls['password'].invalid     ">
+                min Length is 8 character
+              </span>
             </div>
           </div>
 
@@ -101,7 +122,24 @@
           <div class="col-12 col-md-6">
             <div class="my-2">
               <label for="inputPhoneNumber" class="form-label">Phone Number*</label>
-              <input type="email" class="form-control" id="inputPhoneNumber" formControlName="phoneNumber">
+              <input type="email" class="form-control" id="inputPhoneNumber" formControlName="phoneNumber" [ngClass]="{ 'is-valid': signupForm.controls['phoneNumber'].valid,
+              'is-invalid': (signupForm.controls['phoneNumber'].invalid && signupForm.controls['phoneNumber'].touched) ||
+            (signupForm.controls['phoneNumber'].dirty && signupForm.controls['phoneNumber'].invalid && signupForm.controls['phoneNumber'].errors?.['required']) ||
+            (signupForm.controls['phoneNumber'].errors?.['maxlength'] ) }">
+            </div>
+            <div *ngIf="signupForm.controls['phoneNumber'].invalid && signupForm.controls['phoneNumber'].errors && signupForm.controls['phoneNumber'].dirty ||
+              signupForm.controls['phoneNumber'].touched">
+              <span class="text-danger"
+                *ngIf="signupForm.controls['phoneNumber'].errors?.['required'] && signupForm.controls['phoneNumber'].touched ">
+                Please enter your Phone Nunmber
+              </span>
+              <span class="text-danger" *ngIf="signupForm.controls['phoneNumber'].errors?.['maxlength']">
+                max Length is 10 character
+              </span>
+              <span class="text-danger"
+                *ngIf="signupForm.controls['phoneNumber'].errors?.['minlength'] && signupForm.controls['phoneNumber'].touched && signupForm.controls['phoneNumber'].invalid     ">
+                min Length is 10 character
+              </span>
             </div>
           </div>
           <div class="col-12 col-md-6" formGroupName="address">
