@@ -38,4 +38,11 @@ export class ApiService {
     const url = this.baseUrl + 'base-info';
     return this.http.put<bikeInfo>(url, data);
   }
+
+  //upload Image file to API
+  uploadImage(image: any): Observable<any> {
+    const formData = new FormData();
+    formData.append('image', image, image.name);
+    return this.http.post(this.baseUrl + 'imageSave', image);
+  }
 }
