@@ -1,7 +1,5 @@
-import { Overlay } from '@angular/cdk/overlay';
-import { ComponentPortal, Portal } from '@angular/cdk/portal';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { OverlayService } from 'src/app/shared/service/overlay.service';
+import { Component, OnInit } from '@angular/core';
+import { OverlayService } from 'src/app/shared/service/overlay/overlay.service';
 import { ProfileComponent } from 'src/app/users/components/profile/profile.component';
 
 @Component({
@@ -13,8 +11,8 @@ export class HeaderComponent implements OnInit {
 
   public isOpen: boolean;
 
-  constructor(private overlayService: OverlayService,
-    private overlay: Overlay
+  constructor(
+    private overlayService: OverlayService,
   ) {
     this.isOpen = false;
   }

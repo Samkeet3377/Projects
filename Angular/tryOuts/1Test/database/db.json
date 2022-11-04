@@ -1,0 +1,210 @@
+{
+  "cities": [
+    {
+      "id": 57588,
+      "name": "Abrama",
+      "state_id": 4030,
+      "state_code": "GJ",
+      "state_name": "Gujarat",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57591,
+      "name": "Adalaj",
+      "state_id": 4030,
+      "state_code": "GJ",
+      "state_name": "Gujarat",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 147572,
+      "name": "Agol",
+      "state_id": 4030,
+      "state_code": "GJ",
+      "state_name": "Gujarat",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57606,
+      "name": "Ahmedabad",
+      "state_id": 4030,
+      "state_code": "GJ",
+      "state_name": "Gujarat",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57608,
+      "name": "Ahwa",
+      "state_id": 4030,
+      "state_code": "GJ",
+      "state_name": "Gujarat",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57638,
+      "name": "Aldona",
+      "state_id": 4009,
+      "state_code": "GA",
+      "state_name": "Goa",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57727,
+      "name": "Arambol",
+      "state_id": 4009,
+      "state_code": "GA",
+      "state_name": "Goa",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57795,
+      "name": "Baga",
+      "state_id": 4009,
+      "state_code": "GA",
+      "state_name": "Goa",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57836,
+      "name": "Bambolim",
+      "state_id": 4009,
+      "state_code": "GA",
+      "state_name": "Goa",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 57845,
+      "name": "Bandora",
+      "state_id": 4009,
+      "state_code": "GA",
+      "state_name": "Goa",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India"
+    },
+    {
+      "id": 52,
+      "name": "Ashkāsham",
+      "state_id": 3901,
+      "state_code": "BDS",
+      "state_name": "Badakhshan",
+      "country_id": 1,
+      "country_code": "AF",
+      "country_name": "Afghanistan"
+    },
+    {
+      "id": 68,
+      "name": "Fayzabad",
+      "state_id": 3901,
+      "state_code": "BDS",
+      "state_name": "Badakhshan",
+      "country_id": 1,
+      "country_code": "AF",
+      "country_name": "Afghanistan"
+    },
+    {
+      "id": 72,
+      "name": "Ghormach",
+      "state_id": 3871,
+      "state_code": "BDG",
+      "state_name": "Badghis",
+      "country_id": 1,
+      "country_code": "AF",
+      "country_name": "Afghanistan"
+    },
+    {
+      "id": 108,
+      "name": "Qala i Naw",
+      "state_id": 3871,
+      "state_code": "BDG",
+      "state_name": "Badghis",
+      "country_id": 1,
+      "country_code": "AF",
+      "country_name": "Afghanistan"
+    }
+  ],
+  "states": [
+    {
+      "id": 4030,
+      "name": "Gujarat",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India",
+      "state_code": "GJ",
+      "type": "state"
+    },
+    {
+      "id": 4009,
+      "name": "Goa",
+      "country_id": 101,
+      "country_code": "IN",
+      "country_name": "India",
+      "state_code": "GA",
+      "type": "state"
+    },
+    {
+      "id": 3901,
+      "name": "Badakhshan",
+      "country_id": 1,
+      "country_code": "AF",
+      "country_name": "Afghanistan",
+      "state_code": "BDS",
+      "type": null
+    },
+    {
+      "id": 3871,
+      "name": "Badghis",
+      "country_id": 1,
+      "country_code": "AF",
+      "country_name": "Afghanistan",
+      "state_code": "BDG",
+      "type": null
+    }
+  ],
+  "countries": [
+    {
+      "id": 1,
+      "name": "Afghanistan",
+      "iso3": "AFG",
+      "iso2": "AF",
+      "numeric_code": "004",
+      "phone_code": "93",
+      "capital": "Kabul",
+      "currency": "AFN",
+      "currency_name": "Afghan afghani",
+      "region": "Asia",
+      "subregion": "Southern Asia"
+    },
+    {
+      "id": 101,
+      "name": "India",
+      "iso3": "IND",
+      "iso2": "IN",
+      "numeric_code": "356",
+      "phone_code": "91",
+      "capital": "New Delhi",
+      "currency": "INR",
+      "currency_name": "Indian rupee",
+      "region": "Asia",
+      "subregion": "Southern Asia"
+    }
+  ]
+}

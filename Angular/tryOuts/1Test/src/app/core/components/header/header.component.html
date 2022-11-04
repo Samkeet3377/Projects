@@ -21,7 +21,6 @@
 
       </li>
     </ul>
-    <!-- (detach)="isOpen = false" (backdropClick)="isOpen = false" -->
     <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]=" isOpen"
       [cdkConnectedOverlayHasBackdrop]="true" cdkConnectedOverlayBackdropClass="profileDropdownOverlay"
       (detach)="isOpen = false" (backdropClick)="isOpen = false " cdkpos>

@@ -3,15 +3,15 @@
     <h4 class="card-title text-center"><span class="text-danger">1</span>Rhythm</h4>
     <h3 class="card-title text-center">Login to your Account</h3>
     <div class="card-body">
-      <form>
+      <form [formGroup]="loginForm">
         <div class="my-2">
           <label for="inputEmail" class="form-label">Email Address*</label>
-          <input type="email" class="form-control" id="inputEmail">
+          <input type="email" class="form-control" id="inputEmail" formControlName="email">
         </div>
         <div class="my-2 position-relative">
           <label for="inputPassword" class="form-label">password*</label>
-          <input type="{{buttonType}}" class="form-control" id="inputPassword">
-          <a class="bi bi-{{eyeIcon}} position-absolute top-50 end-0 icon-position" (click)="changeIcon()"></a>
+          <input type="{{buttonType}}" class="form-control" id="inputPassword" formControlName="password">
+          <a class="bi bi-{{eyeIcon}} position-absolute top-0 end-0 icon-position" (click)="changeIcon()"></a>
         </div>
         <div class="my-4 text-center">
           <button type="submit" class="btn btn-sm btn-outline-primary">Login</button>

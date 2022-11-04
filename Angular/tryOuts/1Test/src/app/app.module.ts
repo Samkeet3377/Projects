@@ -20,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     UsersModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

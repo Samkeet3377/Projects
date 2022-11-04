@@ -1,0 +1,44 @@
+<div class="container my-5">
+  <form [formGroup]="form">
+    <div class="d-flex text-center">
+      <!-- Countries -->
+      <div class="flex-column me-4 p-2">
+        <label for="country" class="form-label">Countries</label>
+        <input type="search" name="" id="country" class="form-control mb-2" style="width: 200px;">
+        <select name="" id="city" class="form-select mb-2" style="width: 200px;" (change)="onSelectCountry($event)"
+          formControlName="selectCountry">
+          <option value="" selected disabled>--Select--</option>
+          <option *ngFor="let country of countriesData " value="{{country.id}}">{{country.name}}
+          </option>
+          <ul>
+            <li *ngFor="let country of countriesData">{{country.name}} </li>
+          </ul>
+          <!-- | search: 'searchText'  -->
+        </select>
+      </div>
+      <!-- States -->
+      <div class="flex-column me-4 p-2">
+        <label for="state" class="form-label">States</label>
+        <input type="search" name="" id="state" class="form-control mb-2" style="width: 200px;">
+        <select name="" id="city" class="form-select mb-2" style="width: 200px;" (change)="onSelectState($event)"
+          formControlName="selectState">
+          <option value="" selected disabled>--Select--</option>
+          <option *ngFor="let state of tempStateData" value="{{state.id}}">{{state.name}}</option>
+        </select>
+      </div>
+      <!-- Cities -->
+      <div class="flex-column me-4 p-2">
+        <label for="city" class="form-label">Cities</label>
+        <input type="search" name="" id="city" class="form-control mb-2" style="width: 200px;">
+        <select name="" id="city" class="form-select mb-2" style="width: 200px;" formControlName="selectCity">
+          <option value="" selected disabled>--Select--</option>
+          <option *ngFor="let city of tempCityData" value="">{{city.name}}</option>
+        </select>
+      </div>
+
+    </div>
+  </form>
+</div>
+<div class="container my-5">
+
+</div>
