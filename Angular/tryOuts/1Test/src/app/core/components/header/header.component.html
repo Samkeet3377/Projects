@@ -10,15 +10,11 @@
 
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link bi bi-cpu fs-2 pointer"></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link bi bi-clipboard-pulse fs-2 pointer"></a>
       </li>
       <li class="nav-item d-flex profile-wrapper" (click)="isOpen = !isOpen">
         <a class="bi bi-person-circle fs-2 pointer"></a>
         <a class="bi bi-caret-down-fill pointer curPosition" cdkOverlayOrigin #trigger="cdkOverlayOrigin"></a>
-
       </li>
     </ul>
     <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]=" isOpen"

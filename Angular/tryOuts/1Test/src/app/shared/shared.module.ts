@@ -5,12 +5,14 @@ import { TestComponent } from './components/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipe/search.pipe';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
     TestComponent,
-    SearchPipe
+    SearchPipe,
+    HomeComponent
   ],
   imports: [
     CommonModule,

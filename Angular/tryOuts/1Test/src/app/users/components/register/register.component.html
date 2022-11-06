@@ -146,7 +146,16 @@
             <div class="my-2">
               <div class="row">
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4">
+                  <label for="inputContry" class="form-label">Select Country*</label>
+                  <select class="form-select" id="inputCountry" formControlName="country">
+                    <option disabled selected>--India--</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-4">
                   <label for="inputState" class="form-label">Select State*</label>
                   <select class="form-select" id="inputState" formControlName="state">
                     <option disabled selected>--Select--</option>
@@ -155,7 +164,7 @@
                     <option value="3">Three</option>
                   </select>
                 </div>
-                <div class="col-12 col-md-6 my-2">
+                <div class="col-12 col-md-4">
                   <label for="inputCity" class="form-label">Select City*</label>
                   <select class="form-select" id="inputCity" formControlName="city">
                     <option disabled selected>--Select--</option>
@@ -192,11 +201,11 @@
 
           <div class="col-12 col-md-6">
 
-            <div class="my-2 d-flex flex-column">
+            <div class="my-2 d-flex flex-column text-center">
+              <img [src]="imagePath" alt="" class="w-50 h-50">
+              <span>{{'imageName'}}</span>
               <label type="button" class="btn btn-outline-info" for="imageFile">Add Picture</label>
-              <input type="file" class="d-none" name="" formControlName='image' id="imageFile">
-              <img src="" alt="a">
-              <span>{{''}}</span>
+              <input type="file" class="d-none" name="" id="imageFile" (change)="onSelectFile($event)">
             </div>
 
           </div>
