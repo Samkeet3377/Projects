@@ -6,11 +6,11 @@ import { LoginComponent } from './users/components/login/login.component';
 import { RegisterComponent } from './users/components/register/register.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'login', pathMatch: 'full' },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   // { path: '', component: TestComponent },
-  { path: '', component: HomeComponent }
+  // { path: '', component: HomeComponent }
 ];
 
 @NgModule({

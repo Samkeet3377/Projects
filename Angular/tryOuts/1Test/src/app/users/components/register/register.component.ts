@@ -65,15 +65,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSelectFile(event: any) {
-    if (event.target.files[0].length > 0) {
-      this.file = event.target.files[0];
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(this.file);
-      fileReader.onload = () => {
-        this.base64 = String(fileReader.result);
-        this.imagePath = this.domSanitizer.bypassSecurityTrustResourceUrl(this.base64);
-      }
+    this.file = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(this.file);
+    fileReader.onload = () => {
+      this.base64 = String(fileReader.result);
+      this.imagePath = this.domSanitizer.bypassSecurityTrustResourceUrl(this.base64);
     }
-
   }
 }

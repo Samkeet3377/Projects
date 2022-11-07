@@ -21,10 +21,20 @@
       [cdkConnectedOverlayHasBackdrop]="true" cdkConnectedOverlayBackdropClass="profileDropdownOverlay"
       (detach)="isOpen = false" (backdropClick)="isOpen = false " cdkpos>
       <ul class="example-list">
-        <li class="pointer" (click)="openOverlay()">Edit Profile</li>
+        <li class="d-flex align-items-center justify-content-between">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Available</label>
+          <div class="form-check form-switch form-switch-sm pb-0">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          </div>
+        </li>
+        <li class="pointer" (click)="openOverlay();isOpen = !isOpen" data-bs-toggle="tooltip"
+          data-bs-title="Default tooltip">Edit
+          Profile</li>
         <li class="pointer">Logout</li>
       </ul>
     </ng-template>
+
+
 
   </div>
 </nav>
