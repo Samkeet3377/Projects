@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { TestComponent } from './components/test/test.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipe/search.pipe';
 import { HomeComponent } from './components/home/home.component';
+import { ApiService } from './service/api/api.service';
+import { AuthInterceptor } from './service/auth/interceptor/interceptor';
 
 
 @NgModule({
@@ -22,6 +24,14 @@ import { HomeComponent } from './components/home/home.component';
   ],
   exports: [
     TestComponent
+  ],
+  providers: [
+    ApiService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ]
 })
 export class SharedModule { }

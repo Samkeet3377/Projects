@@ -3,7 +3,7 @@
     <h4 class="card-title"><span class="text-danger">1</span>Rhythm</h4>
     <h3 class="card-title text-center">Register your Account</h3>
     <div class="card-body">
-      <form [formGroup]="signupForm">
+      <form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
         <!-- Start: Row for First name Last name -->
         <div class="row">
 
@@ -150,9 +150,7 @@
                   <label for="inputContry" class="form-label">Select Country*</label>
                   <select class="form-select" id="inputCountry" formControlName="country">
                     <option disabled selected>--India--</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="india">India</option>
                   </select>
                 </div>
                 <div class="col-12 col-md-4">
@@ -160,8 +158,6 @@
                   <select class="form-select" id="inputState" formControlName="state">
                     <option disabled selected>--Select--</option>
                     <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
                   </select>
                 </div>
                 <div class="col-12 col-md-4">
@@ -169,8 +165,6 @@
                   <select class="form-select" id="inputCity" formControlName="city">
                     <option disabled selected>--Select--</option>
                     <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
                   </select>
                 </div>
 
@@ -190,9 +184,9 @@
               <label for="inputUserType" class="form-label me-1">Select User Type*</label>
               <select class="form-select w-50" id="inputUserType" formControlName="type">
                 <option disabled selected>--Select--</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="studio-owner">Studio Owner</option>
+                <option value="artist">Artist</option>
+                <option value="general-user">General User</option>
               </select>
             </div>
 

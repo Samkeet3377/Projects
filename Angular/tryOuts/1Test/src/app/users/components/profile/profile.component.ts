@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/shared/service/api/api.service';
-import { testPostScroll } from '../../model/testModel';
+import { users } from '../../model/userModel';
 
 @Component({
   selector: 'app-profile',
@@ -11,33 +11,21 @@ export class ProfileComponent implements OnInit {
 
   public OTP!: string;
 
-  public page: number;
-  public posts: testPostScroll[];
+  public usersData: users[];
+
   constructor(
-    private postApiService: ApiService
+    private userSevice: ApiService
   ) {
-    this.page = 1;
-    this.posts = [];
+    this.usersData = [];
   }
 
   ngOnInit(): void {
-    this.getPosts();
+    this.getAllUsers();
   }
 
-  getPosts(): void {
-    this.postApiService.getPosts(this.page).subscribe((result: testPostScroll[]) => {
-      this.posts = result;
-    });
+  getAllUsers(): void {
+    this.userSevice.getAllUsers().subscribe((result) => { this.usersData = result });
   }
-
-  onScroll(): void {
-    this.postApiService.getPosts(++this.page).subscribe((result: testPostScroll[]) => {
-      return this.posts.push(...result);
-    });
-    // this.page++
-    this.getPosts();
-  }
-
 
   generateOTP() {
     let digits = '0123456789';

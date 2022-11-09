@@ -15,7 +15,7 @@ export class OverlayService {
     const position = this.overLay.position().global().centerVertically().centerHorizontally();
 
     const overlayRef = this.overLay.create({
-      positionStrategy: position, hasBackdrop: true, backdropClass: 'overlay-backdrop', panelClass: 'overlay-panel', height: 800, width: 1000,
+      positionStrategy: position, hasBackdrop: true, backdropClass: 'overlay-backdrop', panelClass: 'overlay-panel', height: 800, width: 1200,
     });
 
     const portal = new ComponentPortal(component);

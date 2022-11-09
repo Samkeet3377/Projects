@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/shared/service/auth/service/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -24,6 +25,8 @@ export class RegisterComponent implements OnInit {
     public formBuilder: FormBuilder,
     private domSanitizer: DomSanitizer,
     private actRouter: ActivatedRoute,
+    private authService: AuthService,
+    private route: Router
   ) {
     this.eyeIcon = 'eye-slash';
     this.buttonType = 'password';
@@ -72,5 +75,14 @@ export class RegisterComponent implements OnInit {
       this.base64 = String(fileReader.result);
       this.imagePath = this.domSanitizer.bypassSecurityTrustResourceUrl(this.base64);
     }
+  }
+
+  onSignUp() {
+    this.authService.signUp(this.signupForm.value).subscribe((result) => {
+      if (result) {
+        this.signupForm.reset();
+        this.route.navigate(['/login']);
+      }
+    });
   }
 }

@@ -15,19 +15,4 @@ export class user {
     this.role = role;
   }
 
-  getId(): number {
-    return this.id;
-  }
-  getUsername(): string {
-    return this.username;
-  }
-  getEmail(): string {
-    return this.email;
-  }
-  getPassword(): string {
-    return this.password;
-  }
-  getRole(): string {
-    return this.role;
-  }
 }

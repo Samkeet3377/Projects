@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/shared/service/auth/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,9 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(
-    formBUilder: FormBuilder
+    formBUilder: FormBuilder,
+    private authService: AuthService,
+    private route: Router
   ) {
     this.eyeIcon = 'eye-slash';
     this.buttonType = 'password';
@@ -36,6 +40,10 @@ export class LoginComponent implements OnInit {
       this.eyeIcon = 'eye-slash';
       this.buttonType = 'password';
     }
+  }
+
+  onLogin() {
+    this.authService.signIn(this.loginForm.value)
   }
 
 }

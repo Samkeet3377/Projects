@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private route: Router,
-    formB: FormBuilder,
+    public formB: FormBuilder,
     private authService: AuthService
   ) {
     this.data = false;

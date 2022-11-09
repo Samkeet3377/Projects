@@ -6,6 +6,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { AuthService } from '../shared/service/auth/service/auth.service';
+import { ApiService } from '../shared/service/api/api.service';
 
 
 @NgModule({
@@ -24,6 +26,10 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     LoginComponent,
     RegisterComponent,
     ProfileComponent
+  ],
+  providers: [
+    ApiService,
+    AuthService
   ]
 })
 export class UsersModule { }

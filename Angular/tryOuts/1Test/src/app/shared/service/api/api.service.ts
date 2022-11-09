@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { testPostScroll } from 'src/app/users/model/testModel';
 import { city, country, state } from '../../modal/test';
+import { users } from '../../../users/model/userModel';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(
+  //   {
+  //   providedIn: 'root'
+  // }
+)
 export class ApiService {
 
   private baseUrl: string;
@@ -34,11 +36,10 @@ export class ApiService {
     // return this.http.get<country[]>(testUrl);
   }
 
-
-  // get POSTs 10 per page
-  getPosts(page: number): Observable<testPostScroll[]> {
-    // const url = `https://jsonplaceholder.typicode.com/comments?_page=${page}&per_page=10`;
-    const url = `https://jsonplaceholder.typicode.com/comments?_page=` + page;
-    return this.http.get<testPostScroll[]>(url);
+  // get All USers
+  getAllUsers(): Observable<users[]> {
+    const url = this.baseUrl + 'users';
+    return this.http.get<users[]>(url);
   }
+
 }
