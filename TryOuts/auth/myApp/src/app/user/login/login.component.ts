@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthGuardService } from 'src/app/service/api/auth-guard.service';
+import { AuthGuardService } from '../../core/service/auth-guard.service';
 import { user } from '../model/user';
 
 @Component({
@@ -56,25 +56,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    if (this.loginForm.valid) {
-
-      const tempData: any = this.userData.find((test: user) => test.email == this.loginForm.value.email);
-      if (tempData.password == this.loginForm.value.password) {
-
-        this.isAuth = 'true';
-        this.authService.auth.next(this.isAuth);
-        this.router.navigate(['home']);
-
-        localStorage.setItem('user',tempData.username);
-
-      } else {
-        alert('You are not register User. Please SignUp first');
-        this.isAuth = 'false';
-        this.authService.auth.next(this.isAuth);
-        this.router.navigate(['signup']);
-      }
-
-    }
+    this.authService.signIn(this.loginForm.value);
   }
 
 }

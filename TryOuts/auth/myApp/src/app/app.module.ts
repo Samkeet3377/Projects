@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,7 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { AuthGuard } from './core/guard/auth.guard';
-import { AuthGuardService } from './service/api/auth-guard.service';
+import { AuthGuardService } from './core/service/auth-guard.service';
+import { AuthInterceptor } from './core/intercepter/authInterceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,12 @@ import { AuthGuardService } from './service/api/auth-guard.service';
   ],
   providers: [
     AuthGuard,
-    AuthGuardService
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent]
 })

@@ -102,7 +102,7 @@ export class EmpFormComponent implements OnInit {
     this.toaster.onSuccess('Data Add Successfully', 'Message');
   }
   public toastInfo() {
-    this.toaster.onSuccess('Data Edit Successfully', 'Message');
+    this.toaster.onInfo('Data Edit Successfully', 'Message');
   }
 
 

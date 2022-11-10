@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthGuardService } from 'src/app/service/api/auth-guard.service';
+import { AuthGuardService } from '../../core/service/auth-guard.service';
 
 @Component({
   selector: 'app-signup',
@@ -24,9 +24,9 @@ export class SignupComponent implements OnInit {
     this.inputType = 'password';
 
     this.signupForm = formB.group({
-      username: ['',Validators.required],
-      email: ['',Validators.required],
-      password: ['',Validators.required],
+      username: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
     });
   }
 
@@ -43,15 +43,17 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  onSubmit(){
+  onSubmit() {
     this.addNewUser();
   }
 
   addNewUser() {
-    if(this.signupForm.valid) {
-      this.authService.addUser(this.signupForm.value).subscribe((result)=> {
-        this.reset();
-        this.router.navigate(['login']);
+    if (this.signupForm.valid) {
+      this.authService.signUp(this.signupForm.value).subscribe((result) => {
+        if (result.result) {
+          this.reset();
+          this.router.navigate(['/login']);
+        }
       });
     }
     else {
@@ -59,7 +61,7 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  reset(){
+  reset() {
     this.signupForm.reset();
   }
 
