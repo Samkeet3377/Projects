@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { map, Observable } from 'rxjs';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { user } from 'src/app/user/model/user';
 import { environment } from '../../../environments/environment';
 
@@ -11,6 +12,10 @@ import { environment } from '../../../environments/environment';
   // }
 )
 export class AuthGuardService {
+  userInfo: BehaviorSubject<any> = new BehaviorSubject(null);
+  jwtHelper = new JwtHelperService();
+
+
   public headers = new HttpHeaders().set('Content-Type', 'application-json');
   public baseUrl: string;
   public currentUser = {};
@@ -30,9 +35,17 @@ export class AuthGuardService {
 
   //signin
   signIn(user: user) {
-    const api = this.baseUrl + 'signin';
+    const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlck5hbWUiOiJzYW1rZWV0IiwiZW1haWwiOiJzYW1rZWV0QGVtYWlsLmNvbSIsInBhc3N3b3JkIjoic2Fta2VldCMxMjMiLCJ0b2tlbkV4cGlyZSI6IjE2NjgwOTA2MDAifQ.p7DyDdYQWTO2uFhNY1TZAvXJYO0XawXbGqanjmWi4Ak";
+    const refreshToken = "dummy";
+    localStorage.setItem('access_token', accessToken);
+    // localStorage.setItem('refresh_token', refreshToken);
+    const decryptUser = this.jwtHelper.decodeToken(accessToken);
+    const data = { access_token: accessToken, refresh_token: refreshToken, userName: decryptUser.userName, expireToken: decryptUser.expireToken };
+    this.userInfo.next(data);
+
+
+    const api = this.baseUrl + 'users';
     return this.http.post(api, user).subscribe((postResult: any) => {
-      localStorage.setItem('access_token', postResult.token);
       this.getUserProfile(postResult.id).subscribe((userResult) => {
         this.currentUser = userResult;
         this.route.navigate(['/home' + userResult.id]);

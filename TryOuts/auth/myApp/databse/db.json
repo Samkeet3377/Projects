@@ -2,14 +2,7 @@
   "users": [
     {
       "username": "samkeet",
-      "email": "samkeet@test.com",
-      "password": "samkeet#123",
-      "id": 1
-    }
-  ],
-  "signin": [
-    {
-      "email": "samkeet@test.com",
+      "email": "samkeet@email.com",
       "password": "samkeet#123",
       "id": 1
     }
