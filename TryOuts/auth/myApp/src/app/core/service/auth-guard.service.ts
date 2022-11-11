@@ -35,7 +35,7 @@ export class AuthGuardService {
 
   //signin
   signIn(user: user) {
-    const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlck5hbWUiOiJzYW1rZWV0IiwiZW1haWwiOiJzYW1rZWV0QGVtYWlsLmNvbSIsInBhc3N3b3JkIjoic2Fta2VldCMxMjMiLCJ0b2tlbkV4cGlyZSI6IjE2NjgwOTA2MDAifQ.p7DyDdYQWTO2uFhNY1TZAvXJYO0XawXbGqanjmWi4Ak";
+    const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlck5hbWUiOiJzYW1rZWV0IiwiZW1haWwiOiJzYW1rZWV0QGVtYWlsLmNvbSIsInBhc3N3b3JkIjoic2Fta2VldCMxMjMiLCJ0b2tlbkV4cGlyZSI6IjE2NjgxMDUwMDAifQ.Kowq_OmBqk_d8qKmldDGmhexZEveT_pxZJ3T1nPel6o";
     const refreshToken = "dummy";
     localStorage.setItem('access_token', accessToken);
     // localStorage.setItem('refresh_token', refreshToken);
