@@ -1,7 +1,12 @@
 {
   "auth": [
     {
-      "login": []
+      "login": [
+        {
+          "username": "samkeet",
+          "password": "1234"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "samkeet",
+      "password": 123456,
+      "firstName": "samkeet",
+      "lastName": "kevat",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzYW1rZWV0IiwicGFzc3dvcmQiOjEyMzQ1NiwiZmlyc3ROYW1lIjoic2Fta2VldCIsImxhc3ROYW1lIjoia2V2YXQifQ.6QbHMny0v-1cDHiZvnYx6uf09Qi1pdY6GUe1a8w_G-w"
+    }
+  ]
+}

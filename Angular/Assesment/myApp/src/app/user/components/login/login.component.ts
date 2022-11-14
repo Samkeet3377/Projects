@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
     this.authService.getUser().subscribe((res) => {
       let findUser = res.find((user: user) => (user.email === this.loginForm.value.email && user.password === this.loginForm.value.password));
       if (findUser) {
-        this.route.navigate(['home']);
+        this.route.navigate(['/home']);
         localStorage.setItem('isAuth', 'true');
         const role = findUser.role;
         localStorage.setItem('role', role);
@@ -65,6 +65,14 @@ export class LoginComponent implements OnInit {
         alert('you are unregistered user');
       }
     });
+
+    this.authService.login(this.loginForm.value).subscribe(
+      (result) => {
+        console.log(result);
+      }, (error) => {
+        console.log(error);
+      }
+    );
 
   }
 

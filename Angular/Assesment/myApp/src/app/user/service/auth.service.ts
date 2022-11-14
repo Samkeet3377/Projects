@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -10,8 +10,12 @@ export class AuthService {
   baseUrl: string;
   visibleBS: BehaviorSubject<boolean>;
 
+  requestHeaders = new HttpHeaders(
+    { "No-Auth": "True" }
+  );
 
   constructor(
+
     private route: Router,
     private http: HttpClient
   ) {
@@ -43,6 +47,9 @@ export class AuthService {
   }
 
   //temp
-
+  login(userData: any) {
+    const url = this.baseUrl + 'user';
+    return this.http.post(url, userData, { headers: this.requestHeaders });
+  }
 
 }

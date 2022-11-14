@@ -44,4 +44,4 @@ export function jwtOptionFactor(authService: AuthService) {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -4,14 +4,14 @@
       "username": "samkeet",
       "email": "samkeet@test.com",
       "password": "123",
-      "role": "user",
+      "role": "User",
       "id": 1
     },
     {
       "username": "amresh",
       "email": "amresh@test.com",
       "password": "amresh123",
-      "role": "admin",
+      "role": "Admin",
       "id": 2
     }
   ],
