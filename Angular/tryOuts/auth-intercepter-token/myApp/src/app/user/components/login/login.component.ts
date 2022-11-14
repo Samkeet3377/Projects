@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public formBuilder: FormBuilder,
-    public authService: AuthApiService,
+    private authService: AuthApiService,
     public router: Router
   ) {
     this.loginForm = formBuilder.group({
@@ -26,13 +26,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLogin() {
-    if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value).subscribe((userData: any) => {
-        this.loginForm.reset();
-        this.router.navigate(['/home']);
-      });
-    }
+  userLogin() {
+    this.authService.userLogin(this.loginForm.value)
+      .subscribe((value) => {
+        if (value) {
+          alert('success');
+          this.router.navigate(['home']);
+        } else {
+          alert('failed');
+        }
+      },
+        (error) => {
+          alert('failed error');
+        }
+      );
   }
 
 }

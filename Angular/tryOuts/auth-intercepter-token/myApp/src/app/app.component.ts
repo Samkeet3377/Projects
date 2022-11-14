@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthApiService } from './user/service/auth-api.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,6 @@ export class AppComponent {
   title = 'myApp';
 
   constructor(
-    public authService: AuthApiService
   ) { }
 
 }
