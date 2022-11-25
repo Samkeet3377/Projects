@@ -22,7 +22,6 @@ import { AuthGuard } from './shared/service/auth/guard/auth.guard';
     UsersModule,
     BrowserAnimationsModule,
     SharedModule,
-
   ],
   providers: [
     AuthGuard

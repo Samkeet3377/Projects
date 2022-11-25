@@ -13,41 +13,6 @@
       "password": "amresh123",
       "role": "Admin",
       "id": 2
-    },
-    {
-      "email": "samkeet@test.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "email": "samkeet@test.com",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "email": "samkeet@test.com",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "email": "samkeet@test.com",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "email": "samkeet@test.com",
-      "password": "123",
-      "id": 7
-    },
-    {
-      "email": "samkeet@test.com",
-      "password": "123",
-      "id": 8
-    },
-    {
-      "email": "amresh@test.com",
-      "password": "amresh123",
-      "id": 9
     }
   ],
   "employee": [

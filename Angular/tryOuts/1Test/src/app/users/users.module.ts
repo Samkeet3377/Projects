@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AuthService } from '../shared/service/auth/service/auth.service';
 import { ApiService } from '../shared/service/api/api.service';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { ApiService } from '../shared/service/api/api.service';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgSelectModule
   ],
   exports: [
     LoginComponent,

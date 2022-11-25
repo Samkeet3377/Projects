@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { city } from '../../modal/test';
-import { country } from '../../modal/test';
-import { state } from '../../modal/test';
+import { city } from '../../model/test';
+import { country } from '../../model/test';
+import { state } from '../../model/test';
 import { ApiService } from '../../service/api/api.service';
 
 @Component({

@@ -13,6 +13,12 @@ export class ProfileComponent implements OnInit {
 
   public usersData: users[];
 
+  public type = [
+    { id: 1, type: 'Recording' },
+    { id: 2, type: 'Jamming' },
+    { id: 3, type: 'Mixing' }
+  ];
+
   constructor(
     private userSevice: ApiService
   ) {

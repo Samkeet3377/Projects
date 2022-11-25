@@ -1,16 +1,16 @@
-<div class="container">
-  <!-- <div class="card shadow-sm p-3 align-items-center justify-content-center" style="width: auto;">
+<!-- <div class="row"> -->
+<!-- <div class="card shadow-sm p-3 align-items-center justify-content-center" style="width: auto;">
     <div class="card-title">
       <h4>User Profile</h4>
     </div> -->
-  <!-- <div class="card-body">
+<!-- <div class="card-body">
       <button class="me-3" type="button" (click)="generateOTP()">Generate OTP</button>
       <input type="text" value="{{OTP}}">
     </div> -->
 
-  <!-- infinite Scroll example -->
+<!-- infinite Scroll example -->
 
-  <!-- <div infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000" [scrollWindow]="false"
+<!-- <div infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000" [scrollWindow]="false"
     style="height: 600px; overflow-y: scroll;" class="">
     <div><a class="curPointer">remove all</a> </div>
     <div class="card shadow-sm p-4 my-3">
@@ -21,8 +21,8 @@
     </div>
   </div> -->
 
-  <!-- All Users Data -->
-  <div class="card shadow p-3 align-items-center justify-content-center">
+<!-- All Users Data -->
+<!-- <div class="card shadow p-3 align-items-center justify-content-center">
     <div class="card-title">
       <h2>Users Details</h2>
     </div>
@@ -58,7 +58,162 @@
         </tbody>
       </table>
     </div>
-  </div>
-
-</div>
+  </div> -->
 <!-- </div> -->
+<!-- Artist Booking Form -->
+<div class="row">
+  <div class="col">
+    <div class="m-2 p-3 border h-100" style="max-width: 500px;">
+      <!-- row1 -->
+      <div class="row">
+        <div class="col d-flex align-items-center">
+          <h4>Artist</h4>
+          <h2 style="margin: 0;">Book Now</h2>
+        </div>
+        <div class="col text-end">
+          <button class="btn btn-light"> <span class="bi bi-x-lg fs-4"></span> </button>
+        </div>
+      </div>
+      <!-- row2 -->
+      <div class="row mb-3">
+        <div class="col">
+          <label>Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
+        </div>
+      </div>
+      <!-- row3 -->
+      <form>
+        <div class="row my-3">
+          <div class="col">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="First Name">
+          </div>
+        </div>
+        <!-- row4 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="" class="form-control" id="phoneNumber" placeholder="Phone Number">
+          </div>
+        </div>
+        <!-- row5 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="SelectDate" class="form-label">Select Date</label>
+            <input type="date" class="form-control" id="SelectDate" placeholder="Select Date">
+          </div>
+        </div>
+        <!-- row6 -->
+        <div class="row my-3">
+          <label for="SelectDuration" class="form-label">Select Duration</label>
+          <div class="col">
+            <label for="SelectFrom" class="form-label">From</label>
+            <input type="time" class="form-control" id="SelectFrom" placeholder="From">
+          </div>
+          <div class="col">
+            <label for="SelectTo" class="form-label">To</label>
+            <input type="time" class="form-control" id="SelectTo" placeholder="To">
+          </div>
+        </div>
+        <!-- row7 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="venueAddress" class="form-label">Venue Address</label>
+            <textarea name="" id="venueAddress" class="form-control" cols="" rows="3"
+              placeholder="Venue Address"></textarea>
+          </div>
+        </div>
+        <!-- row8 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="additional" class="form-label">Additional Requirements</label>
+            <textarea name="" id="additional" class="form-control" cols="" rows="3"
+              placeholder="Additional Requirements"></textarea>
+          </div>
+        </div>
+        <!-- row9 -->
+        <div class="row my-3">
+          <div class="col">
+            <button type="button" class="btn btn-secondary w-100">Cancel</button>
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary w-100">Book Now</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- Studio Booking Form -->
+
+  <div class="col">
+    <div class="m-2 p-3 border h-100" style="max-width: 500px;">
+      <!-- row1 -->
+      <div class="row">
+        <div class="col d-flex align-items-center">
+          <h4>Studio</h4>
+          <h2 style="margin: 0;">Book Now</h2>
+        </div>
+        <div class="col text-end">
+          <button class="btn btn-light"> <span class="bi bi-x-lg fs-4"></span> </button>
+        </div>
+      </div>
+      <!-- row2 -->
+      <div class="row mb-3">
+        <div class="col">
+          <label>Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
+        </div>
+      </div>
+      <!-- row3 -->
+      <form>
+        <div class="row my-3">
+          <div class="col">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="First Name">
+          </div>
+        </div>
+        <!-- row4 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="" class="form-control" id="phoneNumber" placeholder="Phone Number">
+          </div>
+        </div>
+        <!-- row5 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="SelectDate" class="form-label">Select Date</label>
+            <input type="date" class="form-control" id="SelectDate" placeholder="Select Date">
+          </div>
+        </div>
+        <!-- row6 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="SelectDuration" class="form-label">Select Service Type</label>
+            <ng-select class="">
+              <ng-option *ngFor="let type of type" value="{{type.id}}">{{type.type}}</ng-option>
+            </ng-select>
+          </div>
+        </div>
+        <!-- row7 -->
+        <div class="row my-3">
+          <div class="col">
+            <label for="additional" class="form-label">Additional Requirements</label>
+            <textarea name="" id="additional" class="form-control" cols="" rows="3"
+              placeholder="Additional Requirements"></textarea>
+          </div>
+        </div>
+        <!-- row9 -->
+        <div class="row my-3">
+          <div class="col">
+            <button type="button" class="btn btn-secondary w-100">Cancel</button>
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary w-100">Book Now</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
